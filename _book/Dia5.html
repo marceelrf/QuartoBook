@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Marcel Ferreira">
-<meta name="dcterms.date" content="2023-11-20">
 
-<title>Tutorial Bioinformatica</title>
+<title>Tutorial Bioinformatica - 6&nbsp; Dia 5 - Genotipagem de STRs a partir de dados de NGS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./ONT.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Prefacio</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Dia5.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -101,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prefacio</span></a>
   </div>
 </li>
@@ -137,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Dia5.html" class="sidebar-item-text sidebar-link">
+  <a href="./Dia5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></span></a>
   </div>
 </li>
@@ -153,47 +152,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#prefacio" id="toc-prefacio" class="nav-link active" data-scroll-target="#prefacio">Prefacio</a>
-  <ul class="collapse">
-  <li><a href="#autores" id="toc-autores" class="nav-link" data-scroll-target="#autores">Autores</a></li>
-  <li><a href="#softwares-necessários" id="toc-softwares-necessários" class="nav-link" data-scroll-target="#softwares-necessários">Softwares necessários</a>
-  <ul class="collapse">
-  <li><a href="#opcionais" id="toc-opcionais" class="nav-link" data-scroll-target="#opcionais">Opcionais</a></li>
-  </ul></li>
-  <li><a href="#dados-utilizados" id="toc-dados-utilizados" class="nav-link" data-scroll-target="#dados-utilizados">Dados utilizados</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial Bioinformatica</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Marcel Ferreira </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 20, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -201,49 +174,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="prefacio" class="level1 unnumbered">
-<h1 class="unnumbered">Prefacio</h1>
-<section id="autores" class="level2">
-<h2 class="anchored" data-anchor-id="autores">Autores</h2>
-<p>Marcel Rodrigues Ferreira ()</p>
-</section>
-<section id="softwares-necessários" class="level2">
-<h2 class="anchored" data-anchor-id="softwares-necessários">Softwares necessários</h2>
-<ul>
-<li>WSL (Windows Subsystem for Linux)</li>
-<li>IGV (<a href="https://software.broadinstitute.org/software/igv/download">site</a>)</li>
-<li>fastqc (<a href="https://github.com/s-andrews/FastQC">github</a>)</li>
-<li>bwa (<a href="https://github.com/lh3/bwa">github</a>)</li>
-<li>minimap2 (<a href="https://github.com/lh3/minimap2">github</a>)</li>
-<li>samtools (<a href="https://github.com/samtools/samtools">github</a>)</li>
-<li>freebayes (<a href="https://github.com/freebayes/freebayes">github</a>)</li>
-<li>gatk (<a href="https://github.com/broadinstitute/gatk">github</a>)</li>
-<li>vcftools (<a href="https://github.com/vcftools/vcftools">github</a>)</li>
-<li>bcftools (<a href="https://samtools.github.io/bcftools/">site</a>) (<a href="https://github.com/samtools/bcftools">github</a>)</li>
-<li>WhatsHap (<a href="https://github.com/whatshap/whatshap">github</a>)</li>
-</ul>
-<section id="opcionais" class="level3">
-<h3 class="anchored" data-anchor-id="opcionais">Opcionais</h3>
-<ul>
-<li><a href="https://notepad-plus-plus.org/downloads/">notepad++</a></li>
-<li><a href="https://www.gnu.org/software/gzip/">gzip</a></li>
-<li><a href="https://github.com/samtools/htslib">HTSlib</a></li>
-</ul>
-</section>
-</section>
-<section id="dados-utilizados" class="level2">
-<h2 class="anchored" data-anchor-id="dados-utilizados">Dados utilizados</h2>
-<ul>
-<li>fast5/</li>
-<li>fastq/</li>
-<li>genome/</li>
-<li>bam/</li>
-<li>vcf/</li>
-</ul>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -481,10 +413,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./ONT.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dia 4 - Análise de sequenciamento Oxford Nanopore</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

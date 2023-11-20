@@ -11,6 +11,8 @@ book:
     - sequenciamento.qmd
     - alinhamento.qmd
     - genotipagem.qmd
+    - ONT.qmd
+    - Dia5.qmd
     - references.qmd
 
 bibliography: references.bib

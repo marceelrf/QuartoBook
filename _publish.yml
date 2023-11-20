@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: ae65e261-a0a9-4e48-8e92-5785c2fbdbe5
+      url: 'https://workshopbioinfoforense.netlify.app'
