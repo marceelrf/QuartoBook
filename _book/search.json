@@ -28,11 +28,11 @@
     "text": "Dados utilizados\n\nfast5/\nfastq/\ngenome/\nbam/\nvcf/"
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "intro.html#primeiros-passos",
+    "href": "intro.html#primeiros-passos",
+    "title": "1  Introdução",
+    "section": "1.1 Primeiros passos",
+    "text": "1.1 Primeiros passos"
   },
   {
     "objectID": "sequenciamento.html#arquivos",
@@ -61,19 +61,5 @@
     "title": "3  Dia 2 - Alinhamento de sequências de DNA",
     "section": "3.1 Arquivos",
     "text": "3.1 Arquivos"
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "intro.html#primeiros-passos",
-    "href": "intro.html#primeiros-passos",
-    "title": "1  Introdução",
-    "section": "1.1 Primeiros passos",
-    "text": "1.1 Primeiros passos"
   }
 ]
