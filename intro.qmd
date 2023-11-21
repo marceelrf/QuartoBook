@@ -17,3 +17,4 @@ A genética forense tornou-se uma ferramenta essencial na resolução de casos c
 Ao longo desta semana, vocês serão desafiados a aplicar os conhecimentos adquiridos em exercícios práticos e estudos de caso, preparando-os para enfrentar os desafios reais da genética forense na era da bioinformática avançada. Esteja preparado para uma jornada intensiva de aprendizado e descoberta!
 
 ## Primeiros passos
+
