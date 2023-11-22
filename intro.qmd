@@ -37,4 +37,10 @@ Para ter acesso aos dados utilize o email que foi fornecido durante a inscriçã
 Utilize o comando `htop` para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial.
 
 Utilize os argumento `-h` ou `--help` para visualizar ajuda sobre o uso dos softwares via terminal.
+
+`SOFTWARE -h`
+
+Adicionar o comando `time` antes de rodar os códigos para saber o tempo que demorou irá te ajudar a se programar para atividades futuras.
+
+`time [COMANDOS...]`
 :::
