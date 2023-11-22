@@ -1,1 +1,45 @@
-# Dia 4 - Análise de sequenciamento Oxford Nanopore
+# Dia 4 - Análise de sequenciamento Oxford Nanopore {.unnumbered}
+
+::: callout-important
+## Importante
+
+O software `guppy` só esta disponível para download via comunidade da Oxford Nanopore. Para este tutorial fornecemos um arquivo `.tar` para instalação em sua máquina. Para instalar siga os seguintes passos:
+
+Acesse a pasta que contem o arquivo `.tar` e descompacte;
+
+`tar -xf ont-guppy-cpu_6.5.7_linux64.tar.gz`
+
+Verifique o caminho completo para a pasta
+
+`pwd`
+
+Executando `guppy` via caminho completo (Exemplo pedindo ajuda)
+
+`./guppy_basecaller --help`
+:::
+
+Este tutorial foi inspirado...
+
+## Atividades
+
+-   Verifique os workflows disponíveis para esta versão de `guppy`;
+
+-   Realize uma chamada de base para todos os arquivos `fast5` contidos na pasta ...;
+
+::: callout-warning
+## Aviso
+
+O tempo de execução da chama de base (para este conjunto de dados) é superior a **12 horas** em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta ...
+:::
+
+-   Avalie a qualidade do arquivo resultado `.fastq` utilizando `FASTQC` e `nanoQC`;
+
+-   Filtre a read baseado no tamanho e na qualidade utilizando `chopper`;
+
+-   Monte o genoma utilizando `BWA` e `minimap2`;
+
+::: {.callout-note collapse="true" icon="false"}
+## Opcional
+
+Realize uma montagem *de novo* utilizando o pipeline `minimap2`-`miniasm`. Este processo pode levar várias horas/dias. `Tome cuidado!`
+:::

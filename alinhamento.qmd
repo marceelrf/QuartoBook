@@ -1,3 +1,23 @@
-# Dia 2 - Alinhamento de sequências de DNA
+# Dia 2 - Alinhamento de sequências de DNA {.unnumbered}
 
 ## Arquivos
+
+Os arquivos utilizados para estas analises serão os `.fastq` analisados no primeiro dia.
+
+::: callout-warning
+## Arquivos .fastq
+
+Preste atenção para o caminho da pasta aonde estão os `.fastq`.
+:::
+
+## Atividades
+
+-   Realize o alinhamento das amostras utilizando `BWA` e o genoma de referência `hg38.fa`;
+
+-   Converta os arquivos `.sam` para o formato `.bam`;
+
+-   Crie o indice dos arquivos `.bam`;
+
+-   Alinhe novamente, desta vez utilizando `minimap2` e repita as demais etapas;
+
+-   Utilize o `IGV` para visualizar os alinhamentos;

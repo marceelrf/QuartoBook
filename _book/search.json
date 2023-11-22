@@ -11,55 +11,76 @@
     "href": "index.html#autores",
     "title": "Tutorial Bioinformatica",
     "section": "Autores",
-    "text": "Autores\nMarcel Rodrigues Ferreira ()"
+    "text": "Autores\nMarcel Rodrigues Ferreira ()\nDEMAIS"
   },
   {
-    "objectID": "index.html#softwares-necessários",
-    "href": "index.html#softwares-necessários",
+    "objectID": "index.html#sec-softwares-necessários",
+    "href": "index.html#sec-softwares-necessários",
     "title": "Tutorial Bioinformatica",
     "section": "Softwares necessários",
-    "text": "Softwares necessários\n\nWSL (Windows Subsystem for Linux)\nIGV (site)\nfastqc (github)\nbwa (github)\nminimap2 (github)\nsamtools (github)\nfreebayes (github)\ngatk (github)\nvcftools (github)\nbcftools (site) (github)\nWhatsHap (github)\n\n\nOpcionais\n\nnotepad++\ngzip\nHTSlib"
+    "text": "Softwares necessários\n\nWSL (Windows Subsystem for Linux)\nIGV(Robinson et al. 2011)\nfastqc\nbwa(Li 2013)\nminimap2(Li 2018, 2021)\nsamtools(Danecek et al. 2021)\nfreebayes(Garrison and Marth 2012)\ngatk\nvcftools(Danecek et al. 2011)\nbcftools(Danecek et al. 2021)\nwhasthap(Martin et al. 2016)\n\n\nOpcionais\n\nnotepad++\ngzip\nHTSlib"
   },
   {
-    "objectID": "index.html#dados-utilizados",
-    "href": "index.html#dados-utilizados",
+    "objectID": "index.html#sec-dados-utilizados",
+    "href": "index.html#sec-dados-utilizados",
     "title": "Tutorial Bioinformatica",
     "section": "Dados utilizados",
-    "text": "Dados utilizados\n\nfast5/\nfastq/\ngenome/\nbam/\nvcf/"
+    "text": "Dados utilizados\n\nfast5/\nfastq/\ngenome/\nbam/\nvcf/\n\n\n\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The Variant Call Format and VCFtools.” Bioinformatics 27 (15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve Years of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant Detection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and Assembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide Sequences.” Edited by Inanc Birol. Bioinformatics 34 (18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment Accuracy.” Edited by Can Alkan. Bioinformatics 37 (23): 4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia Pisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall. 2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011. “Integrative Genomics Viewer.” Nature Biotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
   },
   {
     "objectID": "intro.html#primeiros-passos",
     "href": "intro.html#primeiros-passos",
-    "title": "1  Introdução",
-    "section": "1.1 Primeiros passos",
-    "text": "1.1 Primeiros passos"
+    "title": "Introdução",
+    "section": "Primeiros passos",
+    "text": "Primeiros passos\n\nInstale os Softwares necessários (Section 2);\n\n\n\n\n\n\n\nUsuários windows\n\n\n\nUsuários windows precisam instalar o Subsistema Windows para Linux (WSL).\nOs softwares FASTQC e IGV precisam ser instalados no windows e não no WSL.\n\n\n\nBaixe os dados que serão utilizados neste workshop (Section 3);\n\n\n\n\n\n\n\nUtilize o email correto\n\n\n\nPara ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro entre em contato com a organização.\n\n\n\n\n\n\n\n\nDicas\n\n\n\nUtilize o comando htop para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial.\nUtilize os argumento -h ou --help para visualizar ajuda sobre o uso dos softwares via terminal."
   },
   {
     "objectID": "sequenciamento.html#arquivos",
     "href": "sequenciamento.html#arquivos",
-    "title": "2  Dia 1 - Sequenciamento de DNA",
-    "section": "2.1 Arquivos",
-    "text": "2.1 Arquivos\n\n\n\n\n\n\nDica\n\n\n\nPreste atenção nos seus arquivos"
+    "title": "Dia 1 - Sequenciamento de DNA",
+    "section": "Arquivos",
+    "text": "Arquivos"
   },
   {
     "objectID": "sequenciamento.html#métricas",
     "href": "sequenciamento.html#métricas",
-    "title": "2  Dia 1 - Sequenciamento de DNA",
-    "section": "2.2 Métricas",
-    "text": "2.2 Métricas\n\\[\nRead\\;Accuracy = \\frac{N_{match}}{N_{match} + N_{mis} + N_{del} + N_{ins}}\n\\tag{2.1}\\]\n\\[\nMis/Ins/Del = \\frac{N_{mis/ins/del}}{N_{match} + N_{mis} + N_{del} + N_{ins}}\n\\tag{2.2}\\]\n\\[\nP=10^{\\frac{-Qscore}{10}}\n\\tag{2.3}\\]\n\\[\nRead\\;Qscore = -10 \\log_{10}{[\\, \\frac{1}{N}\\sum{10^{\\frac{-q_1}{10}}} ]\\,}\n\\tag{2.4}\\]"
+    "title": "Dia 1 - Sequenciamento de DNA",
+    "section": "Métricas",
+    "text": "Métricas\n\\[\nRead\\;Accuracy = \\frac{N_{match}}{N_{match} + N_{mis} + N_{del} + N_{ins}}\n\\tag{1}\\]\n\\[\nMis/Ins/Del = \\frac{N_{mis/ins/del}}{N_{match} + N_{mis} + N_{del} + N_{ins}}\n\\tag{2}\\]\n\\[\nP=10^{\\frac{-Qscore}{10}}\n\\tag{3}\\]\n\\[\nRead\\;Qscore = -10 \\log_{10}{[\\, \\frac{1}{N}\\sum{10^{\\frac{-q_1}{10}}} ]\\,}\n\\tag{4}\\]"
   },
   {
     "objectID": "sequenciamento.html#atividades",
     "href": "sequenciamento.html#atividades",
-    "title": "2  Dia 1 - Sequenciamento de DNA",
-    "section": "2.3 Atividades",
-    "text": "2.3 Atividades\nO controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequenciamento de nova geração (NGS) para garantir a confiabilidade dos resultados. Abaixo estão as etapas típicas do controle de qualidade:\n\nAnálise Inicial com FASTQC:\n\nExecute o FASTQC nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.\n\nIdentificação de Adaptação (Adapter) e Trimagem:\n\nCom base nos resultados do FASTQC, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize ferramentas como Trimmomatic, Cutadapt ou similar para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.\n\nRemoção de Leituras de Baixa Qualidade:\n\nAlgumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema.\n\nFiltragem de Leituras Curtas ou Longas:\n\nDependendo do seu experimento, você pode querer filtrar leituras muito curtas ou muito longas que possam representar artefatos ou problemas experimentais.\n\n\n\n\n\nAvaliação de Qualidade Pós-Trimagem:\n\nApós a trimagem e filtragem, execute novamente o FASTQC para avaliar como essas etapas afetaram a qualidade dos dados. Isso ajudará a garantir que você atingiu os padrões de qualidade desejados.\n\n\n\n\n\nRelatório Final de Controle de Qualidade:\n\nCompile todos os resultados de QC em um relatório final que destaque os principais aspectos da qualidade dos dados. Isso é útil para comunicação interna, bem como para garantir a transparência na publicação de resultados."
+    "title": "Dia 1 - Sequenciamento de DNA",
+    "section": "Atividades",
+    "text": "Atividades\nO controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequenciamento de nova geração (NGS) para garantir a confiabilidade dos resultados. Abaixo estão as etapas típicas do controle de qualidade:\n\nAnálise Inicial com FASTQC:\n\nExecute o FASTQC nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.\n\nIdentificação de Adaptação (Adapter) e Trimagem:\n\nCom base nos resultados do FASTQC, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize ferramentas como Trimmomatic, Cutadapt ou similar para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.\n\nRemoção de Leituras de Baixa Qualidade:\n\nAlgumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema.\n\nFiltragem de Leituras Curtas ou Longas:\n\nDependendo do seu experimento, você pode querer filtrar leituras muito curtas ou muito longas que possam representar artefatos ou problemas experimentais.\n\n\n\n\n\nAvaliação de Qualidade Pós-Trimagem:\n\nApós a trimagem e filtragem, execute novamente o FASTQC para avaliar como essas etapas afetaram a qualidade dos dados. Isso ajudará a garantir que você atingiu os padrões de qualidade desejados.\n\n\n\n\n\nRelatório Final de Controle de Qualidade:\n\nCompile todos os resultados de QC em um relatório final que destaque os principais aspectos da qualidade dos dados. Isso é útil para comunicação interna, bem como para garantir a transparência na publicação de resultados."
   },
   {
     "objectID": "alinhamento.html#arquivos",
     "href": "alinhamento.html#arquivos",
-    "title": "3  Dia 2 - Alinhamento de sequências de DNA",
-    "section": "3.1 Arquivos",
-    "text": "3.1 Arquivos"
+    "title": "Dia 2 - Alinhamento de sequências de DNA",
+    "section": "Arquivos",
+    "text": "Arquivos\nOs arquivos utilizados para estas analises serão os .fastq analisados no primeiro dia.\n\n\n\n\n\n\nArquivos .fastq\n\n\n\nPreste atenção para o caminho da pasta aonde estão os .fastq."
+  },
+  {
+    "objectID": "alinhamento.html#atividades",
+    "href": "alinhamento.html#atividades",
+    "title": "Dia 2 - Alinhamento de sequências de DNA",
+    "section": "Atividades",
+    "text": "Atividades\n\nRealize o alinhamento das amostras utilizando BWA e o genoma de referência hg38.fa;\nConverta os arquivos .sam para o formato .bam;\nCrie o indice dos arquivos .bam;\nAlinhe novamente, desta vez utilizando minimap2 e repita as demais etapas;\nUtilize o IGV para visualizar os alinhamentos;"
+  },
+  {
+    "objectID": "ONT.html#atividades",
+    "href": "ONT.html#atividades",
+    "title": "Dia 4 - Análise de sequenciamento Oxford Nanopore",
+    "section": "Atividades",
+    "text": "Atividades\n\nVerifique os workflows disponíveis para esta versão de guppy;\nRealize uma chamada de base para todos os arquivos fast5 contidos na pasta …;\n\n\n\n\n\n\n\nAviso\n\n\n\nO tempo de execução da chama de base (para este conjunto de dados) é superior a 12 horas em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta …\n\n\n\nAvalie a qualidade do arquivo resultado .fastq utilizando FASTQC e nanoQC;\nFiltre a read baseado no tamanho e na qualidade utilizando chopper;\nMonte o genoma utilizando BWA e minimap2;\n\n\n\n\n\n\n\nOpcional\n\n\n\n\n\nRealize uma montagem de novo utilizando o pipeline minimap2-miniasm. Este processo pode levar várias horas/dias. Tome cuidado!"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Referências",
+    "section": "",
+    "text": "Danecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric\nBanks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The\nVariant Call Format and VCFtools.” Bioinformatics 27\n(15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu\nOhan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve\nYears of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant\nDetection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and\nAssembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide\nSequences.” Edited by Inanc Birol. Bioinformatics 34\n(18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment\nAccuracy.” Edited by Can Alkan. Bioinformatics 37 (23):\n4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia\nPisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall.\n2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell\nGuttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011.\n“Integrative Genomics Viewer.” Nature\nBiotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
   }
 ]

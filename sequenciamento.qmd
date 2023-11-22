@@ -1,12 +1,14 @@
-# Dia 1 - Sequenciamento de DNA
+# Dia 1 - Sequenciamento de DNA {.unnumbered}
+
+::: callout-important
+## Importante
+
+Verifique se o `FASTQC` esta instalado.
+:::
 
 ## Arquivos
 
-::: callout-tip
-## Dica
 
-Preste atenção nos seus arquivos
-:::
 
 ## Métricas
 

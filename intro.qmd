@@ -1,4 +1,4 @@
-# Introdução {#sec-introduction}
+# Introdução {#sec-introduction .unnumbered}
 
 Bem-vindos ao Workshop de Bioinformática Aplicada à Genética Forense: Análise de Dados de Sequenciamento de Segunda e Terceira Geração. Este curso abrangente foi projetado para fornecer a vocês, participantes entusiasmados, uma imersão prática nas técnicas avançadas de análise de dados genômicos, com foco especial na aplicação forense.
 
@@ -18,3 +18,23 @@ Ao longo desta semana, vocês serão desafiados a aplicar os conhecimentos adqui
 
 ## Primeiros passos
 
+-   Instale os Softwares necessários (@sec-softwares-necessários);
+
+::: {.callout-warning title="Usuários windows"}
+Usuários windows precisam instalar o Subsistema Windows para Linux (`WSL`).\
+Os softwares `FASTQC` e `IGV` precisam ser instalados no windows e **não no `WSL`**.
+:::
+
+-   Baixe os dados que serão utilizados neste workshop (@sec-dados-utilizados);
+
+::: {.callout-important title="Utilize o email correto"}
+Para ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro entre em contato com a organização.
+:::
+
+::: callout-tip
+## Dicas
+
+Utilize o comando `htop` para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial.
+
+Utilize os argumento `-h` ou `--help` para visualizar ajuda sobre o uso dos softwares via terminal.
+:::

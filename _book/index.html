@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Marcel Ferreira">
-<meta name="dcterms.date" content="2023-11-20">
+<meta name="dcterms.date" content="2023-11-21">
 
 <title>Tutorial Bioinformatica</title>
 <style>
@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -90,6 +109,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Tutorial Bioinformatica</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Tutorial-Bioinformatica.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,37 +130,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+ <span class="menu-text">Introdução</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sequenciamento.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dia 1 - Sequenciamento de DNA</span></span></a>
+ <span class="menu-text">Dia 1 - Sequenciamento de DNA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./alinhamento.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dia 2 - Alinhamento de sequências de DNA</span></span></a>
+ <span class="menu-text">Dia 2 - Alinhamento de sequências de DNA</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./genotipagem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Dia 3 - Genotipagem</span></span></a>
+ <span class="menu-text">Dia 3 - Genotipagem</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ONT.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Dia 4 - Análise de sequenciamento Oxford Nanopore</span></span></a>
+ <span class="menu-text">Dia 4 - Análise de sequenciamento Oxford Nanopore</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Dia5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></span></a>
+ <span class="menu-text">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -154,17 +176,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Nesta seção</h2>
    
   <ul>
   <li><a href="#sobre-esse-tutorial" id="toc-sobre-esse-tutorial" class="nav-link active" data-scroll-target="#sobre-esse-tutorial">Sobre esse tutorial</a>
   <ul class="collapse">
   <li><a href="#autores" id="toc-autores" class="nav-link" data-scroll-target="#autores">Autores</a></li>
-  <li><a href="#softwares-necessários" id="toc-softwares-necessários" class="nav-link" data-scroll-target="#softwares-necessários">Softwares necessários</a>
+  <li><a href="#sec-softwares-necessários" id="toc-sec-softwares-necessários" class="nav-link" data-scroll-target="#sec-softwares-necessários">Softwares necessários</a>
   <ul class="collapse">
   <li><a href="#opcionais" id="toc-opcionais" class="nav-link" data-scroll-target="#opcionais">Opcionais</a></li>
   </ul></li>
-  <li><a href="#dados-utilizados" id="toc-dados-utilizados" class="nav-link" data-scroll-target="#dados-utilizados">Dados utilizados</a></li>
+  <li><a href="#sec-dados-utilizados" id="toc-sec-dados-utilizados" class="nav-link" data-scroll-target="#sec-dados-utilizados">Dados utilizados</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -191,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 20, 2023</p>
+      <p class="date">November 21, 2023</p>
     </div>
   </div>
   
@@ -206,21 +228,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="autores" class="level2">
 <h2 class="anchored" data-anchor-id="autores">Autores</h2>
 <p>Marcel Rodrigues Ferreira ()</p>
+<p>DEMAIS</p>
 </section>
-<section id="softwares-necessários" class="level2">
-<h2 class="anchored" data-anchor-id="softwares-necessários">Softwares necessários</h2>
+<section id="sec-softwares-necessários" class="level2">
+<h2 class="anchored" data-anchor-id="sec-softwares-necessários">Softwares necessários</h2>
 <ul>
 <li>WSL (Windows Subsystem for Linux)</li>
-<li>IGV (<a href="https://software.broadinstitute.org/software/igv/download">site</a>)</li>
-<li>fastqc (<a href="https://github.com/s-andrews/FastQC">github</a>)</li>
-<li>bwa (<a href="https://github.com/lh3/bwa">github</a>)</li>
-<li>minimap2 (<a href="https://github.com/lh3/minimap2">github</a>)</li>
-<li>samtools (<a href="https://github.com/samtools/samtools">github</a>)</li>
-<li>freebayes (<a href="https://github.com/freebayes/freebayes">github</a>)</li>
-<li>gatk (<a href="https://github.com/broadinstitute/gatk">github</a>)</li>
-<li>vcftools (<a href="https://github.com/vcftools/vcftools">github</a>)</li>
-<li>bcftools (<a href="https://samtools.github.io/bcftools/">site</a>) (<a href="https://github.com/samtools/bcftools">github</a>)</li>
-<li>WhatsHap (<a href="https://github.com/whatshap/whatshap">github</a>)</li>
+<li><a href="https://software.broadinstitute.org/software/igv/download">IGV</a><span class="citation" data-cites="robinson2011">(<a href="references.html#ref-robinson2011" role="doc-biblioref">Robinson et al. 2011</a>)</span></li>
+<li><a href="https://github.com/s-andrews/FastQC">fastqc</a></li>
+<li><a href="https://github.com/lh3/bwa">bwa</a><span class="citation" data-cites="li2013">(<a href="references.html#ref-li2013" role="doc-biblioref">Li 2013</a>)</span></li>
+<li><a href="https://github.com/lh3/minimap2">minimap2</a><span class="citation" data-cites="li2018 li2021">(<a href="references.html#ref-li2018" role="doc-biblioref">Li 2018</a>, <a href="references.html#ref-li2021" role="doc-biblioref">2021</a>)</span></li>
+<li><a href="https://github.com/samtools/samtools">samtools</a><span class="citation" data-cites="danecek2021">(<a href="references.html#ref-danecek2021" role="doc-biblioref">Danecek et al. 2021</a>)</span></li>
+<li><a href="https://github.com/freebayes/freebayes">freebayes</a><span class="citation" data-cites="garrison2012">(<a href="references.html#ref-garrison2012" role="doc-biblioref">Garrison and Marth 2012</a>)</span></li>
+<li><a href="https://github.com/broadinstitute/gatk">gatk</a></li>
+<li><a href="https://github.com/vcftools/vcftools">vcftools</a><span class="citation" data-cites="danecek2011">(<a href="references.html#ref-danecek2011" role="doc-biblioref">Danecek et al. 2011</a>)</span></li>
+<li><a href="https://github.com/samtools/bcftools">bcftools</a><span class="citation" data-cites="danecek2021">(<a href="references.html#ref-danecek2021" role="doc-biblioref">Danecek et al. 2021</a>)</span></li>
+<li><a href="https://github.com/whatshap/whatshap">whasthap</a><span class="citation" data-cites="martin2016">(<a href="references.html#ref-martin2016" role="doc-biblioref">Martin et al. 2016</a>)</span></li>
 </ul>
 <section id="opcionais" class="level3">
 <h3 class="anchored" data-anchor-id="opcionais">Opcionais</h3>
@@ -231,8 +254,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="dados-utilizados" class="level2">
-<h2 class="anchored" data-anchor-id="dados-utilizados">Dados utilizados</h2>
+<section id="sec-dados-utilizados" class="level2">
+<h2 class="anchored" data-anchor-id="sec-dados-utilizados">Dados utilizados</h2>
 <ul>
 <li>fast5/</li>
 <li>fastq/</li>
@@ -242,6 +265,32 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-danecek2011" class="csl-entry" role="listitem">
+Danecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. <span>“The Variant Call Format and VCFtools.”</span> <em>Bioinformatics</em> 27 (15): 2156–58. <a href="https://doi.org/10.1093/bioinformatics/btr330">https://doi.org/10.1093/bioinformatics/btr330</a>.
+</div>
+<div id="ref-danecek2021" class="csl-entry" role="listitem">
+Danecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. <span>“Twelve Years of SAMtools and BCFtools.”</span> <em>GigaScience</em> 10 (2). <a href="https://doi.org/10.1093/gigascience/giab008">https://doi.org/10.1093/gigascience/giab008</a>.
+</div>
+<div id="ref-garrison2012" class="csl-entry" role="listitem">
+Garrison, Erik, and Gabor Marth. 2012. <span>“Haplotype-Based Variant Detection from Short-Read Sequencing.”</span> <a href="https://doi.org/10.48550/ARXIV.1207.3907">https://doi.org/10.48550/ARXIV.1207.3907</a>.
+</div>
+<div id="ref-li2013" class="csl-entry" role="listitem">
+Li, Heng. 2013. <span>“Aligning Sequence Reads, Clone Sequences and Assembly Contigs with BWA-MEM.”</span> <a href="https://doi.org/10.48550/ARXIV.1303.3997">https://doi.org/10.48550/ARXIV.1303.3997</a>.
+</div>
+<div id="ref-li2018" class="csl-entry" role="listitem">
+———. 2018. <span>“Minimap2: Pairwise Alignment for Nucleotide Sequences.”</span> Edited by Inanc Birol. <em>Bioinformatics</em> 34 (18): 3094–3100. <a href="https://doi.org/10.1093/bioinformatics/bty191">https://doi.org/10.1093/bioinformatics/bty191</a>.
+</div>
+<div id="ref-li2021" class="csl-entry" role="listitem">
+———. 2021. <span>“New Strategies to Improve Minimap2 Alignment Accuracy.”</span> Edited by Can Alkan. <em>Bioinformatics</em> 37 (23): 4572–74. <a href="https://doi.org/10.1093/bioinformatics/btab705">https://doi.org/10.1093/bioinformatics/btab705</a>.
+</div>
+<div id="ref-martin2016" class="csl-entry" role="listitem">
+Martin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia Pisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall. 2016. <span>“WhatsHap: Fast and Accurate Read-Based Phasing.”</span> <a href="http://dx.doi.org/10.1101/085050">http://dx.doi.org/10.1101/085050</a>.
+</div>
+<div id="ref-robinson2011" class="csl-entry" role="listitem">
+Robinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011. <span>“Integrative Genomics Viewer.”</span> <em>Nature Biotechnology</em> 29 (1): 24–26. <a href="https://doi.org/10.1038/nbt.1754">https://doi.org/10.1038/nbt.1754</a>.
+</div>
+</div>
 </section>
 </section>
 
@@ -484,7 +533,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Introdução</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
