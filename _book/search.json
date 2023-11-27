@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Tutorial Bioinformatica",
     "section": "",
-    "text": "Sobre esse tutorial"
+    "text": "Sobre esse curso"
   },
   {
     "objectID": "index.html#autores",
@@ -18,7 +18,7 @@
     "href": "index.html#sec-softwares-necessários",
     "title": "Tutorial Bioinformatica",
     "section": "Softwares necessários",
-    "text": "Softwares necessários\n\nWSL (Windows Subsystem for Linux)\nIGV(Robinson et al. 2011)\nfastqc\nbwa(Li 2013)\nminimap2(Li 2018, 2021)\nsamtools(Danecek et al. 2021)\nfreebayes(Garrison and Marth 2012)\ngatk\nvcftools(Danecek et al. 2011)\nbcftools(Danecek et al. 2021)\nwhasthap(Martin et al. 2016)\nNanoPlot(De Coster and Rademakers 2023)\nchopper(De Coster and Rademakers 2023)\ncramino(De Coster and Rademakers 2023)\n\n\nOpcionais\n\nnotepad++\ngzip\nHTSlib"
+    "text": "Softwares necessários\n\nWSL (Windows Subsystem for Linux)\nIGV (Robinson et al. 2011)\nfastqc\nbwa (Li 2013)\nminimap2 (Li 2018, 2021)\nsamtools (Danecek et al. 2021)\nfreebayes (Garrison and Marth 2012)\ngatk\nvcftools (Danecek et al. 2011)\nbcftools (Danecek et al. 2021)\nwhasthap (Martin et al. 2016)\nNanoPlot (De Coster and Rademakers 2023)\nchopper (De Coster and Rademakers 2023)\ncramino (De Coster and Rademakers 2023)\n\n\nOpcionais\n\nnotepad++\ngzip\nHTSlib"
   },
   {
     "objectID": "index.html#sec-dados-utilizados",
@@ -82,5 +82,19 @@
     "title": "Referências",
     "section": "",
     "text": "Danecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric\nBanks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The\nVariant Call Format and VCFtools.” Bioinformatics 27\n(15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu\nOhan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve\nYears of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2:\nPopulation-Scale Evaluation of Long-Read Sequencing Data.” Edited\nby Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant\nDetection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and\nAssembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide\nSequences.” Edited by Inanc Birol. Bioinformatics 34\n(18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment\nAccuracy.” Edited by Can Alkan. Bioinformatics 37 (23):\n4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia\nPisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall.\n2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell\nGuttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011.\n“Integrative Genomics Viewer.” Nature\nBiotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
+  },
+  {
+    "objectID": "index.html#realização",
+    "href": "index.html#realização",
+    "title": "Tutorial Bioinformatica",
+    "section": "Realização",
+    "text": "Realização\n\n\n\nRealização UnB, UNESP e USP."
+  },
+  {
+    "objectID": "index.html#apoio",
+    "href": "index.html#apoio",
+    "title": "Tutorial Bioinformatica",
+    "section": "Apoio",
+    "text": "Apoio\n\n\n\nCAPES-PROCAD Edital n° 16/2020"
   }
 ]

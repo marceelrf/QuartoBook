@@ -1,4 +1,12 @@
-# Sobre esse tutorial {.unnumbered}
+# Sobre esse curso {.unnumbered}
+
+## Realização
+
+![Realização UnB, UNESP e USP.](realizacai.png){fig-align="center"}
+
+## Apoio
+
+![CAPES-PROCAD Edital n° 16/2020](logo-aplicacao-horizontal-fundo-claro.jpg){fig-align="center"}
 
 ## Autores
 
@@ -9,19 +17,19 @@ DEMAIS
 ## Softwares necessários {#sec-softwares-necessários}
 
 -   WSL (Windows Subsystem for Linux)
--   [IGV](https://software.broadinstitute.org/software/igv/download)[@robinson2011]
+-   [IGV](https://software.broadinstitute.org/software/igv/download) [@robinson2011]
 -   [fastqc](https://github.com/s-andrews/FastQC)
--   [bwa](https://github.com/lh3/bwa)[@li2013]
--   [minimap2](https://github.com/lh3/minimap2)[@li2018; @li2021]
--   [samtools](https://github.com/samtools/samtools)[@danecek2021]
--   [freebayes](https://github.com/freebayes/freebayes)[@garrison2012]
+-   [bwa](https://github.com/lh3/bwa) [@li2013]
+-   [minimap2](https://github.com/lh3/minimap2) [@li2018; @li2021]
+-   [samtools](https://github.com/samtools/samtools) [@danecek2021]
+-   [freebayes](https://github.com/freebayes/freebayes) [@garrison2012]
 -   [gatk](https://github.com/broadinstitute/gatk)
--   [vcftools](https://github.com/vcftools/vcftools)[@danecek2011]
--   [bcftools](https://github.com/samtools/bcftools)[@danecek2021]
--   [whasthap](https://github.com/whatshap/whatshap)[@martin2016]
--   [NanoPlot](https://github.com/wdecoster/NanoPlot)[@decoster2023]
--   [chopper](https://github.com/wdecoster/chopper)[@decoster2023]
--   [cramino](https://github.com/wdecoster/cramino)[@decoster2023]
+-   [vcftools](https://github.com/vcftools/vcftools) [@danecek2011]
+-   [bcftools](https://github.com/samtools/bcftools) [@danecek2021]
+-   [whasthap](https://github.com/whatshap/whatshap) [@martin2016]
+-   [NanoPlot](https://github.com/wdecoster/NanoPlot) [@decoster2023]
+-   [chopper](https://github.com/wdecoster/chopper) [@decoster2023]
+-   [cramino](https://github.com/wdecoster/cramino) [@decoster2023]
 
 ### Opcionais
 
