@@ -19,6 +19,9 @@ DEMAIS
 -   [vcftools](https://github.com/vcftools/vcftools)[@danecek2011]
 -   [bcftools](https://github.com/samtools/bcftools)[@danecek2021]
 -   [whasthap](https://github.com/whatshap/whatshap)[@martin2016]
+-   [NanoPlot](https://github.com/wdecoster/NanoPlot)[@decoster2023]
+-   [chopper](https://github.com/wdecoster/chopper)[@decoster2023]
+-   [cramino](https://github.com/wdecoster/cramino)[@decoster2023]
 
 ### Opcionais
 
