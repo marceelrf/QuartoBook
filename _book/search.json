@@ -18,7 +18,7 @@
     "href": "index.html#sec-softwares-necessários",
     "title": "Tutorial Bioinformatica",
     "section": "Softwares necessários",
-    "text": "Softwares necessários\n\nWSL (Windows Subsystem for Linux)\nIGV(Robinson et al. 2011)\nfastqc\nbwa(Li 2013)\nminimap2(Li 2018, 2021)\nsamtools(Danecek et al. 2021)\nfreebayes(Garrison and Marth 2012)\ngatk\nvcftools(Danecek et al. 2011)\nbcftools(Danecek et al. 2021)\nwhasthap(Martin et al. 2016)\nNanoPlot(De Coster and Rademakers 2023)\nchopper(De Coster and Rademakers 2023)\n\n\nOpcionais\n\nnotepad++\ngzip\nHTSlib"
+    "text": "Softwares necessários\n\nWSL (Windows Subsystem for Linux)\nIGV(Robinson et al. 2011)\nfastqc\nbwa(Li 2013)\nminimap2(Li 2018, 2021)\nsamtools(Danecek et al. 2021)\nfreebayes(Garrison and Marth 2012)\ngatk\nvcftools(Danecek et al. 2011)\nbcftools(Danecek et al. 2021)\nwhasthap(Martin et al. 2016)\nNanoPlot(De Coster and Rademakers 2023)\nchopper(De Coster and Rademakers 2023)\ncramino(De Coster and Rademakers 2023)\n\n\nOpcionais\n\nnotepad++\ngzip\nHTSlib"
   },
   {
     "objectID": "index.html#sec-dados-utilizados",

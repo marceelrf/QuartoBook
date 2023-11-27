@@ -3,9 +3,14 @@ project:
 
 book:
   title: "Tutorial Bioinformatica"
-  author: "Marcel Ferreira"
+  author: "Marcel Ferreira - Bolsista/CAPES"
   date: "today"
   downloads: [pdf]
+  page-footer:
+    left: |
+      Este curso teve apoio CAPES-PROCAD Edital n° 16/2020
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
   chapters:
     - index.qmd
     - intro.qmd
