@@ -1,0 +1,97 @@
+# ANEXO: Comandos Básicos do Ubuntu via WSL
+
+## Navegação e Diretórios
+
+### Listar Conteúdo do Diretório
+
+`ls`
+
+### **Mudar de Diretório**
+
+`cd nome_do_diretorio`
+
+### **Diretório Atual**
+
+`pwd`
+
+### **Criar Diretório**
+
+`mkdir nome_do_novo_diretorio`
+
+## **Manipulação de Arquivos**
+
+### **Copiar Arquivo**
+
+`cp arquivo_origem destino`
+
+### **Mover/Renomear Arquivo**
+
+`mv arquivo_origem novo_nome_ou_destino`
+
+### **Remover Arquivo**
+
+`rm nome_do_arquivo`
+
+## **Visualização de Conteúdo**
+
+### **Visualizar Conteúdo do Arquivo**
+
+`cat nome_do_arquivo`
+
+### **Visualizar Conteúdo do Arquivo (página por página)**
+
+`less nome_do_arquivo`
+
+## **Pacotes e Atualizações**
+
+### **Atualizar Lista de Pacotes**
+
+`sudo apt update`
+
+### **Atualizar Pacotes Instalados**
+
+`sudo apt upgrade`
+
+### **Instalar Novo Pacote**
+
+`sudo apt install nome_do_pacote`
+
+## **Gerenciamento de Usuários**
+
+### **Adicionar Usuário ao Grupo**
+
+`sudo usermod -aG nome_do_grupo nome_do_usuario`
+
+### **Mudar Senha do Usuário**
+
+`passwd nome_do_usuario`
+
+## **Processos**
+
+### **Listar Processos**
+
+`ps aux`
+
+### **Matar um Processo por ID**
+
+`kill -9 processo_id`
+
+## **Rede**
+
+### **Verificar Configurações de Rede**
+
+`ifconfig`
+
+### **Testar Conexão com um Endereço IP**
+
+`ping endereco_ip`
+
+## **Outros Comandos Úteis**
+
+### **Ajuda sobre um Comando**
+
+`man nome_do_comando`
+
+### **Sair do Terminal**
+
+`exit`

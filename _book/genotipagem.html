@@ -195,6 +195,41 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="atividades" class="level2">
 <h2 class="anchored" data-anchor-id="atividades">Atividades</h2>
+<ol type="1">
+<li><p><strong>Preparação do Ambiente:</strong></p>
+<ul>
+<li><p>Certifique-se de que o FreeBayes está instalado no seu ambiente. Você pode instalar o FreeBayes usando gerenciadores de pacotes, como o <strong><code>conda</code></strong> ou o <strong><code>pip</code></strong>, ou compilando-o a partir do código-fonte.</p></li>
+<li><p><code>conda install -c bioconda freebayes</code></p></li>
+</ul></li>
+<li><p><strong>Indexação do Genoma de Referência (se ainda não estiver indexado):</strong></p>
+<ul>
+<li><p>Assim como na etapa de alinhamento, o genoma de referência deve ser indexado.</p></li>
+<li><p><code>samtools faidx reference_genome.fa</code></p></li>
+</ul></li>
+<li><p><strong>Chamada de Variantes com FreeBayes:</strong></p>
+<ul>
+<li><p>Execute o FreeBayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.</p></li>
+<li><p><code>freebayes -f reference_genome.fa alinhamento_sorted.bam &gt; variantes.vcf</code></p></li>
+</ul></li>
+<li><p><strong>Filtragem de Variantes (opcional):</strong></p>
+<ul>
+<li><p>Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo FreeBayes para reduzir o número de falsos positivos.</p></li>
+<li><p><code>bcftools view --exclude 'QUAL&gt;5' variantes.vcf &gt; variantes_filtradas.vcf</code></p></li>
+</ul>
+<p>Adapte os critérios de filtragem conforme necessário.</p></li>
+<li><p><strong>Análise e Interpretação de Variantes:</strong></p>
+<ul>
+<li>Utilize ferramentas como <code>VCFtools</code>, <code>bcftools</code> ou GATK para realizar análises adicionais no arquivo VCF, como filtragem específica, anotações e interpretação biológica.</li>
+</ul></li>
+<li><p><strong>Visualização de Variantes:</strong></p>
+<ul>
+<li>Use o <code>IGV</code> para visualizar as variantes em relação ao genoma de referência e avaliar sua qualidade.</li>
+</ul></li>
+<li><p><strong>Anotação de Variantes:</strong></p>
+<ul>
+<li>Anote as variantes chamadas usando ferramentas como ANNOVAR, Variant Effect Predictor (VEP) ou AnnovarR.</li>
+</ul></li>
+</ol>
 
 
 </section>

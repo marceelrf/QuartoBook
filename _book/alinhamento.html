@@ -223,7 +223,7 @@ Arquivos .fastq
 <li><p><strong>Alinhamento de Sequências:</strong></p>
 <ul>
 <li><p>Use o <strong><code>bwa mem</code></strong> para alinhar suas sequências de DNA ao genoma de referência.</p></li>
-<li><p><code>bwa mem reference_genome.fa read1.fq read2.fq &gt; alinhamento.sam</code></p></li>
+<li><p><code>bwa mem -R "@RG\tID:{SAMPLE}\tSM:``{SAMPLE}``" reference_genome.fa``{SAMPLE}_r1``.fq``{SAMPLE}_``r2.fq &gt; alinhamento.sam</code></p></li>
 </ul>
 <p>Substitua <strong><code>reference_genome.fa</code></strong>, <strong><code>read1.fq</code></strong> e <strong><code>read2.fq</code></strong> pelos nomes dos arquivos correspondentes.</p></li>
 <li><p><strong>Converter Formato SAM para BAM:</strong></p>

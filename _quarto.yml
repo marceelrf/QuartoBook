@@ -21,6 +21,7 @@ book:
     - ONT.qmd
     - Dia5.qmd
     - references.qmd
+    - commWSL.qmd
 
 bibliography: references.bib
 

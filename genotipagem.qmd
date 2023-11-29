@@ -3,3 +3,41 @@
 ## Arquivos
 
 ## Atividades
+
+1.  **Preparação do Ambiente:**
+
+    -   Certifique-se de que o FreeBayes está instalado no seu ambiente. Você pode instalar o FreeBayes usando gerenciadores de pacotes, como o **`conda`** ou o **`pip`**, ou compilando-o a partir do código-fonte.
+
+    -   `conda install -c bioconda freebayes`
+
+2.  **Indexação do Genoma de Referência (se ainda não estiver indexado):**
+
+    -   Assim como na etapa de alinhamento, o genoma de referência deve ser indexado.
+
+    -   `samtools faidx reference_genome.fa`
+
+3.  **Chamada de Variantes com FreeBayes:**
+
+    -   Execute o FreeBayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.
+
+    -   `freebayes -f reference_genome.fa alinhamento_sorted.bam > variantes.vcf`
+
+4.  **Filtragem de Variantes (opcional):**
+
+    -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo FreeBayes para reduzir o número de falsos positivos.
+
+    -   `bcftools view --exclude 'QUAL>5' variantes.vcf > variantes_filtradas.vcf`
+
+    Adapte os critérios de filtragem conforme necessário.
+
+5.  **Análise e Interpretação de Variantes:**
+
+    -   Utilize ferramentas como `VCFtools`, `bcftools` ou GATK para realizar análises adicionais no arquivo VCF, como filtragem específica, anotações e interpretação biológica.
+
+6.  **Visualização de Variantes:**
+
+    -   Use o `IGV` para visualizar as variantes em relação ao genoma de referência e avaliar sua qualidade.
+
+7.  **Anotação de Variantes:**
+
+    -   Anote as variantes chamadas usando ferramentas como ANNOVAR, Variant Effect Predictor (VEP) ou AnnovarR.
