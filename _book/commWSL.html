@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial Bioinformatica - Dia 2 - Alinhamento de sequências de DNA</title>
+<title>Tutorial Bioinformatica - ANEXO: Comandos Básicos do Ubuntu via WSL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./genotipagem.html" rel="next">
-<link href="./sequenciamento.html" rel="prev">
+<link href="./references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./alinhamento.html">Dia 2 - Alinhamento de sequências de DNA</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./commWSL.html">ANEXO: Comandos Básicos do Ubuntu via WSL</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -127,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./alinhamento.html" class="sidebar-item-text sidebar-link active">
+  <a href="./alinhamento.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dia 2 - Alinhamento de sequências de DNA</span></a>
   </div>
 </li>
@@ -157,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./commWSL.html" class="sidebar-item-text sidebar-link">
+  <a href="./commWSL.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ANEXO: Comandos Básicos do Ubuntu via WSL</span></a>
   </div>
 </li>
@@ -171,8 +170,53 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Nesta seção</h2>
    
   <ul>
-  <li><a href="#arquivos" id="toc-arquivos" class="nav-link active" data-scroll-target="#arquivos">Arquivos</a></li>
-  <li><a href="#atividades" id="toc-atividades" class="nav-link" data-scroll-target="#atividades">Atividades</a></li>
+  <li><a href="#navegação-e-diretórios" id="toc-navegação-e-diretórios" class="nav-link active" data-scroll-target="#navegação-e-diretórios">Navegação e Diretórios</a>
+  <ul class="collapse">
+  <li><a href="#listar-conteúdo-do-diretório" id="toc-listar-conteúdo-do-diretório" class="nav-link" data-scroll-target="#listar-conteúdo-do-diretório">Listar Conteúdo do Diretório</a></li>
+  <li><a href="#mudar-de-diretório" id="toc-mudar-de-diretório" class="nav-link" data-scroll-target="#mudar-de-diretório"><strong>Mudar de Diretório</strong></a></li>
+  <li><a href="#diretório-atual" id="toc-diretório-atual" class="nav-link" data-scroll-target="#diretório-atual"><strong>Diretório Atual</strong></a></li>
+  <li><a href="#criar-diretório" id="toc-criar-diretório" class="nav-link" data-scroll-target="#criar-diretório"><strong>Criar Diretório</strong></a></li>
+  </ul></li>
+  <li><a href="#manipulação-de-arquivos" id="toc-manipulação-de-arquivos" class="nav-link" data-scroll-target="#manipulação-de-arquivos"><strong>Manipulação de Arquivos</strong></a>
+  <ul class="collapse">
+  <li><a href="#copiar-arquivo" id="toc-copiar-arquivo" class="nav-link" data-scroll-target="#copiar-arquivo"><strong>Copiar Arquivo</strong></a></li>
+  <li><a href="#moverrenomear-arquivo" id="toc-moverrenomear-arquivo" class="nav-link" data-scroll-target="#moverrenomear-arquivo"><strong>Mover/Renomear Arquivo</strong></a></li>
+  <li><a href="#remover-arquivo" id="toc-remover-arquivo" class="nav-link" data-scroll-target="#remover-arquivo"><strong>Remover Arquivo</strong></a></li>
+  </ul></li>
+  <li><a href="#visualização-de-conteúdo" id="toc-visualização-de-conteúdo" class="nav-link" data-scroll-target="#visualização-de-conteúdo"><strong>Visualização de Conteúdo</strong></a>
+  <ul class="collapse">
+  <li><a href="#visualizar-conteúdo-do-arquivo" id="toc-visualizar-conteúdo-do-arquivo" class="nav-link" data-scroll-target="#visualizar-conteúdo-do-arquivo"><strong>Visualizar Conteúdo do Arquivo</strong></a></li>
+  <li><a href="#visualizar-conteúdo-do-arquivo-página-por-página" id="toc-visualizar-conteúdo-do-arquivo-página-por-página" class="nav-link" data-scroll-target="#visualizar-conteúdo-do-arquivo-página-por-página"><strong>Visualizar Conteúdo do Arquivo (página por página)</strong></a></li>
+  </ul></li>
+  <li><a href="#pacotes-e-atualizações" id="toc-pacotes-e-atualizações" class="nav-link" data-scroll-target="#pacotes-e-atualizações"><strong>Pacotes e Atualizações</strong></a>
+  <ul class="collapse">
+  <li><a href="#atualizar-lista-de-pacotes" id="toc-atualizar-lista-de-pacotes" class="nav-link" data-scroll-target="#atualizar-lista-de-pacotes"><strong>Atualizar Lista de Pacotes</strong></a></li>
+  <li><a href="#atualizar-pacotes-instalados" id="toc-atualizar-pacotes-instalados" class="nav-link" data-scroll-target="#atualizar-pacotes-instalados"><strong>Atualizar Pacotes Instalados</strong></a></li>
+  <li><a href="#instalar-novo-pacote" id="toc-instalar-novo-pacote" class="nav-link" data-scroll-target="#instalar-novo-pacote"><strong>Instalar Novo Pacote</strong></a></li>
+  </ul></li>
+  <li><a href="#gerenciamento-de-usuários" id="toc-gerenciamento-de-usuários" class="nav-link" data-scroll-target="#gerenciamento-de-usuários"><strong>Gerenciamento de Usuários</strong></a>
+  <ul class="collapse">
+  <li><a href="#adicionar-usuário-ao-grupo" id="toc-adicionar-usuário-ao-grupo" class="nav-link" data-scroll-target="#adicionar-usuário-ao-grupo"><strong>Adicionar Usuário ao Grupo</strong></a></li>
+  <li><a href="#mudar-senha-do-usuário" id="toc-mudar-senha-do-usuário" class="nav-link" data-scroll-target="#mudar-senha-do-usuário"><strong>Mudar Senha do Usuário</strong></a></li>
+  </ul></li>
+  <li><a href="#processos" id="toc-processos" class="nav-link" data-scroll-target="#processos"><strong>Processos</strong></a>
+  <ul class="collapse">
+  <li><a href="#listar-processos" id="toc-listar-processos" class="nav-link" data-scroll-target="#listar-processos"><strong>Listar Processos</strong></a></li>
+  <li><a href="#matar-um-processo-por-id" id="toc-matar-um-processo-por-id" class="nav-link" data-scroll-target="#matar-um-processo-por-id"><strong>Matar um Processo por ID</strong></a></li>
+  <li><a href="#monitorar-recursos-do-sistema-htop" id="toc-monitorar-recursos-do-sistema-htop" class="nav-link" data-scroll-target="#monitorar-recursos-do-sistema-htop"><strong>Monitorar Recursos do Sistema (htop)</strong></a></li>
+  <li><a href="#medir-tempo-de-execução-de-um-comando-time" id="toc-medir-tempo-de-execução-de-um-comando-time" class="nav-link" data-scroll-target="#medir-tempo-de-execução-de-um-comando-time"><strong>Medir Tempo de Execução de um Comando (time)</strong></a></li>
+  </ul></li>
+  <li><a href="#rede" id="toc-rede" class="nav-link" data-scroll-target="#rede"><strong>Rede</strong></a>
+  <ul class="collapse">
+  <li><a href="#verificar-configurações-de-rede" id="toc-verificar-configurações-de-rede" class="nav-link" data-scroll-target="#verificar-configurações-de-rede"><strong>Verificar Configurações de Rede</strong></a></li>
+  <li><a href="#testar-conexão-com-um-endereço-ip" id="toc-testar-conexão-com-um-endereço-ip" class="nav-link" data-scroll-target="#testar-conexão-com-um-endereço-ip"><strong>Testar Conexão com um Endereço IP</strong></a></li>
+  </ul></li>
+  <li><a href="#entrada-e-saída-padrão-stdinstdout" id="toc-entrada-e-saída-padrão-stdinstdout" class="nav-link" data-scroll-target="#entrada-e-saída-padrão-stdinstdout"><strong>Entrada e Saída Padrão (stdin/stdout)</strong></a></li>
+  <li><a href="#outros-comandos-úteis" id="toc-outros-comandos-úteis" class="nav-link" data-scroll-target="#outros-comandos-úteis"><strong>Outros Comandos Úteis</strong></a>
+  <ul class="collapse">
+  <li><a href="#ajuda-sobre-um-comando" id="toc-ajuda-sobre-um-comando" class="nav-link" data-scroll-target="#ajuda-sobre-um-comando"><strong>Ajuda sobre um Comando</strong></a></li>
+  <li><a href="#sair-do-terminal" id="toc-sair-do-terminal" class="nav-link" data-scroll-target="#sair-do-terminal"><strong>Sair do Terminal</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dia 2 - Alinhamento de sequências de DNA</h1>
+<h1 class="title">ANEXO: Comandos Básicos do Ubuntu via WSL</h1>
 </div>
 
 
@@ -196,69 +240,130 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="arquivos" class="level2">
-<h2 class="anchored" data-anchor-id="arquivos">Arquivos</h2>
-<p>Os arquivos utilizados para estas analises serão os <code>.fastq</code> analisados no primeiro dia.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Arquivos .fastq
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Preste atenção para o caminho da pasta aonde estão os <code>.fastq</code>.</p>
-</div>
-</div>
+<section id="navegação-e-diretórios" class="level2">
+<h2 class="anchored" data-anchor-id="navegação-e-diretórios">Navegação e Diretórios</h2>
+<section id="listar-conteúdo-do-diretório" class="level3">
+<h3 class="anchored" data-anchor-id="listar-conteúdo-do-diretório">Listar Conteúdo do Diretório</h3>
+<p><code>ls</code></p>
 </section>
-<section id="atividades" class="level2">
-<h2 class="anchored" data-anchor-id="atividades">Atividades</h2>
-<!-- -   Realize o alinhamento das amostras utilizando `BWA` e o genoma de referência `hg38.fa`; -->
-<!-- -   Converta os arquivos `.sam` para o formato `.bam`; -->
-<!-- -   Crie o indice dos arquivos `.bam`; -->
-<!-- -   Alinhe novamente, desta vez utilizando `minimap2` e repita as demais etapas; -->
-<!-- -   Utilize o `IGV` para visualizar os alinhamentos; -->
-<ol type="1">
-<li><p><strong>Indexação do Genoma de Referência:</strong></p>
+<section id="mudar-de-diretório" class="level3">
+<h3 class="anchored" data-anchor-id="mudar-de-diretório"><strong>Mudar de Diretório</strong></h3>
+<p><code>cd nome_do_diretorio</code></p>
+</section>
+<section id="diretório-atual" class="level3">
+<h3 class="anchored" data-anchor-id="diretório-atual"><strong>Diretório Atual</strong></h3>
+<p><code>pwd</code></p>
+</section>
+<section id="criar-diretório" class="level3">
+<h3 class="anchored" data-anchor-id="criar-diretório"><strong>Criar Diretório</strong></h3>
+<p><code>mkdir nome_do_novo_diretorio</code></p>
+</section>
+</section>
+<section id="manipulação-de-arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="manipulação-de-arquivos"><strong>Manipulação de Arquivos</strong></h2>
+<section id="copiar-arquivo" class="level3">
+<h3 class="anchored" data-anchor-id="copiar-arquivo"><strong>Copiar Arquivo</strong></h3>
+<p><code>cp arquivo_origem destino</code></p>
+</section>
+<section id="moverrenomear-arquivo" class="level3">
+<h3 class="anchored" data-anchor-id="moverrenomear-arquivo"><strong>Mover/Renomear Arquivo</strong></h3>
+<p><code>mv arquivo_origem novo_nome_ou_destino</code></p>
+</section>
+<section id="remover-arquivo" class="level3">
+<h3 class="anchored" data-anchor-id="remover-arquivo"><strong>Remover Arquivo</strong></h3>
+<p><code>rm nome_do_arquivo</code></p>
+</section>
+</section>
+<section id="visualização-de-conteúdo" class="level2">
+<h2 class="anchored" data-anchor-id="visualização-de-conteúdo"><strong>Visualização de Conteúdo</strong></h2>
+<section id="visualizar-conteúdo-do-arquivo" class="level3">
+<h3 class="anchored" data-anchor-id="visualizar-conteúdo-do-arquivo"><strong>Visualizar Conteúdo do Arquivo</strong></h3>
+<p><code>cat nome_do_arquivo</code></p>
+</section>
+<section id="visualizar-conteúdo-do-arquivo-página-por-página" class="level3">
+<h3 class="anchored" data-anchor-id="visualizar-conteúdo-do-arquivo-página-por-página"><strong>Visualizar Conteúdo do Arquivo (página por página)</strong></h3>
+<p><code>less nome_do_arquivo</code></p>
+</section>
+</section>
+<section id="pacotes-e-atualizações" class="level2">
+<h2 class="anchored" data-anchor-id="pacotes-e-atualizações"><strong>Pacotes e Atualizações</strong></h2>
+<section id="atualizar-lista-de-pacotes" class="level3">
+<h3 class="anchored" data-anchor-id="atualizar-lista-de-pacotes"><strong>Atualizar Lista de Pacotes</strong></h3>
+<p><code>sudo apt update</code></p>
+</section>
+<section id="atualizar-pacotes-instalados" class="level3">
+<h3 class="anchored" data-anchor-id="atualizar-pacotes-instalados"><strong>Atualizar Pacotes Instalados</strong></h3>
+<p><code>sudo apt upgrade</code></p>
+</section>
+<section id="instalar-novo-pacote" class="level3">
+<h3 class="anchored" data-anchor-id="instalar-novo-pacote"><strong>Instalar Novo Pacote</strong></h3>
+<p><code>sudo apt install nome_do_pacote</code></p>
+</section>
+</section>
+<section id="gerenciamento-de-usuários" class="level2">
+<h2 class="anchored" data-anchor-id="gerenciamento-de-usuários"><strong>Gerenciamento de Usuários</strong></h2>
+<section id="adicionar-usuário-ao-grupo" class="level3">
+<h3 class="anchored" data-anchor-id="adicionar-usuário-ao-grupo"><strong>Adicionar Usuário ao Grupo</strong></h3>
+<p><code>sudo usermod -aG nome_do_grupo nome_do_usuario</code></p>
+</section>
+<section id="mudar-senha-do-usuário" class="level3">
+<h3 class="anchored" data-anchor-id="mudar-senha-do-usuário"><strong>Mudar Senha do Usuário</strong></h3>
+<p><code>passwd nome_do_usuario</code></p>
+</section>
+</section>
+<section id="processos" class="level2">
+<h2 class="anchored" data-anchor-id="processos"><strong>Processos</strong></h2>
+<section id="listar-processos" class="level3">
+<h3 class="anchored" data-anchor-id="listar-processos"><strong>Listar Processos</strong></h3>
+<p><code>ps aux</code></p>
+</section>
+<section id="matar-um-processo-por-id" class="level3">
+<h3 class="anchored" data-anchor-id="matar-um-processo-por-id"><strong>Matar um Processo por ID</strong></h3>
+<p><code>kill -9 processo_id</code></p>
+</section>
+<section id="monitorar-recursos-do-sistema-htop" class="level3">
+<h3 class="anchored" data-anchor-id="monitorar-recursos-do-sistema-htop"><strong>Monitorar Recursos do Sistema (htop)</strong></h3>
+<p><code>htop</code></p>
+</section>
+<section id="medir-tempo-de-execução-de-um-comando-time" class="level3">
+<h3 class="anchored" data-anchor-id="medir-tempo-de-execução-de-um-comando-time"><strong>Medir Tempo de Execução de um Comando (time)</strong></h3>
+<p><code>time comando_a_ser_medido</code></p>
+</section>
+</section>
+<section id="rede" class="level2">
+<h2 class="anchored" data-anchor-id="rede"><strong>Rede</strong></h2>
+<section id="verificar-configurações-de-rede" class="level3">
+<h3 class="anchored" data-anchor-id="verificar-configurações-de-rede"><strong>Verificar Configurações de Rede</strong></h3>
+<p><code>ifconfig</code></p>
+</section>
+<section id="testar-conexão-com-um-endereço-ip" class="level3">
+<h3 class="anchored" data-anchor-id="testar-conexão-com-um-endereço-ip"><strong>Testar Conexão com um Endereço IP</strong></h3>
+<p><code>ping endereco_ip</code></p>
+</section>
+</section>
+<section id="entrada-e-saída-padrão-stdinstdout" class="level2">
+<h2 class="anchored" data-anchor-id="entrada-e-saída-padrão-stdinstdout"><strong>Entrada e Saída Padrão (stdin/stdout)</strong></h2>
 <ul>
-<li><p>Antes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando <strong><code>bwa index</code></strong>. Isso cria arquivos que aceleram o processo de alinhamento.</p>
-<p><code>bwa index reference_genome.fa</code></p></li>
-</ul></li>
-<li><p><strong>Alinhamento de Sequências:</strong></p>
-<ul>
-<li><p>Use o <strong><code>bwa mem</code></strong> para alinhar suas sequências de DNA ao genoma de referência.</p></li>
-<li><p><code>bwa mem -R "@RG\tID:{SAMPLE}\tSM:``{SAMPLE}``" reference_genome.fa``{SAMPLE}_r1``.fq``{SAMPLE}_``r2.fq &gt; alinhamento.sam</code></p></li>
+<li><p><strong>stdin (Standard Input):</strong> É a entrada padrão de dados. Um programa pode ler dados a partir do stdin. Exemplo:</p></li>
+<li><p><code>cat &lt; nome_do_arquivo</code></p></li>
+<li><p><strong>stdout (Standard Output):</strong> É a saída padrão de dados. Um programa geralmente imprime resultados no stdout. Exemplo:</p></li>
+<li><p><code>ls &gt; lista_de_arquivos.txt</code></p></li>
+<li><p><strong>stderr (Standard Error):</strong> É a saída padrão para mensagens de erro. Exemplo:</p></li>
+<li><p><code>comando_inexistente 2&gt; erro.log</code></p></li>
 </ul>
-<p>Substitua <strong><code>reference_genome.fa</code></strong>, <strong><code>read1.fq</code></strong> e <strong><code>read2.fq</code></strong> pelos nomes dos arquivos correspondentes.</p></li>
-<li><p><strong>Converter Formato SAM para BAM:</strong></p>
-<ul>
-<li><p>O arquivo de saída do <strong><code>bwa mem</code></strong> é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.</p></li>
-<li><p><code>samtools sort alinhamento.sam &gt; alinhamento_sorted.bam</code></p></li>
-</ul></li>
-<li><p><strong>Ordenar e Indexar o Arquivo BAM:</strong></p>
-<ul>
-<li><p>Ordene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.</p></li>
-<li><p><code>samtools index alinhamento_sorted.bam</code></p></li>
-</ul></li>
-<li><p><strong>Remoção de Duplicatas (opcional):</strong></p>
-<ul>
-<li><p>Dependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes.</p></li>
-<li><p><code>samtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam</code></p></li>
-</ul></li>
-<li><p><strong>Visualização do Alinhamento:</strong></p>
-<ul>
-<li>Use o IGV (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.</li>
-</ul></li>
-<li><p><strong>Avaliação de Cobertura:</strong></p>
-<ul>
-<li><p>Utilize ferramentas como <strong><code>samtools depth</code></strong> para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.</p></li>
-<li><p><code>samtools depth alinhamento_sorted.bam &gt; cobertura.txt</code></p></li>
-</ul></li>
-</ol>
+</section>
+<section id="outros-comandos-úteis" class="level2">
+<h2 class="anchored" data-anchor-id="outros-comandos-úteis"><strong>Outros Comandos Úteis</strong></h2>
+<section id="ajuda-sobre-um-comando" class="level3">
+<h3 class="anchored" data-anchor-id="ajuda-sobre-um-comando"><strong>Ajuda sobre um Comando</strong></h3>
+<p><code>man nome_do_comando</code></p>
+</section>
+<section id="sair-do-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="sair-do-terminal"><strong>Sair do Terminal</strong></h3>
+<p><code>exit</code></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -497,14 +602,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./sequenciamento.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Dia 1 - Sequenciamento de DNA</span>
+      <a href="./references.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Referências</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./genotipagem.html" class="pagination-link">
-        <span class="nav-page-text">Dia 3 - Genotipagem</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

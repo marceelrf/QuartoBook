@@ -138,5 +138,68 @@
     "title": "Referências",
     "section": "",
     "text": "Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014.\n“Trimmomatic: A Flexible Trimmer for Illumina Sequence\nData.” Bioinformatics 30 (15): 2114–20. https://doi.org/10.1093/bioinformatics/btu170.\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric\nBanks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The\nVariant Call Format and VCFtools.” Bioinformatics 27\n(15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu\nOhan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve\nYears of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2:\nPopulation-Scale Evaluation of Long-Read Sequencing Data.” Edited\nby Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant\nDetection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and\nAssembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide\nSequences.” Edited by Inanc Birol. Bioinformatics 34\n(18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment\nAccuracy.” Edited by Can Alkan. Bioinformatics 37 (23):\n4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia\nPisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall.\n2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell\nGuttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011.\n“Integrative Genomics Viewer.” Nature\nBiotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
+  },
+  {
+    "objectID": "commWSL.html#navegação-e-diretórios",
+    "href": "commWSL.html#navegação-e-diretórios",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Navegação e Diretórios",
+    "text": "Navegação e Diretórios\n\nListar Conteúdo do Diretório\nls\n\n\nMudar de Diretório\ncd nome_do_diretorio\n\n\nDiretório Atual\npwd\n\n\nCriar Diretório\nmkdir nome_do_novo_diretorio"
+  },
+  {
+    "objectID": "commWSL.html#manipulação-de-arquivos",
+    "href": "commWSL.html#manipulação-de-arquivos",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Manipulação de Arquivos",
+    "text": "Manipulação de Arquivos\n\nCopiar Arquivo\ncp arquivo_origem destino\n\n\nMover/Renomear Arquivo\nmv arquivo_origem novo_nome_ou_destino\n\n\nRemover Arquivo\nrm nome_do_arquivo"
+  },
+  {
+    "objectID": "commWSL.html#visualização-de-conteúdo",
+    "href": "commWSL.html#visualização-de-conteúdo",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Visualização de Conteúdo",
+    "text": "Visualização de Conteúdo\n\nVisualizar Conteúdo do Arquivo\ncat nome_do_arquivo\n\n\nVisualizar Conteúdo do Arquivo (página por página)\nless nome_do_arquivo"
+  },
+  {
+    "objectID": "commWSL.html#pacotes-e-atualizações",
+    "href": "commWSL.html#pacotes-e-atualizações",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Pacotes e Atualizações",
+    "text": "Pacotes e Atualizações\n\nAtualizar Lista de Pacotes\nsudo apt update\n\n\nAtualizar Pacotes Instalados\nsudo apt upgrade\n\n\nInstalar Novo Pacote\nsudo apt install nome_do_pacote"
+  },
+  {
+    "objectID": "commWSL.html#gerenciamento-de-usuários",
+    "href": "commWSL.html#gerenciamento-de-usuários",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Gerenciamento de Usuários",
+    "text": "Gerenciamento de Usuários\n\nAdicionar Usuário ao Grupo\nsudo usermod -aG nome_do_grupo nome_do_usuario\n\n\nMudar Senha do Usuário\npasswd nome_do_usuario"
+  },
+  {
+    "objectID": "commWSL.html#processos",
+    "href": "commWSL.html#processos",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Processos",
+    "text": "Processos\n\nListar Processos\nps aux\n\n\nMatar um Processo por ID\nkill -9 processo_id\n\n\nMonitorar Recursos do Sistema (htop)\nhtop\n\n\nMedir Tempo de Execução de um Comando (time)\ntime comando_a_ser_medido"
+  },
+  {
+    "objectID": "commWSL.html#rede",
+    "href": "commWSL.html#rede",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Rede",
+    "text": "Rede\n\nVerificar Configurações de Rede\nifconfig\n\n\nTestar Conexão com um Endereço IP\nping endereco_ip"
+  },
+  {
+    "objectID": "commWSL.html#entrada-e-saída-padrão-stdinstdout",
+    "href": "commWSL.html#entrada-e-saída-padrão-stdinstdout",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Entrada e Saída Padrão (stdin/stdout)",
+    "text": "Entrada e Saída Padrão (stdin/stdout)\n\nstdin (Standard Input): É a entrada padrão de dados. Um programa pode ler dados a partir do stdin. Exemplo:\ncat &lt; nome_do_arquivo\nstdout (Standard Output): É a saída padrão de dados. Um programa geralmente imprime resultados no stdout. Exemplo:\nls &gt; lista_de_arquivos.txt\nstderr (Standard Error): É a saída padrão para mensagens de erro. Exemplo:\ncomando_inexistente 2&gt; erro.log"
+  },
+  {
+    "objectID": "commWSL.html#outros-comandos-úteis",
+    "href": "commWSL.html#outros-comandos-úteis",
+    "title": "ANEXO: Comandos Básicos do Ubuntu via WSL",
+    "section": "Outros Comandos Úteis",
+    "text": "Outros Comandos Úteis\n\nAjuda sobre um Comando\nman nome_do_comando\n\n\nSair do Terminal\nexit"
   }
 ]

@@ -1,4 +1,4 @@
-# ANEXO: Comandos Básicos do Ubuntu via WSL
+# ANEXO: Comandos Básicos do Ubuntu via WSL {.unnumbered}
 
 ## Navegação e Diretórios
 
@@ -76,6 +76,14 @@
 
 `kill -9 processo_id`
 
+### **Monitorar Recursos do Sistema (htop)**
+
+`htop`
+
+### **Medir Tempo de Execução de um Comando (time)**
+
+`time comando_a_ser_medido`
+
 ## **Rede**
 
 ### **Verificar Configurações de Rede**
@@ -85,6 +93,20 @@
 ### **Testar Conexão com um Endereço IP**
 
 `ping endereco_ip`
+
+## **Entrada e Saída Padrão (stdin/stdout)**
+
+-   **stdin (Standard Input):** É a entrada padrão de dados. Um programa pode ler dados a partir do stdin. Exemplo:
+
+-   `cat < nome_do_arquivo`
+
+-   **stdout (Standard Output):** É a saída padrão de dados. Um programa geralmente imprime resultados no stdout. Exemplo:
+
+-   `ls > lista_de_arquivos.txt`
+
+-   **stderr (Standard Error):** É a saída padrão para mensagens de erro. Exemplo:
+
+-   `comando_inexistente 2> erro.log`
 
 ## **Outros Comandos Úteis**
 
