@@ -32,7 +32,7 @@ Este tutorial foi inspirado...
 O tempo de execução da chama de base (para este conjunto de dados) é superior a **12 horas** em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta ...
 :::
 
--   Avalie a qualidade do arquivo resultado `.fastq` utilizando `FASTQC` e `nanoQC`;
+-   Avalie a qualidade do arquivo resultado `.fastq` utilizando `FASTQC` e `NanoPlot`;
 
 -   Filtre a read baseado no tamanho e na qualidade utilizando `chopper`;
 

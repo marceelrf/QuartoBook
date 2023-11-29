@@ -1,46 +1,17 @@
 # Introdução {#sec-introduction .unnumbered}
 
-Bem-vindos ao Workshop de Bioinformática Aplicada à Genética Forense: Análise de Dados de Sequenciamento de Segunda e Terceira Geração. Este curso abrangente foi projetado para fornecer a vocês, participantes entusiasmados, uma imersão prática nas técnicas avançadas de análise de dados genômicos, com foco especial na aplicação forense.
+Bem-vindos ao Workshop de Bioinformática Aplicada à Genética Forense: Análise de Dados de Sequenciamento de Segunda e Terceira Geração. Este curso abrangente foi projetado para fornecer a vocês uma imersão prática nas técnicas de análise de dados genômicos, com foco especial na aplicação forense.
 
-A genética forense tornou-se uma ferramenta essencial na resolução de casos criminais, identificação de indivíduos e estabelecimento de relações familiares. Neste workshop de cinco dias, exploraremos os fundamentos e as aplicações práticas do sequenciamento de DNA, abordando desde os conceitos básicos até as técnicas avançadas de genotipagem de STRs (Short Tandem Repeats) a partir de dados de Next-Generation Sequencing (NGS).
+A genética forense tornou-se uma ferramenta essencial na resolução de casos criminais, identificação de indivíduos e estabelecimento de relações familiares. Neste workshop de cinco dias, exploraremos os fundamentos e as aplicações práticas do sequenciamento de DNA, abordando desde os conceitos básicos até as técnicas avançadas de genotipagem de STRs (*Short Tandem Repeats*) a partir de dados de *Next-Generation Sequencing* (NGS).
 
 **Dia 1 - Sequenciamento de DNA:** Iniciaremos nossa jornada explorando os princípios fundamentais do sequenciamento de DNA de segunda e terceira geração. Compreenderemos as tecnologias por trás desses métodos e sua importância na geração de dados genômicos de alta qualidade.
 
 **Dia 2 - Alinhamento de Sequências de DNA:** No segundo dia, mergulharemos na etapa crucial de alinhamento de sequências de DNA. A precisão dessa fase é vital para extrair informações significativas dos dados brutos e identificar variações genéticas relevantes.
 
-**Dia 3 - Identificação de Variantes:** Aprofundando-nos ainda mais, dedicaremos o terceiro dia à identificação de variantes genéticas. Exploraremos ferramentas e estratégias para detectar mutações, SNPs (Single Nucleotide Polymorphisms) e outras alterações que desempenham um papel crucial na individualidade genômica.
+**Dia 3 - Identificação de Variantes:** Aprofundando-nos ainda mais, dedicaremos o terceiro dia à identificação de variantes genéticas. Exploraremos ferramentas e estratégias para detectar mutações, SNPs (*Single Nucleotide Polymorphisms*) e outras alterações que desempenham um papel crucial na individualidade genômica.
 
 **Dia 4 - Análise de Sequenciamento Oxford Nanopore:** No quarto dia, abordaremos uma tecnologia revolucionária: o sequenciamento Oxford Nanopore. Compreenderemos suas vantagens, desafios e exploraremos casos de uso específicos na genética forense.
 
 **Dia 5 - Genotipagem de STRs a partir de dados de NGS:** Encerraremos o workshop com uma exploração prática da genotipagem de STRs, uma ferramenta valiosa para estabelecer perfis genéticos únicos. Aprenderemos a interpretar e analisar esses dados, fornecendo insights fundamentais para investigações forenses.
 
 Ao longo desta semana, vocês serão desafiados a aplicar os conhecimentos adquiridos em exercícios práticos e estudos de caso, preparando-os para enfrentar os desafios reais da genética forense na era da bioinformática avançada. Esteja preparado para uma jornada intensiva de aprendizado e descoberta!
-
-## Primeiros passos
-
--   Instale os Softwares necessários (@sec-softwares-necessários);
-
-::: {.callout-warning title="Usuários windows"}
-Usuários windows precisam instalar o Subsistema Windows para Linux (`WSL`).\
-Os softwares `FASTQC` e `IGV` precisam ser instalados no windows e **não no `WSL`**.
-:::
-
--   Baixe os dados que serão utilizados neste workshop (@sec-dados-utilizados);
-
-::: {.callout-important title="Utilize o email correto"}
-Para ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro entre em contato com a organização.
-:::
-
-::: callout-tip
-## Dicas
-
-Utilize o comando `htop` para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial.
-
-Utilize os argumento `-h` ou `--help` para visualizar ajuda sobre o uso dos softwares via terminal.
-
-`SOFTWARE -h`
-
-Adicionar o comando `time` antes de rodar os códigos para saber o tempo que demorou irá te ajudar a se programar para atividades futuras.
-
-`time [COMANDOS...]`
-:::

@@ -115,6 +115,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./primeiropassos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Primeiros passos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./sequenciamento.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dia 1 - Sequenciamento de DNA</span></a>
   </div>
@@ -203,13 +209,48 @@ Arquivos .fastq
 </section>
 <section id="atividades" class="level2">
 <h2 class="anchored" data-anchor-id="atividades">Atividades</h2>
+<!-- -   Realize o alinhamento das amostras utilizando `BWA` e o genoma de referência `hg38.fa`; -->
+<!-- -   Converta os arquivos `.sam` para o formato `.bam`; -->
+<!-- -   Crie o indice dos arquivos `.bam`; -->
+<!-- -   Alinhe novamente, desta vez utilizando `minimap2` e repita as demais etapas; -->
+<!-- -   Utilize o `IGV` para visualizar os alinhamentos; -->
+<ol type="1">
+<li><p><strong>Indexação do Genoma de Referência:</strong></p>
 <ul>
-<li><p>Realize o alinhamento das amostras utilizando <code>BWA</code> e o genoma de referência <code>hg38.fa</code>;</p></li>
-<li><p>Converta os arquivos <code>.sam</code> para o formato <code>.bam</code>;</p></li>
-<li><p>Crie o indice dos arquivos <code>.bam</code>;</p></li>
-<li><p>Alinhe novamente, desta vez utilizando <code>minimap2</code> e repita as demais etapas;</p></li>
-<li><p>Utilize o <code>IGV</code> para visualizar os alinhamentos;</p></li>
+<li><p>Antes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando <strong><code>bwa index</code></strong>. Isso cria arquivos que aceleram o processo de alinhamento.</p>
+<p><code>bwa index reference_genome.fa</code></p></li>
+</ul></li>
+<li><p><strong>Alinhamento de Sequências:</strong></p>
+<ul>
+<li><p>Use o <strong><code>bwa mem</code></strong> para alinhar suas sequências de DNA ao genoma de referência.</p></li>
+<li><p><code>bwa mem reference_genome.fa read1.fq read2.fq &gt; alinhamento.sam</code></p></li>
 </ul>
+<p>Substitua <strong><code>reference_genome.fa</code></strong>, <strong><code>read1.fq</code></strong> e <strong><code>read2.fq</code></strong> pelos nomes dos arquivos correspondentes.</p></li>
+<li><p><strong>Converter Formato SAM para BAM:</strong></p>
+<ul>
+<li><p>O arquivo de saída do <strong><code>bwa mem</code></strong> é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.</p></li>
+<li><p><code>samtools sort alinhamento.sam &gt; alinhamento_sorted.bam</code></p></li>
+</ul></li>
+<li><p><strong>Ordenar e Indexar o Arquivo BAM:</strong></p>
+<ul>
+<li><p>Ordene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.</p></li>
+<li><p><code>samtools index alinhamento_sorted.bam</code></p></li>
+</ul></li>
+<li><p><strong>Remoção de Duplicatas (opcional):</strong></p>
+<ul>
+<li><p>Dependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes.</p></li>
+<li><p><code>samtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam</code></p></li>
+</ul></li>
+<li><p><strong>Visualização do Alinhamento:</strong></p>
+<ul>
+<li>Use o IGV (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.</li>
+</ul></li>
+<li><p><strong>Avaliação de Cobertura:</strong></p>
+<ul>
+<li><p>Utilize ferramentas como <strong><code>samtools depth</code></strong> para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.</p></li>
+<li><p><code>samtools depth alinhamento_sorted.bam &gt; cobertura.txt</code></p></li>
+</ul></li>
+</ol>
 
 
 </section>

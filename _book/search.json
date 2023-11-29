@@ -7,39 +7,81 @@
     "text": "Sobre esse curso"
   },
   {
+    "objectID": "index.html#realização",
+    "href": "index.html#realização",
+    "title": "Tutorial Bioinformatica",
+    "section": "Realização",
+    "text": "Realização\n\n\n\nRealização UnB, UNESP e USP."
+  },
+  {
+    "objectID": "index.html#apoio",
+    "href": "index.html#apoio",
+    "title": "Tutorial Bioinformatica",
+    "section": "Apoio",
+    "text": "Apoio\n\n\n\nCAPES-PROCAD Edital n° 16/2020"
+  },
+  {
     "objectID": "index.html#autores",
     "href": "index.html#autores",
     "title": "Tutorial Bioinformatica",
     "section": "Autores",
-    "text": "Autores\nMarcel Rodrigues Ferreira ()\nDEMAIS"
+    "text": "Autores\nCelso Teixeira Mendes Junior\nErick da Cruz Castelli\nMarcel Rodrigues Ferreira\nTamara Soledad Frontanilla Recalde"
   },
   {
-    "objectID": "index.html#sec-softwares-necessários",
-    "href": "index.html#sec-softwares-necessários",
+    "objectID": "index.html#colaboradores",
+    "href": "index.html#colaboradores",
     "title": "Tutorial Bioinformatica",
-    "section": "Softwares necessários",
-    "text": "Softwares necessários\n\nWSL (Windows Subsystem for Linux)\nIGV (Robinson et al. 2011)\nfastqc\nbwa (Li 2013)\nminimap2 (Li 2018, 2021)\nsamtools (Danecek et al. 2021)\nfreebayes (Garrison and Marth 2012)\ngatk\nvcftools (Danecek et al. 2011)\nbcftools (Danecek et al. 2021)\nwhasthap (Martin et al. 2016)\nNanoPlot (De Coster and Rademakers 2023)\nchopper (De Coster and Rademakers 2023)\ncramino (De Coster and Rademakers 2023)\n\n\nOpcionais\n\nnotepad++\ngzip\nHTSlib"
+    "section": "Colaboradores",
+    "text": "Colaboradores"
   },
   {
-    "objectID": "index.html#sec-dados-utilizados",
-    "href": "index.html#sec-dados-utilizados",
-    "title": "Tutorial Bioinformatica",
-    "section": "Dados utilizados",
-    "text": "Dados utilizados\n\nfast5/\nfastq/\ngenome/\nbam/\nvcf/\n\n\n\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The Variant Call Format and VCFtools.” Bioinformatics 27 (15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve Years of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2: Population-Scale Evaluation of Long-Read Sequencing Data.” Edited by Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant Detection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and Assembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide Sequences.” Edited by Inanc Birol. Bioinformatics 34 (18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment Accuracy.” Edited by Can Alkan. Bioinformatics 37 (23): 4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia Pisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall. 2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011. “Integrative Genomics Viewer.” Nature Biotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
-  },
-  {
-    "objectID": "intro.html#primeiros-passos",
-    "href": "intro.html#primeiros-passos",
+    "objectID": "intro.html",
+    "href": "intro.html",
     "title": "Introdução",
-    "section": "Primeiros passos",
-    "text": "Primeiros passos\n\nInstale os Softwares necessários (Section 2);\n\n\n\n\n\n\n\nUsuários windows\n\n\n\nUsuários windows precisam instalar o Subsistema Windows para Linux (WSL).\nOs softwares FASTQC e IGV precisam ser instalados no windows e não no WSL.\n\n\n\nBaixe os dados que serão utilizados neste workshop (Section 3);\n\n\n\n\n\n\n\nUtilize o email correto\n\n\n\nPara ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro entre em contato com a organização.\n\n\n\n\n\n\n\n\nDicas\n\n\n\nUtilize o comando htop para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial.\nUtilize os argumento -h ou --help para visualizar ajuda sobre o uso dos softwares via terminal.\nSOFTWARE -h\nAdicionar o comando time antes de rodar os códigos para saber o tempo que demorou irá te ajudar a se programar para atividades futuras.\ntime [COMANDOS...]"
+    "section": "",
+    "text": "Bem-vindos ao Workshop de Bioinformática Aplicada à Genética Forense: Análise de Dados de Sequenciamento de Segunda e Terceira Geração. Este curso abrangente foi projetado para fornecer a vocês uma imersão prática nas técnicas de análise de dados genômicos, com foco especial na aplicação forense.\nA genética forense tornou-se uma ferramenta essencial na resolução de casos criminais, identificação de indivíduos e estabelecimento de relações familiares. Neste workshop de cinco dias, exploraremos os fundamentos e as aplicações práticas do sequenciamento de DNA, abordando desde os conceitos básicos até as técnicas avançadas de genotipagem de STRs (Short Tandem Repeats) a partir de dados de Next-Generation Sequencing (NGS).\nDia 1 - Sequenciamento de DNA: Iniciaremos nossa jornada explorando os princípios fundamentais do sequenciamento de DNA de segunda e terceira geração. Compreenderemos as tecnologias por trás desses métodos e sua importância na geração de dados genômicos de alta qualidade.\nDia 2 - Alinhamento de Sequências de DNA: No segundo dia, mergulharemos na etapa crucial de alinhamento de sequências de DNA. A precisão dessa fase é vital para extrair informações significativas dos dados brutos e identificar variações genéticas relevantes.\nDia 3 - Identificação de Variantes: Aprofundando-nos ainda mais, dedicaremos o terceiro dia à identificação de variantes genéticas. Exploraremos ferramentas e estratégias para detectar mutações, SNPs (Single Nucleotide Polymorphisms) e outras alterações que desempenham um papel crucial na individualidade genômica.\nDia 4 - Análise de Sequenciamento Oxford Nanopore: No quarto dia, abordaremos uma tecnologia revolucionária: o sequenciamento Oxford Nanopore. Compreenderemos suas vantagens, desafios e exploraremos casos de uso específicos na genética forense.\nDia 5 - Genotipagem de STRs a partir de dados de NGS: Encerraremos o workshop com uma exploração prática da genotipagem de STRs, uma ferramenta valiosa para estabelecer perfis genéticos únicos. Aprenderemos a interpretar e analisar esses dados, fornecendo insights fundamentais para investigações forenses.\nAo longo desta semana, vocês serão desafiados a aplicar os conhecimentos adquiridos em exercícios práticos e estudos de caso, preparando-os para enfrentar os desafios reais da genética forense na era da bioinformática avançada. Esteja preparado para uma jornada intensiva de aprendizado e descoberta!"
+  },
+  {
+    "objectID": "primeiropassos.html#configurações-de-sistema",
+    "href": "primeiropassos.html#configurações-de-sistema",
+    "title": "Primeiros passos",
+    "section": "Configurações de sistema",
+    "text": "Configurações de sistema\nAntes de iniciarmos o tutorial, é imperativo garantir que o sistema atenda às configurações mínimas para uma experiência estável. Utilizaremos sistema Linux. Recomenda-se que a máquina disponha de, no mínimo, 30 GB de armazenamento e 8 GB de memória RAM. No entanto, para uma performance ideal e considerando o potencial de expansão das aplicações, encorajamos a utilização de um sistema com mais de 50 GB de armazenamento e, no mínimo, 16 GB de memória RAM. Essas configurações mais robustas assegurarão não apenas a instalação suave do software, mas também a capacidade de executar múltiplas aplicações de forma eficiente, proporcionando uma experiência mais fluida e responsiva ao usuário."
+  },
+  {
+    "objectID": "primeiropassos.html#sec-softwares-necessários",
+    "href": "primeiropassos.html#sec-softwares-necessários",
+    "title": "Primeiros passos",
+    "section": "Softwares necessários",
+    "text": "Softwares necessários\n\nUsuários Windows\n\nWSL (Windows Subsystem for Linux)\nIGV (Robinson et al. 2011)\nFASTQC\nnotepad++\n\n\n\n\n\n\n\nTutorial para instalar o WSL\n\n\n\n\n\nSiga o tutorial da microsoft para instalar o WSL.\nhttps://learn.microsoft.com/pt-br/windows/wsl/install\n\n\n\n\n\nNo Ubuntu\n\nIGV (Robinson et al. 2011)\nFASTQC\nTrimmomatic (Bolger, Lohse, and Usadel 2014)\nbwa (Li 2013)\nminimap2 (Li 2018, 2021)\nsamtools (Danecek et al. 2021)\nfreebayes (Garrison and Marth 2012)\ngatk\nvcftools (Danecek et al. 2011)\nbcftools (Danecek et al. 2021)\nWhatsHap (Martin et al. 2016)\nNanoPlot (De Coster and Rademakers 2023)\nchopper (De Coster and Rademakers 2023)\ncramino (De Coster and Rademakers 2023)\n\n\nOpcionais\n\ngzip\nHTSlib"
+  },
+  {
+    "objectID": "primeiropassos.html#instalação",
+    "href": "primeiropassos.html#instalação",
+    "title": "Primeiros passos",
+    "section": "Instalação",
+    "text": "Instalação\n\n\n\n\n\n\nUsuários windows\n\n\n\nUsuários windows precisam instalar o Subsistema Windows para Linux (WSL).\nOs softwares FASTQC e IGV precisam ser instalados no windows e não no WSL.\n\n\nAo terminar a instalação do WSL e de configurar seu usuário no linux utilize os seguintes comandos:\nsudo apt-get update\nsudo apt-get upgrade\nEstes comandos irão garantir que o seu sistema esteja atualizado.\n\n\n\n\n\n\nSobre o comando sudo\n\n\n\nO comando sudo permite ao usuário executar comandos com permissão superior. Para isso você precisará da sua senha (ou do administrador)!\n\n\nPara instalar softwares utilize o comando apt install da seguinte forma:\nsudo apt install [SOFTWARE]"
+  },
+  {
+    "objectID": "primeiropassos.html#sec-dados-utilizados",
+    "href": "primeiropassos.html#sec-dados-utilizados",
+    "title": "Primeiros passos",
+    "section": "Dados utilizados",
+    "text": "Dados utilizados\nBaixe os dados que serão utilizados neste workshop via Google Drive;\n\n\n\n\n\n\nUtilize o email correto\n\n\n\nPara ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro entre em contato com a organização.\nOs dados totalizam ~13 GB, se atente para isso.\n\n\nOs dados estão contidos nesta estrutura de pastas descritas a baixo:\nWorkshopDados/                                        \n   ¦--genome/                                \n   ¦   ¦--chr17.fas1                        \n   ¦   °--hg38.fa                          \n   ¦--fast5/                      \n   ¦   °--*arquivos.fast52    \n   ¦--guppy_installer/                      \n   ¦   °--ont-guppy-cpu_6.5.7_linux64.tar.gz3\n   ¦--LongReadsFastq/                        \n   ¦   ¦--HG00096.hg38.fastq                \n   ¦   °--HG00099.hg38.fastq                \n  °--ShortReadsFastq/                      \n      ¦--HG00096_r1.fastq                  \n      ¦--HG00096_r2.fastq                  \n      ¦--HG00097_r1.fastq                  \n      ¦--HG00097_r2.fastq                  \n      ¦--HG00099_r1.fastq                  \n      ¦--HG00099_r2.fastq                  \n      ¦--HG00100_r1.fastq                  \n      ¦--HG00100_r2.fastq                  \n      ¦--NA18486_r1.fastq                  \n      ¦--NA18486_r2.fastq                  \n      ¦--NA18487_r1.fastq                  \n      ¦--NA18487_r2.fastq                  \n      ¦--NA18488_r1.fastq                  \n      ¦--NA18488_r2.fastq                  \n      ¦--NA19648_r1.fastq                  \n      ¦--NA19648_r2.fastq                  \n      ¦--NA19649_r1.fastq                  \n      ¦--NA19649_r2.fastq                  \n      ¦--NA19651_r1.fastq                  \n      °--NA19651_r2.fastq\n\n\n\n\n\n\nDicas\n\n\n\nUtilize o comando htop para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial.\nUtilize os argumento -h ou --help para visualizar ajuda sobre o uso dos softwares via terminal.\nSOFTWARE -h\nAdicionar o comando time antes de rodar os códigos, para saber o tempo que demorou, irá te ajudar a se programar para atividades futuras.\ntime [COMANDOS...]\n\n\n\n\n\n\nBolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014. “Trimmomatic: A Flexible Trimmer for Illumina Sequence Data.” Bioinformatics 30 (15): 2114–20. https://doi.org/10.1093/bioinformatics/btu170.\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The Variant Call Format and VCFtools.” Bioinformatics 27 (15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve Years of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2: Population-Scale Evaluation of Long-Read Sequencing Data.” Edited by Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant Detection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and Assembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide Sequences.” Edited by Inanc Birol. Bioinformatics 34 (18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment Accuracy.” Edited by Can Alkan. Bioinformatics 37 (23): 4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia Pisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall. 2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011. “Integrative Genomics Viewer.” Nature Biotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
+  },
+  {
+    "objectID": "primeiropassos.html#footnotes",
+    "href": "primeiropassos.html#footnotes",
+    "title": "Primeiros passos",
+    "section": "",
+    "text": "Genoma do cromossomo 17 obtido em https://timkahlke.github.io/LongRead_tutorials/↩︎\nArquivos fast5 obtidos em https://timkahlke.github.io/LongRead_tutorials/↩︎\nInstalador obtido em https://community.nanoporetech.com/↩︎"
   },
   {
     "objectID": "sequenciamento.html#arquivos",
     "href": "sequenciamento.html#arquivos",
     "title": "Dia 1 - Sequenciamento de DNA",
     "section": "Arquivos",
-    "text": "Arquivos"
+    "text": "Arquivos\nSerão utilizados os arquivos contidos na pasta WorkshopDados/shortReads/."
   },
   {
     "objectID": "sequenciamento.html#métricas",
@@ -67,34 +109,34 @@
     "href": "alinhamento.html#atividades",
     "title": "Dia 2 - Alinhamento de sequências de DNA",
     "section": "Atividades",
-    "text": "Atividades\n\nRealize o alinhamento das amostras utilizando BWA e o genoma de referência hg38.fa;\nConverta os arquivos .sam para o formato .bam;\nCrie o indice dos arquivos .bam;\nAlinhe novamente, desta vez utilizando minimap2 e repita as demais etapas;\nUtilize o IGV para visualizar os alinhamentos;"
+    "text": "Atividades\n\n\n\n\n\n\nIndexação do Genoma de Referência:\n\nAntes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando bwa index. Isso cria arquivos que aceleram o processo de alinhamento.\nbwa index reference_genome.fa\n\nAlinhamento de Sequências:\n\nUse o bwa mem para alinhar suas sequências de DNA ao genoma de referência.\nbwa mem reference_genome.fa read1.fq read2.fq &gt; alinhamento.sam\n\nSubstitua reference_genome.fa, read1.fq e read2.fq pelos nomes dos arquivos correspondentes.\nConverter Formato SAM para BAM:\n\nO arquivo de saída do bwa mem é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.\nsamtools sort alinhamento.sam &gt; alinhamento_sorted.bam\n\nOrdenar e Indexar o Arquivo BAM:\n\nOrdene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.\nsamtools index alinhamento_sorted.bam\n\nRemoção de Duplicatas (opcional):\n\nDependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes.\nsamtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam\n\nVisualização do Alinhamento:\n\nUse o IGV (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.\n\nAvaliação de Cobertura:\n\nUtilize ferramentas como samtools depth para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.\nsamtools depth alinhamento_sorted.bam &gt; cobertura.txt"
+  },
+  {
+    "objectID": "genotipagem.html#arquivos",
+    "href": "genotipagem.html#arquivos",
+    "title": "Dia 3 - Genotipagem",
+    "section": "Arquivos",
+    "text": "Arquivos"
+  },
+  {
+    "objectID": "genotipagem.html#atividades",
+    "href": "genotipagem.html#atividades",
+    "title": "Dia 3 - Genotipagem",
+    "section": "Atividades",
+    "text": "Atividades"
   },
   {
     "objectID": "ONT.html#atividades",
     "href": "ONT.html#atividades",
     "title": "Dia 4 - Análise de sequenciamento Oxford Nanopore",
     "section": "Atividades",
-    "text": "Atividades\n\nVerifique os workflows disponíveis para esta versão de guppy;\nRealize uma chamada de base para todos os arquivos fast5 contidos na pasta …;\n\n\n\n\n\n\n\nAviso\n\n\n\nO tempo de execução da chama de base (para este conjunto de dados) é superior a 12 horas em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta …\n\n\n\nAvalie a qualidade do arquivo resultado .fastq utilizando FASTQC e nanoQC;\nFiltre a read baseado no tamanho e na qualidade utilizando chopper;\nMonte o genoma utilizando BWA e minimap2;\n\n\n\n\n\n\n\nOpcional\n\n\n\n\n\nRealize uma montagem de novo utilizando o pipeline minimap2-miniasm. Este processo pode levar várias horas/dias. Tome cuidado!"
+    "text": "Atividades\n\nVerifique os workflows disponíveis para esta versão de guppy;\nRealize uma chamada de base para todos os arquivos fast5 contidos na pasta …;\n\n\n\n\n\n\n\nAviso\n\n\n\nO tempo de execução da chama de base (para este conjunto de dados) é superior a 12 horas em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta …\n\n\n\nAvalie a qualidade do arquivo resultado .fastq utilizando FASTQC e NanoPlot;\nFiltre a read baseado no tamanho e na qualidade utilizando chopper;\nMonte o genoma utilizando BWA e minimap2;\n\n\n\n\n\n\n\nOpcional\n\n\n\n\n\nRealize uma montagem de novo utilizando o pipeline minimap2-miniasm. Este processo pode levar várias horas/dias. Tome cuidado!"
   },
   {
     "objectID": "references.html",
     "href": "references.html",
     "title": "Referências",
     "section": "",
-    "text": "Danecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric\nBanks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The\nVariant Call Format and VCFtools.” Bioinformatics 27\n(15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu\nOhan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve\nYears of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2:\nPopulation-Scale Evaluation of Long-Read Sequencing Data.” Edited\nby Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant\nDetection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and\nAssembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide\nSequences.” Edited by Inanc Birol. Bioinformatics 34\n(18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment\nAccuracy.” Edited by Can Alkan. Bioinformatics 37 (23):\n4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia\nPisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall.\n2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell\nGuttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011.\n“Integrative Genomics Viewer.” Nature\nBiotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
-  },
-  {
-    "objectID": "index.html#realização",
-    "href": "index.html#realização",
-    "title": "Tutorial Bioinformatica",
-    "section": "Realização",
-    "text": "Realização\n\n\n\nRealização UnB, UNESP e USP."
-  },
-  {
-    "objectID": "index.html#apoio",
-    "href": "index.html#apoio",
-    "title": "Tutorial Bioinformatica",
-    "section": "Apoio",
-    "text": "Apoio\n\n\n\nCAPES-PROCAD Edital n° 16/2020"
+    "text": "Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014.\n“Trimmomatic: A Flexible Trimmer for Illumina Sequence\nData.” Bioinformatics 30 (15): 2114–20. https://doi.org/10.1093/bioinformatics/btu170.\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric\nBanks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The\nVariant Call Format and VCFtools.” Bioinformatics 27\n(15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu\nOhan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve\nYears of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2:\nPopulation-Scale Evaluation of Long-Read Sequencing Data.” Edited\nby Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant\nDetection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and\nAssembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide\nSequences.” Edited by Inanc Birol. Bioinformatics 34\n(18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment\nAccuracy.” Edited by Can Alkan. Bioinformatics 37 (23):\n4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nMartin, Marcel, Murray Patterson, Shilpa Garg, Sarah O Fischer, Nadia\nPisanti, Gunnar W Klau, Alexander Schöenhuth, and Tobias Marschall.\n2016. “WhatsHap: Fast and Accurate Read-Based Phasing.” http://dx.doi.org/10.1101/085050.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell\nGuttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011.\n“Integrative Genomics Viewer.” Nature\nBiotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
   }
 ]

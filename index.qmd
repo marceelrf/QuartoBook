@@ -10,37 +10,9 @@
 
 ## Autores
 
-Marcel Rodrigues Ferreira ()
+Celso Teixeira Mendes Junior\
+Erick da Cruz Castelli\
+Marcel Rodrigues Ferreira\
+Tamara Soledad Frontanilla Recalde
 
-DEMAIS
-
-## Softwares necessários {#sec-softwares-necessários}
-
--   WSL (Windows Subsystem for Linux)
--   [IGV](https://software.broadinstitute.org/software/igv/download) [@robinson2011]
--   [fastqc](https://github.com/s-andrews/FastQC)
--   [bwa](https://github.com/lh3/bwa) [@li2013]
--   [minimap2](https://github.com/lh3/minimap2) [@li2018; @li2021]
--   [samtools](https://github.com/samtools/samtools) [@danecek2021]
--   [freebayes](https://github.com/freebayes/freebayes) [@garrison2012]
--   [gatk](https://github.com/broadinstitute/gatk)
--   [vcftools](https://github.com/vcftools/vcftools) [@danecek2011]
--   [bcftools](https://github.com/samtools/bcftools) [@danecek2021]
--   [whasthap](https://github.com/whatshap/whatshap) [@martin2016]
--   [NanoPlot](https://github.com/wdecoster/NanoPlot) [@decoster2023]
--   [chopper](https://github.com/wdecoster/chopper) [@decoster2023]
--   [cramino](https://github.com/wdecoster/cramino) [@decoster2023]
-
-### Opcionais
-
--   [notepad++](https://notepad-plus-plus.org/downloads/)
--   [gzip](https://www.gnu.org/software/gzip/)
--   [HTSlib](https://github.com/samtools/htslib)
-
-## Dados utilizados {#sec-dados-utilizados}
-
--   fast5/
--   fastq/
--   genome/
--   bam/
--   vcf/
+## Colaboradores

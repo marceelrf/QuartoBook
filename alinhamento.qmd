@@ -12,12 +12,54 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`.
 
 ## Atividades
 
--   Realize o alinhamento das amostras utilizando `BWA` e o genoma de referência `hg38.fa`;
+<!-- -   Realize o alinhamento das amostras utilizando `BWA` e o genoma de referência `hg38.fa`; -->
 
--   Converta os arquivos `.sam` para o formato `.bam`;
+<!-- -   Converta os arquivos `.sam` para o formato `.bam`; -->
 
--   Crie o indice dos arquivos `.bam`;
+<!-- -   Crie o indice dos arquivos `.bam`; -->
 
--   Alinhe novamente, desta vez utilizando `minimap2` e repita as demais etapas;
+<!-- -   Alinhe novamente, desta vez utilizando `minimap2` e repita as demais etapas; -->
 
--   Utilize o `IGV` para visualizar os alinhamentos;
+<!-- -   Utilize o `IGV` para visualizar os alinhamentos; -->
+
+1.  **Indexação do Genoma de Referência:**
+
+    -   Antes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando **`bwa index`**. Isso cria arquivos que aceleram o processo de alinhamento.
+
+        `bwa index reference_genome.fa`
+
+2.  **Alinhamento de Sequências:**
+
+    -   Use o **`bwa mem`** para alinhar suas sequências de DNA ao genoma de referência.
+
+    -   `bwa mem -R "@RG\tID:{SAMPLE}\tSM:``{SAMPLE}``" reference_genome.fa``{SAMPLE}_r1``.fq``{SAMPLE}_``r2.fq > alinhamento.sam`
+
+    Substitua **`reference_genome.fa`**, **`read1.fq`** e **`read2.fq`** pelos nomes dos arquivos correspondentes.
+
+3.  **Converter Formato SAM para BAM:**
+
+    -   O arquivo de saída do **`bwa mem`** é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.
+
+    -   `samtools sort alinhamento.sam > alinhamento_sorted.bam`
+
+4.  **Ordenar e Indexar o Arquivo BAM:**
+
+    -   Ordene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.
+
+    -   `samtools index alinhamento_sorted.bam`
+
+5.  **Remoção de Duplicatas (opcional):**
+
+    -   Dependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes.
+
+    -   `samtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam`
+
+6.  **Visualização do Alinhamento:**
+
+    -   Use o IGV (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.
+
+7.  **Avaliação de Cobertura:**
+
+    -   Utilize ferramentas como **`samtools depth`** para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.
+
+    -   `samtools depth alinhamento_sorted.bam > cobertura.txt`
