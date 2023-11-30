@@ -257,6 +257,7 @@ Automatizando o processo (Opicional)
 </div>
 <div class="callout-body-container callout-body">
 <p>Caso tenha experiência em programação, você pode utilizar um <code>loop</code>, como <code>for</code> ou <code>while</code>, para rodar todas as amostras ao mesmo tempo. Você pode utilizar o própio <code>bash</code> (ubuntu) ou sua linguagem de programação favorita, como <code>python</code>, <code>perl</code>, <code>R</code>, etc.</p>
+<p>Você poderá incluir as etapas seguintes no mesmo <code>loop</code>.</p>
 </div>
 </div></li>
 <li><p><strong>Converter Formato SAM para BAM:</strong></p>
@@ -276,11 +277,11 @@ Automatizando o processo (Opicional)
 </ul></li>
 <li><p><strong>Visualização do Alinhamento:</strong></p>
 <ul>
-<li>Use o IGV (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.</li>
+<li>Use o <code>IGV</code> (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.</li>
 </ul></li>
 <li><p><strong>Avaliação de Cobertura:</strong></p>
 <ul>
-<li><p>Utilize ferramentas como <strong><code>samtools depth</code></strong> para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.</p></li>
+<li><p>Utilize o comando <strong><code>samtools depth</code></strong> para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.</p></li>
 <li><p><code>samtools depth alinhamento_sorted.bam &gt; cobertura.txt</code></p></li>
 </ul></li>
 </ol>

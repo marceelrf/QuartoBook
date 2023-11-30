@@ -237,11 +237,12 @@ Read\;Qscore = -10 \log_{10}{[\, \frac{1}{N}\sum{10^{\frac{-q_1}{10}}} ]\,}
 <ol type="1">
 <li><strong>Análise Inicial com FASTQC:</strong>
 <ul>
-<li>Execute o FASTQC nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.</li>
+<li>Execute o <code>FASTQC</code> nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.</li>
 </ul></li>
 <li><strong>Identificação de Adaptação (Adapter) e Trimagem:</strong>
 <ul>
-<li>Com base nos resultados do FASTQC, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize ferramentas como Trimmomatic, Cutadapt ou similar para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.</li>
+<li>Com base nos resultados do <code>FASTQC</code>, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize o <code>Trimmomatic</code> para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.</li>
+<li></li>
 </ul></li>
 <li><strong>Remoção de Leituras de Baixa Qualidade:</strong>
 <ul>
@@ -257,7 +258,7 @@ Read\;Qscore = -10 \log_{10}{[\, \frac{1}{N}\sum{10^{\frac{-q_1}{10}}} ]\,}
 <ol start="5" type="1">
 <li><strong>Avaliação de Qualidade Pós-Trimagem:</strong>
 <ul>
-<li>Após a trimagem e filtragem, execute novamente o FASTQC para avaliar como essas etapas afetaram a qualidade dos dados. Isso ajudará a garantir que você atingiu os padrões de qualidade desejados.</li>
+<li>Após a trimagem e filtragem, execute novamente o <code>FASTQC</code> para avaliar como essas etapas afetaram a qualidade dos dados. Isso ajudará a garantir que você atingiu os padrões de qualidade desejados.</li>
 </ul></li>
 </ol>
 <!-- 6. **Estimativa de Diversidade e Contaminação:** -->

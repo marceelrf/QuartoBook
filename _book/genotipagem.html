@@ -204,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p><strong>Preparação do Ambiente:</strong></p>
 <ul>
-<li><p>Certifique-se de que o FreeBayes está instalado no seu ambiente. Você pode instalar o FreeBayes usando gerenciadores de pacotes, como o <strong><code>conda</code></strong> ou o <strong><code>pip</code></strong>, ou compilando-o a partir do código-fonte.</p></li>
+<li><p>Certifique-se de que o freebayes está instalado no seu ambiente. Você pode instalar o FreeBayes usando gerenciadores de pacotes, como o <strong><code>conda</code></strong> ou o <strong><code>pip</code></strong>, ou compilando-o a partir do código-fonte.</p></li>
 <li><p><code>conda install -c bioconda freebayes</code></p></li>
 </ul></li>
 <li><p><strong>Indexação do Genoma de Referência (se ainda não estiver indexado):</strong></p>
@@ -212,14 +212,27 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Assim como na etapa de alinhamento, o genoma de referência deve ser indexado.</p></li>
 <li><p><code>samtools faidx reference_genome.fa</code></p></li>
 </ul></li>
-<li><p><strong>Chamada de Variantes com FreeBayes:</strong></p>
+<li><p><strong>Chamada de Variantes com <code>freebayes</code>:</strong></p>
 <ul>
-<li><p>Execute o FreeBayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.</p></li>
-<li><p><code>freebayes -f reference_genome.fa alinhamento_sorted.bam &gt; variantes.vcf</code></p></li>
+<li><p>Execute o freebayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.</p></li>
+<li><p><code>freebayes -f reference_genome.fa -L bam_list.txt -t bed_file.bed &gt; variantes.vcf</code></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Otimizando o uso do <code>freebayes</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Caso o computador que esteja utilizando aborte o processo por falta de memória, você pode optar por reduzir o número de amostras em <code>bam_list.txt</code>. É importante destacar que a analise correta de genotipagem via <code>freebayes</code> requer que todas as amostras sejam analisadas simultaneamente, mas para fim de aprendizado esta é uma estratégia.</p>
+</div>
+</div></li>
 </ul></li>
 <li><p><strong>Filtragem de Variantes (opcional):</strong></p>
 <ul>
-<li><p>Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo FreeBayes para reduzir o número de falsos positivos.</p></li>
+<li><p>Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo freebayes para reduzir o número de falsos positivos.</p></li>
 <li><p><code>bcftools view --exclude 'QUAL&gt;5' variantes.vcf &gt; variantes_filtradas.vcf</code></p></li>
 </ul>
 <p>Adapte os critérios de filtragem conforme necessário.</p></li>

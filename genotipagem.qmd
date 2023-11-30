@@ -6,7 +6,7 @@
 
 1.  **Preparação do Ambiente:**
 
-    -   Certifique-se de que o FreeBayes está instalado no seu ambiente. Você pode instalar o FreeBayes usando gerenciadores de pacotes, como o **`conda`** ou o **`pip`**, ou compilando-o a partir do código-fonte.
+    -   Certifique-se de que o freebayes está instalado no seu ambiente. Você pode instalar o FreeBayes usando gerenciadores de pacotes, como o **`conda`** ou o **`pip`**, ou compilando-o a partir do código-fonte.
 
     -   `conda install -c bioconda freebayes`
 
@@ -16,15 +16,21 @@
 
     -   `samtools faidx reference_genome.fa`
 
-3.  **Chamada de Variantes com FreeBayes:**
+3.  **Chamada de Variantes com `freebayes`:**
 
-    -   Execute o FreeBayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.
+    -   Execute o freebayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.
 
-    -   `freebayes -f reference_genome.fa alinhamento_sorted.bam > variantes.vcf`
+    -   `freebayes -f reference_genome.fa -L bam_list.txt -t bed_file.bed > variantes.vcf`
+
+        ::: callout-warning
+        ## Otimizando o uso do `freebayes`
+
+        Caso o computador que esteja utilizando aborte o processo por falta de memória, você pode optar por reduzir o número de amostras em `bam_list.txt`. É importante destacar que a analise correta de genotipagem via `freebayes` requer que todas as amostras sejam analisadas simultaneamente, mas para fim de aprendizado esta é uma estratégia.
+        :::
 
 4.  **Filtragem de Variantes (opcional):**
 
-    -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo FreeBayes para reduzir o número de falsos positivos.
+    -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo freebayes para reduzir o número de falsos positivos.
 
     -   `bcftools view --exclude 'QUAL>5' variantes.vcf > variantes_filtradas.vcf`
 

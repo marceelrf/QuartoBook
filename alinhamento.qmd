@@ -72,7 +72,7 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`.
 
 6.  **Visualização do Alinhamento:**
 
-    -   Use o IGV (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.
+    -   Use o `IGV` (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.
 
 7.  **Avaliação de Cobertura:**
 
