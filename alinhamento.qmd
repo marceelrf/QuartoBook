@@ -28,13 +28,29 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`.
 
         `bwa index reference_genome.fa`
 
+    ::: callout-warning
+    ## Indexação do genoma
+
+    O processo criar o indice do genoma via `bwa index` demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta **`WorkshopDados/genome/`** os arquivo resultantes desta etapa, que são os arquivos com extensão `.amb`, `.ann`, `.bwt`, `.fai`, `.pac` e `.sa`.
+
+    Caso deseje testar em um genoma menor, utilize o `chr17.fas`.
+    :::
+
 2.  **Alinhamento de Sequências:**
 
     -   Use o **`bwa mem`** para alinhar suas sequências de DNA ao genoma de referência.
 
-    -   `bwa mem -R "@RG\tID:{SAMPLE}\tSM:``{SAMPLE}``" reference_genome.fa``{SAMPLE}_r1``.fq``{SAMPLE}_``r2.fq > alinhamento.sam`
+    -   `bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" reference_genome.fa {SAMPLE}_r1.fq {SAMPLE}_r2.fq > alinhamento.sam`
 
-    Substitua **`reference_genome.fa`**, **`read1.fq`** e **`read2.fq`** pelos nomes dos arquivos correspondentes.
+    Substitua **`reference_genome.fa`**, `{SAMPLE}_r1.fq` e `{SAMPLE}_r2.fq` pelos nomes dos arquivos correspondentes.
+
+    ::: callout-tip
+    ## Automatizando o processo (Opicional)
+
+    Caso tenha experiência em programação, você pode utilizar um `loop`, como `for` ou `while`, para rodar todas as amostras ao mesmo tempo. Você pode utilizar o própio `bash` (ubuntu) ou sua linguagem de programação favorita, como `python`, `perl`, `R`, etc.
+
+    Você poderá incluir as etapas seguintes no mesmo `loop`.
+    :::
 
 3.  **Converter Formato SAM para BAM:**
 
@@ -60,6 +76,6 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`.
 
 7.  **Avaliação de Cobertura:**
 
-    -   Utilize ferramentas como **`samtools depth`** para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.
+    -   Utilize o comando **`samtools depth`** para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.
 
     -   `samtools depth alinhamento_sorted.bam > cobertura.txt`

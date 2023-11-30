@@ -32,12 +32,12 @@
 
 5.  **Análise e Interpretação de Variantes:**
 
-    -   Utilize ferramentas como `VCFtools`, `bcftools` ou GATK para realizar análises adicionais no arquivo VCF, como filtragem específica, anotações e interpretação biológica.
+    -   Utilize ferramentas como `VCFtools` ou `bcftools` para realizar análises adicionais no arquivo VCF, como filtragem específica, anotações e interpretação biológica.
 
 6.  **Visualização de Variantes:**
 
     -   Use o `IGV` para visualizar as variantes em relação ao genoma de referência e avaliar sua qualidade.
 
-7.  **Anotação de Variantes:**
+<!-- 7.  **Anotação de Variantes:** -->
 
-    -   Anote as variantes chamadas usando ferramentas como ANNOVAR, Variant Effect Predictor (VEP) ou AnnovarR.
+<!--     -   Anote as variantes chamadas usando ferramentas como ANNOVAR, Variant Effect Predictor (VEP) ou AnnovarR. -->

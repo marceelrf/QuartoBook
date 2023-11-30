@@ -225,13 +225,40 @@ Arquivos .fastq
 <ul>
 <li><p>Antes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando <strong><code>bwa index</code></strong>. Isso cria arquivos que aceleram o processo de alinhamento.</p>
 <p><code>bwa index reference_genome.fa</code></p></li>
-</ul></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Indexação do genoma
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O processo criar o indice do genoma via <code>bwa index</code> demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta <strong><code>WorkshopDados/genome/</code></strong> os arquivo resultantes desta etapa, que são os arquivos com extensão <code>.amb</code>, <code>.ann</code>, <code>.bwt</code>, <code>.fai</code>, <code>.pac</code> e <code>.sa</code>.</p>
+<p>Caso deseje testar em um genoma menor, utilize o <code>chr17.fas</code>.</p>
+</div>
+</div></li>
 <li><p><strong>Alinhamento de Sequências:</strong></p>
 <ul>
 <li><p>Use o <strong><code>bwa mem</code></strong> para alinhar suas sequências de DNA ao genoma de referência.</p></li>
-<li><p><code>bwa mem -R "@RG\tID:{SAMPLE}\tSM:``{SAMPLE}``" reference_genome.fa``{SAMPLE}_r1``.fq``{SAMPLE}_``r2.fq &gt; alinhamento.sam</code></p></li>
+<li><p><code>bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" reference_genome.fa {SAMPLE}_r1.fq {SAMPLE}_r2.fq &gt; alinhamento.sam</code></p></li>
 </ul>
-<p>Substitua <strong><code>reference_genome.fa</code></strong>, <strong><code>read1.fq</code></strong> e <strong><code>read2.fq</code></strong> pelos nomes dos arquivos correspondentes.</p></li>
+<p>Substitua <strong><code>reference_genome.fa</code></strong>, <code>{SAMPLE}_r1.fq</code> e <code>{SAMPLE}_r2.fq</code> pelos nomes dos arquivos correspondentes.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Automatizando o processo (Opicional)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Caso tenha experiência em programação, você pode utilizar um <code>loop</code>, como <code>for</code> ou <code>while</code>, para rodar todas as amostras ao mesmo tempo. Você pode utilizar o própio <code>bash</code> (ubuntu) ou sua linguagem de programação favorita, como <code>python</code>, <code>perl</code>, <code>R</code>, etc.</p>
+</div>
+</div></li>
 <li><p><strong>Converter Formato SAM para BAM:</strong></p>
 <ul>
 <li><p>O arquivo de saída do <strong><code>bwa mem</code></strong> é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.</p></li>
