@@ -34,7 +34,7 @@
 
     -   `bcftools view --exclude 'QUAL>5' variantes.vcf > variantes_filtradas.vcf`
 
-    Adapte os critérios de filtragem conforme necessário.
+    -   Adapte os critérios de filtragem conforme necessário.
 
 5.  **Análise e Interpretação de Variantes:**
 

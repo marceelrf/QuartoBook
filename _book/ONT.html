@@ -214,12 +214,15 @@ Importante
 <p><code>./guppy_basecaller --help</code></p>
 </div>
 </div>
-<p>Este tutorial foi inspirado…</p>
+<p>Este tutorial foi inspirado no tutorial do Tim Kahlke<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> e em nossas experiências durante os trabalhos com ONT.</p>
 <section id="atividades" class="level2">
 <h2 class="anchored" data-anchor-id="atividades">Atividades</h2>
+<ol type="1">
+<li><p><strong>Realize uma chamada de base utilizando guppy (Opicional):</strong></p>
 <ul>
-<li><p>Verifique os workflows disponíveis para esta versão de <code>guppy</code>;</p></li>
-<li><p>Realize uma chamada de base para todos os arquivos <code>fast5</code> contidos na pasta …;</p></li>
+<li>Verifique os workflows disponíveis para esta versão de <code>guppy</code>;</li>
+<li>Realize achamada de base para todos os arquivos <code>fast5</code> contidos na pasta <strong>WorkshopDados/fast5/</strong>;</li>
+<li>COMANDO</li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -231,16 +234,76 @@ Aviso
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O tempo de execução da chama de base (para este conjunto de dados) é superior a <strong>12 horas</strong> em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta …</p>
+<p>O tempo de execução da chama de base (para este conjunto de dados) é superior a <strong>12 horas</strong> em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta <strong>WorkshopDados/LongReadsFastq/</strong></p>
+</div>
+</div></li>
+<li><p><strong>Avaliação da qualidade do arquivo resultado <code>.fastq</code>:</strong></p>
+<ul>
+<li>Utilize o <code>NanoPlot</code> para gerar gráficos de qualidade da amostra;</li>
+<li><code>NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose</code></li>
+</ul></li>
+<li><p><strong>Filtre as leituras baseado no tamanho e qualidade:</strong></p>
+<ul>
+<li>Utilize <code>chopper</code> para isso</li>
+<li><code>chopper &lt; [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] &gt; [AMOSTRA]_filtrada.fastq</code></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Por que usar <code>&lt;</code> no comando chopper?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O comando <code>&lt;</code> garante que o arquivo fastq da amostra seja direcionado para entrada (<strong><code>stdin</code></strong>) do comando no <code>chopper</code>. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.</p>
+</div>
+</div>
+</div></li>
+<li><p><strong>Alinhamento das Sequências:</strong></p>
+<ul>
+<li><p>Use o <code>minimap2</code> para alinhar suas sequências de DNA ao genoma de referência.</p></li>
+<li><p><code>minimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /</code></p>
+<p><code>-R "@RG\tID::{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] &gt; [AMOSTRA].sam</code></p></li>
+</ul>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Consumo de memória durante a etapa
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O alinhamento via minimap2 tem pico de consumo de memória de ~ 13 GB. Caso seu computador disponha desta capacidade utilize o arquivo resultante na pasta <strong>WorkshopDados/pre_run/Dia4/</strong></p>
 </div>
 </div>
 <ul>
-<li><p>Avalie a qualidade do arquivo resultado <code>.fastq</code> utilizando <code>FASTQC</code> e <code>NanoPlot</code>;</p></li>
-<li><p>Filtre a read baseado no tamanho e na qualidade utilizando <code>chopper</code>;</p></li>
-<li><p>Monte o genoma utilizando <code>BWA</code> e <code>minimap2</code>;</p></li>
+<li>Realize novamento utilizando <code>bwa mem</code> desta vez (Opicional);</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tempo de execução do <code>bwa</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Atenção, o <code>bwa</code> demora quase 10x mais que o <code>minimap2</code></p>
+</div>
+</div>
+<ul>
+<li><p><code>bwa men -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /</code></p>
+<p><code>-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] &gt; [AMOSTRA].sam</code></p></li>
 </ul>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -249,14 +312,56 @@ Opcional
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Realize uma montagem <em>de novo</em> utilizando o pipeline <code>minimap2</code>-<code>miniasm</code>. Este processo pode levar várias horas/dias. <code>Tome cuidado!</code></p>
 </div>
 </div>
+</div></li>
+<li><p><strong>Gerar o arquivo BAM indexado:</strong></p>
+<ul>
+<li>Repita os passos 3 e 4 do dia 2 utilizando <code>samtools</code>;</li>
+</ul></li>
+<li><p><strong>Avaliação da cobertura dos long reads:</strong></p>
+<ul>
+<li>Repita o passo 7 do dia 2 utilizando <code>samtools</code>;</li>
+</ul></li>
+<li><p><strong>Visualização do Alinhamento:</strong></p>
+<ul>
+<li>Importe o <code>BAM</code> para o <code>IGV</code> e avalie sua qualidade;</li>
+<li>Compare as amostras com suas respectivas amostras de short reads;</li>
+</ul></li>
+<li><p><strong>Realize a Genotipagem das Amostras de long reads:</strong></p>
+<ul>
+<li>Utilize o <code>freebayes</code> para realizar a genotipagem e modo similar ao passo 3 do dia 3;</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Tempo de execução da genotipagem em Long Reads
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O tempo de execução do <code>freebayes</code> para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo bed fornecido para trabalhar com menos regiões.</p>
+<p>Para os formulários utilize o vcf resultante em <strong>WorkshopDados/pre_run/Dia4/</strong></p>
+</div>
+</div>
+<ul>
+<li>Repita as métricas de filtragem utilizadas no passo 4 do dia 3;</li>
+<li>Repita os passos 5 e 6 do dia 3, comparando aos resultados de short reads.</li>
+</ul></li>
+</ol>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>&nbsp;https://timkahlke.github.io/LongRead_tutorials/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

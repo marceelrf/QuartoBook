@@ -18,28 +18,96 @@ Executando `guppy` via caminho completo (Exemplo pedindo ajuda)
 `./guppy_basecaller --help`
 :::
 
-Este tutorial foi inspirado...
+Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experiências durante os trabalhos com ONT.
+
+[^ont-1]:  https://timkahlke.github.io/LongRead_tutorials/
 
 ## Atividades
 
--   Verifique os workflows disponíveis para esta versão de `guppy`;
+1.  **Realize uma chamada de base utilizando guppy (Opicional):**
 
--   Realize uma chamada de base para todos os arquivos `fast5` contidos na pasta ...;
+    -   Verifique os workflows disponíveis para esta versão de `guppy`;
+    -   Realize achamada de base para todos os arquivos `fast5` contidos na pasta **WorkshopDados/fast5/**;
+    -   COMANDO
 
-::: callout-warning
-## Aviso
+    ::: callout-warning
+    ## Aviso
 
-O tempo de execução da chama de base (para este conjunto de dados) é superior a **12 horas** em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta ...
-:::
+    O tempo de execução da chama de base (para este conjunto de dados) é superior a **12 horas** em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta **WorkshopDados/LongReadsFastq/**
+    :::
 
--   Avalie a qualidade do arquivo resultado `.fastq` utilizando `FASTQC` e `NanoPlot`;
+2.  **Avaliação da qualidade do arquivo resultado `.fastq`:**
 
--   Filtre a read baseado no tamanho e na qualidade utilizando `chopper`;
+    -   Utilize o `NanoPlot` para gerar gráficos de qualidade da amostra;
+    -   `NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose`
 
--   Monte o genoma utilizando `BWA` e `minimap2`;
+3.  **Filtre as leituras baseado no tamanho e qualidade:**
 
-::: {.callout-note collapse="true" icon="false"}
-## Opcional
+    -   Utilize `chopper` para isso
+    -   `chopper < [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] > [AMOSTRA]_filtrada.fastq`
 
-Realize uma montagem *de novo* utilizando o pipeline `minimap2`-`miniasm`. Este processo pode levar várias horas/dias. `Tome cuidado!`
-:::
+    ::: {.callout-important collapse="true"}
+    ## Por que usar `<` no comando chopper?
+
+    O comando `<` garante que o arquivo fastq da amostra seja direcionado para entrada (**`stdin`**) do comando no `chopper`. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.
+    :::
+
+4.  **Alinhamento das Sequências:**
+
+    -   Use o `minimap2` para alinhar suas sequências de DNA ao genoma de referência.
+
+    -   `minimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /`
+
+        `-R "@RG\tID::{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam`
+
+    ::: callout-caution
+    ## Consumo de memória durante a etapa
+
+    O alinhamento via minimap2 tem pico de consumo de memória de \~ 13 GB. Caso seu computador disponha desta capacidade utilize o arquivo resultante na pasta **WorkshopDados/pre_run/Dia4/**
+    :::
+
+    -   Realize novamento utilizando `bwa mem` desta vez (Opicional);
+
+    ::: callout-warning
+    ## Tempo de execução do `bwa`
+
+    Atenção, o `bwa` demora quase 10x mais que o `minimap2`
+    :::
+
+    -   `bwa men -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /`
+
+        `-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam`
+
+    ::: {.callout-note collapse="true" icon="false"}
+    ## Opcional
+
+    Realize uma montagem *de novo* utilizando o pipeline `minimap2`-`miniasm`. Este processo pode levar várias horas/dias. `Tome cuidado!`
+    :::
+
+5.  **Gerar o arquivo BAM indexado:**
+
+    -   Repita os passos 3 e 4 do dia 2 utilizando `samtools`;
+
+6.  **Avaliação da cobertura dos long reads:**
+
+    -   Repita o passo 7 do dia 2 utilizando `samtools`;
+
+7.  **Visualização do Alinhamento:**
+
+    -   Importe o `BAM` para o `IGV` e avalie sua qualidade;
+    -   Compare as amostras com suas respectivas amostras de short reads;
+
+8.  **Realize a Genotipagem das Amostras de long reads:**
+
+    -   Utilize o `freebayes` para realizar a genotipagem e modo similar ao passo 3 do dia 3;
+
+    ::: callout-warning
+    ## Tempo de execução da genotipagem em Long Reads
+
+    O tempo de execução do `freebayes` para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo bed fornecido para trabalhar com menos regiões.
+
+    Para os formulários utilize o vcf resultante em **WorkshopDados/pre_run/Dia4/**
+    :::
+
+    -   Repita as métricas de filtragem utilizadas no passo 4 do dia 3;
+    -   Repita os passos 5 e 6 do dia 3, comparando aos resultados de short reads.
