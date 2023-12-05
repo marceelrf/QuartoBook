@@ -29,8 +29,16 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 1.  **Realize uma chamada de base utilizando guppy (Opicional):**
 
     -   Verifique os workflows disponíveis para esta versão de `guppy`;
-    -   Realize achamada de base para todos os arquivos `fast5` contidos na pasta **WorkshopDados/fast5/**;
-    -   COMANDO
+
+    -   `./Downloads/ont-guppy-cpu/bin/guppy_basecaller --print_workflows`
+
+    -   Sabendo que este sequenciamento foi realizado utilizando o kit SQK-LSK108 e a flowcell MIN106, qual a configuração a ser utilizada?
+
+    -   Realize a chamada de base para todos os arquivos `fast5` contidos na pasta **WorkshopDados/fast5/**;
+
+    -   `./Downloads/ont-guppy-cpu/bin/guppy_basecaller –i [PASTAFAST5] –s /`
+
+        `./guppy_out –c [CONFIG].cfg  --num_callers 2 --cpu_threads_per_caller 1`
 
     ::: callout-warning
     ## Aviso
@@ -45,11 +53,34 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
 3.  **Filtre as leituras baseado no tamanho e qualidade:**
 
-    -   Utilize `chopper` para isso
+    -   Utilize `chopper` para isso.
+
+        ::: {.callout-tip collapse="true"}
+        ## Instalação do `chopper`
+
+        Para instalar o `chopper` pode ser necessário ter o `conda` em seu sistema. Para isso utilize os seguintes comandos:
+
+        `mkdir -p ~/miniconda3`
+
+        `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh`
+
+        `bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3`
+
+        `rm -rf ~/miniconda3/miniconda.sh`
+
+        `~/miniconda3/bin/conda init bash`
+
+        `~/miniconda3/bin/conda init zsh`
+
+        Será necessário reinciar seu sistema (Ubuntu ou `WSL`) após isso.
+
+        `conda install -c bioconda chopper`
+        :::
+
     -   `chopper < [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] > [AMOSTRA]_filtrada.fastq`
 
     ::: {.callout-important collapse="true"}
-    ## Por que usar `<` no comando chopper?
+    ## Por que usar `<` no comando `chopper`?
 
     O comando `<` garante que o arquivo fastq da amostra seja direcionado para entrada (**`stdin`**) do comando no `chopper`. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.
     :::
@@ -65,7 +96,7 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
     ::: callout-caution
     ## Consumo de memória durante a etapa
 
-    O alinhamento via minimap2 tem pico de consumo de memória de \~ 13 GB. Caso seu computador disponha desta capacidade utilize o arquivo resultante na pasta **WorkshopDados/pre_run/Dia4/**
+    O alinhamento via `minimap2` tem pico de consumo de memória de \~ 13 GB. Caso seu computador disponha desta capacidade utilize o arquivo resultante na pasta **WorkshopDados/pre_run/Dia4/**
     :::
 
     -   Realize novamento utilizando `bwa mem` desta vez (Opicional);
@@ -76,7 +107,7 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
     Atenção, o `bwa` demora quase 10x mais que o `minimap2`
     :::
 
-    -   `bwa men -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /`
+    -   `bwa mem -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /`
 
         `-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam`
 

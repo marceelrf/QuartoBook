@@ -78,6 +78,12 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 
     -   Use o `IGV` (Integrative Genomics Viewer) para visualizar o alinhamento (`{SAMPLE}.bam`) e verificar sua qualidade.
 
+        ::: callout-important
+        ## Regiões com reads
+
+        Os arquivos `fastq` fornecidos para este curso foram preparados contendo apenas as regiões que estão nos arquivos `bed` fornecidos.
+        :::
+
 <!-- 6.  **Avaliação de Cobertura:** -->
 
 <!--     -   Utilize o comando **`samtools depth`** para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões. -->
