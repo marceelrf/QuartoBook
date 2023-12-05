@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./commWSL.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ANEXO: Comandos Básicos do Ubuntu via WSL</span></a>
+ <span class="menu-text">ANEXO: Dicas para uso do Ubuntu/WSL</span></a>
   </div>
 </li>
     </ul>
@@ -209,7 +209,7 @@ Arquivos .fastq
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Preste atenção para o caminho da pasta aonde estão os <code>.fastq</code>.</p>
+<p>Preste atenção para o caminho da pasta aonde estão os <code>.fastq</code>. Eles estão na pasta <strong><code>WorkshopDados/shortReads/</code></strong></p>
 </div>
 </div>
 </section>
@@ -223,8 +223,9 @@ Arquivos .fastq
 <ol type="1">
 <li><p><strong>Indexação do Genoma de Referência:</strong></p>
 <ul>
+<li><p>Para o alinhamento de sequências utilizaremos o programa <code>bwa</code>. Há outros, como <code>bowtie2</code>, <code>minimap2</code>, que podem ser utilizados caso seja conveniente. Os comandos abaixo preparam o genoma de referência para o <code>bwa</code>.</p></li>
 <li><p>Antes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando <strong><code>bwa index</code></strong>. Isso cria arquivos que aceleram o processo de alinhamento.</p>
-<p><code>bwa index reference_genome.fa</code></p></li>
+<p><code>bwa index hg38.fa</code></p></li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -236,16 +237,17 @@ Indexação do genoma
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O processo criar o indice do genoma via <code>bwa index</code> demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta <strong><code>WorkshopDados/genome/</code></strong> os arquivo resultantes desta etapa, que são os arquivos com extensão <code>.amb</code>, <code>.ann</code>, <code>.bwt</code>, <code>.fai</code>, <code>.pac</code> e <code>.sa</code>.</p>
-<p>Caso deseje testar em um genoma menor, utilize o <code>chr17.fas</code>.</p>
+<p>O processo para criar o indice do genoma via <code>bwa index</code> demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta <strong><code>WorkshopDados/genome/</code></strong> os arquivo resultantes desta etapa, que são os arquivos com extensão <code>.amb</code>, <code>.ann</code>, <code>.bwt</code>, <code>.fai</code>, <code>.pac</code> e <code>.sa</code>.</p>
+<p>O genoma de referência humano esta no arquivo <code>hg38.fa</code>. Esse é a última versão do genoma de referência e a mais utilizada no mundo.</p>
+<p>Caso deseje testar em um genoma menor, utilize o <code>chr12.fasta</code>.</p>
 </div>
 </div></li>
 <li><p><strong>Alinhamento de Sequências:</strong></p>
 <ul>
 <li><p>Use o <strong><code>bwa mem</code></strong> para alinhar suas sequências de DNA ao genoma de referência.</p></li>
-<li><p><code>bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" reference_genome.fa {SAMPLE}_r1.fq {SAMPLE}_r2.fq &gt; alinhamento.sam</code></p></li>
+<li><p><code>bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq -o {SAMPLE}.sam</code></p></li>
 </ul>
-<p>Substitua <strong><code>reference_genome.fa</code></strong>, <code>{SAMPLE}_r1.fq</code> e <code>{SAMPLE}_r2.fq</code> pelos nomes dos arquivos correspondentes.</p>
+<p>Substitua <strong><code>reference_genome.fa</code></strong>, <code>{SAMPLE}</code> pelos nomes dos arquivos correspondentes.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -260,30 +262,31 @@ Automatizando o processo (Opicional)
 <p>Você poderá incluir as etapas seguintes no mesmo <code>loop</code>.</p>
 </div>
 </div></li>
-<li><p><strong>Converter Formato SAM para BAM:</strong></p>
+<li><p><strong>Converter Formato SAM para BAM e ordenar os reads:</strong></p>
 <ul>
 <li><p>O arquivo de saída do <strong><code>bwa mem</code></strong> é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.</p></li>
-<li><p><code>samtools sort alinhamento.sam &gt; alinhamento_sorted.bam</code></p></li>
+<li><p><code>samtools sort {SAMPLE}.sam &gt; {SAMPLE}.bam</code></p></li>
 </ul></li>
-<li><p><strong>Ordenar e Indexar o Arquivo BAM:</strong></p>
+<li><p><strong>Indexar o Arquivo BAM:</strong></p>
 <ul>
 <li><p>Ordene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.</p></li>
-<li><p><code>samtools index alinhamento_sorted.bam</code></p></li>
+<li><p><code>samtools index {SAMPLE}.bam</code></p></li>
 </ul></li>
-<li><p><strong>Remoção de Duplicatas (opcional):</strong></p>
-<ul>
-<li><p>Dependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes.</p></li>
-<li><p><code>samtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam</code></p></li>
-</ul></li>
+</ol>
+<!-- 5.  **Remoção de Duplicatas (opcional):** -->
+<!--     -   Dependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes. -->
+<!--     -   `samtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam` -->
+<ol start="5" type="1">
 <li><p><strong>Visualização do Alinhamento:</strong></p>
 <ul>
-<li>Use o <code>IGV</code> (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.</li>
+<li>Use o <code>IGV</code> (Integrative Genomics Viewer) para visualizar o alinhamento (<code>{SAMPLE}.bam</code>) e verificar sua qualidade.</li>
 </ul></li>
-<li><p><strong>Avaliação de Cobertura:</strong></p>
-<ul>
-<li><p>Utilize o comando <strong><code>samtools depth</code></strong> para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.</p></li>
-<li><p><code>samtools depth alinhamento_sorted.bam &gt; cobertura.txt</code></p></li>
-</ul></li>
+</ol>
+<!-- 6.  **Avaliação de Cobertura:** -->
+<!--     -   Utilize o comando **`samtools depth`** para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões. -->
+<!--     -   `samtools depth alinhamento_sorted.bam > cobertura.txt` -->
+<ol start="6" type="1">
+<li><strong>Use o <code>IGV</code> para observar várias amostras ao mesmo tempo</strong></li>
 </ol>
 
 

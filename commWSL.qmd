@@ -1,4 +1,4 @@
-# ANEXO: Comandos Básicos do Ubuntu via WSL {.unnumbered}
+# ANEXO: Dicas para uso do Ubuntu/WSL {.unnumbered}
 
 ## Navegação e Diretórios
 

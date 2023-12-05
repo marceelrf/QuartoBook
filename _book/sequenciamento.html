@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./commWSL.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ANEXO: Comandos Básicos do Ubuntu via WSL</span></a>
+ <span class="menu-text">ANEXO: Dicas para uso do Ubuntu/WSL</span></a>
   </div>
 </li>
     </ul>
@@ -212,6 +212,7 @@ Importante
 <section id="arquivos" class="level2">
 <h2 class="anchored" data-anchor-id="arquivos">Arquivos</h2>
 <p>Serão utilizados os arquivos contidos na pasta <strong><code>WorkshopDados/shortReads/</code></strong>.</p>
+<p>Estão dados vieram do projeto 1000 genomas (<a href="https://www.internationalgenome.org/home" class="uri">https://www.internationalgenome.org/home</a>) e compreendem 10 amostras: dois trios e quatro amostras isoladas.</p>
 </section>
 <section id="atividades" class="level2">
 <h2 class="anchored" data-anchor-id="atividades">Atividades</h2>
@@ -219,16 +220,17 @@ Importante
 <ol type="1">
 <li><strong>Análise Inicial com FASTQC:</strong>
 <ul>
-<li>Execute o <code>FASTQC</code> nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.</li>
+<li>Execute o <code>FASTQC</code> nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências <em>overrepresented</em>, entre outros.</li>
 </ul></li>
-<li><strong>Identificação de Adaptação (Adapter) e Trimagem:</strong>
+<li><strong>Identificação de Adaptadores e Trimagem:</strong>
 <ul>
 <li>Com base nos resultados do <code>FASTQC</code>, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize o <code>Trimmomatic</code> para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.</li>
-<li></li>
+<li><code>[COMANDO]</code></li>
 </ul></li>
 <li><strong>Remoção de Leituras de Baixa Qualidade:</strong>
 <ul>
 <li>Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema.</li>
+<li><code>[COMANDO]</code></li>
 </ul></li>
 <li><strong>Filtragem de Leituras Curtas ou Longas:</strong>
 <ul>
@@ -245,12 +247,8 @@ Importante
 </ol>
 <!-- 6. **Estimativa de Diversidade e Contaminação:** -->
 <!--    - Em alguns casos, pode ser útil estimar a diversidade da amostra e verificar a presença de contaminação. Ferramentas como FastQ Screen podem ser úteis nesse contexto. -->
-<ol start="6" type="1">
-<li><strong>Relatório Final de Controle de Qualidade:</strong>
-<ul>
-<li>Compile todos os resultados de QC em um relatório final que destaque os principais aspectos da qualidade dos dados. Isso é útil para comunicação interna, bem como para garantir a transparência na publicação de resultados.</li>
-</ul></li>
-</ol>
+<!-- 6.  **Relatório Final de Controle de Qualidade:** -->
+<!--     -   Compile todos os resultados de QC em um relatório final que destaque os principais aspectos da qualidade dos dados. Isso é útil para comunicação interna, bem como para garantir a transparência na publicação de resultados. -->
 <!-- Essas etapas são fundamentais para garantir que os dados utilizados nas análises subsequentes sejam de alta qualidade e que os resultados sejam mais confiáveis. Lembre-se de que os detalhes específicos podem variar com base no tipo de experimento e na plataforma de sequenciamento utilizada. -->
 
 

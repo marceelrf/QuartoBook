@@ -7,7 +7,7 @@ Os arquivos utilizados para estas analises serão os `.fastq` analisados no prim
 ::: callout-warning
 ## Arquivos .fastq
 
-Preste atenção para o caminho da pasta aonde estão os `.fastq`.
+Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão na pasta **`WorkshopDados/shortReads/`**
 :::
 
 ## Atividades
@@ -24,25 +24,29 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`.
 
 1.  **Indexação do Genoma de Referência:**
 
+    -   Para o alinhamento de sequências utilizaremos o programa `bwa`. Há outros, como `bowtie2`, `minimap2`, que podem ser utilizados caso seja conveniente. Os comandos abaixo preparam o genoma de referência para o `bwa`.
+
     -   Antes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando **`bwa index`**. Isso cria arquivos que aceleram o processo de alinhamento.
 
-        `bwa index reference_genome.fa`
+        `bwa index hg38.fa`
 
     ::: callout-warning
     ## Indexação do genoma
 
-    O processo criar o indice do genoma via `bwa index` demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta **`WorkshopDados/genome/`** os arquivo resultantes desta etapa, que são os arquivos com extensão `.amb`, `.ann`, `.bwt`, `.fai`, `.pac` e `.sa`.
+    O processo para criar o indice do genoma via `bwa index` demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta **`WorkshopDados/genome/`** os arquivo resultantes desta etapa, que são os arquivos com extensão `.amb`, `.ann`, `.bwt`, `.fai`, `.pac` e `.sa`.
 
-    Caso deseje testar em um genoma menor, utilize o `chr17.fas`.
+    O genoma de referência humano esta no arquivo `hg38.fa`. Esse é a última versão do genoma de referência e a mais utilizada no mundo.
+
+    Caso deseje testar em um genoma menor, utilize o `chr12.fasta`.
     :::
 
 2.  **Alinhamento de Sequências:**
 
     -   Use o **`bwa mem`** para alinhar suas sequências de DNA ao genoma de referência.
 
-    -   `bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" reference_genome.fa {SAMPLE}_r1.fq {SAMPLE}_r2.fq > alinhamento.sam`
+    -   `bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq -o {SAMPLE}.sam`
 
-    Substitua **`reference_genome.fa`**, `{SAMPLE}_r1.fq` e `{SAMPLE}_r2.fq` pelos nomes dos arquivos correspondentes.
+    Substitua **`reference_genome.fa`**, `{SAMPLE}` pelos nomes dos arquivos correspondentes.
 
     ::: callout-tip
     ## Automatizando o processo (Opicional)
@@ -52,30 +56,32 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`.
     Você poderá incluir as etapas seguintes no mesmo `loop`.
     :::
 
-3.  **Converter Formato SAM para BAM:**
+3.  **Converter Formato SAM para BAM e ordenar os reads:**
 
     -   O arquivo de saída do **`bwa mem`** é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.
 
-    -   `samtools sort alinhamento.sam > alinhamento_sorted.bam`
+    -   `samtools sort {SAMPLE}.sam > {SAMPLE}.bam`
 
-4.  **Ordenar e Indexar o Arquivo BAM:**
+4.  **Indexar o Arquivo BAM:**
 
     -   Ordene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.
 
-    -   `samtools index alinhamento_sorted.bam`
+    -   `samtools index {SAMPLE}.bam`
 
-5.  **Remoção de Duplicatas (opcional):**
+<!-- 5.  **Remoção de Duplicatas (opcional):** -->
 
-    -   Dependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes.
+<!--     -   Dependendo da aplicação, você pode querer remover duplicatas do seu arquivo BAM para evitar viés em análises subsequentes. -->
 
-    -   `samtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam`
+<!--     -   `samtools rmdup alinhamento_sorted.bam alinhamento_nodups.bam` -->
 
-6.  **Visualização do Alinhamento:**
+5.  **Visualização do Alinhamento:**
 
-    -   Use o `IGV` (Integrative Genomics Viewer) para visualizar o alinhamento e verificar sua qualidade.
+    -   Use o `IGV` (Integrative Genomics Viewer) para visualizar o alinhamento (`{SAMPLE}.bam`) e verificar sua qualidade.
 
-7.  **Avaliação de Cobertura:**
+<!-- 6.  **Avaliação de Cobertura:** -->
 
-    -   Utilize o comando **`samtools depth`** para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões.
+<!--     -   Utilize o comando **`samtools depth`** para calcular a cobertura do genoma e avaliar a profundidade de sequenciamento em diferentes regiões. -->
 
-    -   `samtools depth alinhamento_sorted.bam > cobertura.txt`
+<!--     -   `samtools depth alinhamento_sorted.bam > cobertura.txt` -->
+
+6.  **Use o `IGV` para observar várias amostras ao mesmo tempo**

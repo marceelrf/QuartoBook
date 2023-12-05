@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./commWSL.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ANEXO: Comandos Básicos do Ubuntu via WSL</span></a>
+ <span class="menu-text">ANEXO: Dicas para uso do Ubuntu/WSL</span></a>
   </div>
 </li>
     </ul>
@@ -205,7 +205,8 @@ Importante
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O software <code>guppy</code> só esta disponível para download via comunidade da Oxford Nanopore. Para este tutorial fornecemos um arquivo <code>.tar</code> para instalação em sua máquina. Para instalar siga os seguintes passos:</p>
+<p>O software <code>guppy</code> só esta disponível para download via comunidade da Oxford Nanopore. Para este tutorial fornecemos um arquivo <code>.tar</code> para instalação em sua máquina. O arquivo esta na pasta <strong>WorkshopDados/guppy_installer/</strong></p>
+<p>Para instalar siga os seguintes passos:</p>
 <p>Acesse a pasta que contem o arquivo <code>.tar</code> e descompacte;</p>
 <p><code>tar -xf ont-guppy-cpu_6.5.7_linux64.tar.gz</code></p>
 <p>Verifique o caminho completo para a pasta</p>
@@ -267,7 +268,7 @@ Por que usar <code>&lt;</code> no comando chopper?
 <ul>
 <li><p>Use o <code>minimap2</code> para alinhar suas sequências de DNA ao genoma de referência.</p></li>
 <li><p><code>minimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /</code></p>
-<p><code>-R "@RG\tID::{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] &gt; [AMOSTRA].sam</code></p></li>
+<p><code>-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] &gt; [AMOSTRA].sam</code></p></li>
 </ul>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -322,10 +323,6 @@ Opcional
 <ul>
 <li>Repita os passos 3 e 4 do dia 2 utilizando <code>samtools</code>;</li>
 </ul></li>
-<li><p><strong>Avaliação da cobertura dos long reads:</strong></p>
-<ul>
-<li>Repita o passo 7 do dia 2 utilizando <code>samtools</code>;</li>
-</ul></li>
 <li><p><strong>Visualização do Alinhamento:</strong></p>
 <ul>
 <li>Importe o <code>BAM</code> para o <code>IGV</code> e avalie sua qualidade;</li>
@@ -345,8 +342,8 @@ Tempo de execução da genotipagem em Long Reads
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O tempo de execução do <code>freebayes</code> para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo bed fornecido para trabalhar com menos regiões.</p>
-<p>Para os formulários utilize o vcf resultante em <strong>WorkshopDados/pre_run/Dia4/</strong></p>
+<p>O tempo de execução do <code>freebayes</code> para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo <code>bed</code> fornecido para trabalhar com menos regiões.</p>
+<p>Para os formulários utilize o <code>vcf</code> resultante em <strong>WorkshopDados/pre_run/Dia4/</strong></p>
 </div>
 </div>
 <ul>

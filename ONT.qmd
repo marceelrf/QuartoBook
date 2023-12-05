@@ -3,7 +3,9 @@
 ::: callout-important
 ## Importante
 
-O software `guppy` só esta disponível para download via comunidade da Oxford Nanopore. Para este tutorial fornecemos um arquivo `.tar` para instalação em sua máquina. Para instalar siga os seguintes passos:
+O software `guppy` só esta disponível para download via comunidade da Oxford Nanopore. Para este tutorial fornecemos um arquivo `.tar` para instalação em sua máquina. O arquivo esta na pasta **WorkshopDados/guppy_installer/**
+
+Para instalar siga os seguintes passos:
 
 Acesse a pasta que contem o arquivo `.tar` e descompacte;
 
@@ -58,7 +60,7 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
     -   `minimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /`
 
-        `-R "@RG\tID::{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam`
+        `-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam`
 
     ::: callout-caution
     ## Consumo de memória durante a etapa
@@ -88,25 +90,21 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
     -   Repita os passos 3 e 4 do dia 2 utilizando `samtools`;
 
-6.  **Avaliação da cobertura dos long reads:**
-
-    -   Repita o passo 7 do dia 2 utilizando `samtools`;
-
-7.  **Visualização do Alinhamento:**
+6.  **Visualização do Alinhamento:**
 
     -   Importe o `BAM` para o `IGV` e avalie sua qualidade;
     -   Compare as amostras com suas respectivas amostras de short reads;
 
-8.  **Realize a Genotipagem das Amostras de long reads:**
+7.  **Realize a Genotipagem das Amostras de long reads:**
 
     -   Utilize o `freebayes` para realizar a genotipagem e modo similar ao passo 3 do dia 3;
 
     ::: callout-warning
     ## Tempo de execução da genotipagem em Long Reads
 
-    O tempo de execução do `freebayes` para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo bed fornecido para trabalhar com menos regiões.
+    O tempo de execução do `freebayes` para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo `bed` fornecido para trabalhar com menos regiões.
 
-    Para os formulários utilize o vcf resultante em **WorkshopDados/pre_run/Dia4/**
+    Para os formulários utilize o `vcf` resultante em **WorkshopDados/pre_run/Dia4/**
     :::
 
     -   Repita as métricas de filtragem utilizadas no passo 4 do dia 3;

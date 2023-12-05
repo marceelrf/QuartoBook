@@ -6,17 +6,23 @@
 
 1.  **Preparação do Ambiente:**
 
-    -   Certifique-se de que o freebayes está instalado no seu ambiente. Você pode instalar o FreeBayes usando gerenciadores de pacotes, como o **`conda`** ou o **`pip`**, ou compilando-o a partir do código-fonte.
-
-    -   `conda install -c bioconda freebayes`
+    -   Certifique-se de que o `freebayes` está instalado no seu ambiente. Você pode instalar com `sudo apt install freebayes`.
 
 2.  **Indexação do Genoma de Referência (se ainda não estiver indexado):**
 
     -   Assim como na etapa de alinhamento, o genoma de referência deve ser indexado.
 
-    -   `samtools faidx reference_genome.fa`
+    -   `samtools faidx hg38.fa`
 
-3.  **Chamada de Variantes com `freebayes`:**
+    -   Caso utilize um genoma menor, atualize o nome.
+
+3.  **Crie um arquivo com os nomes da amostras BAM:**
+
+    -   Entre na pasta onde estão os arquivos `BAM` gerados e utilize o comando `ls` como abaixo
+
+    -   `ls *.bam > bam_list.txt`
+
+4.  **Chamada de Variantes com `freebayes`:**
 
     -   Execute o freebayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.
 
@@ -28,21 +34,28 @@
         Caso o computador que esteja utilizando aborte o processo por falta de memória, você pode optar por reduzir o número de amostras em `bam_list.txt`. É importante destacar que a analise correta de genotipagem via `freebayes` requer que todas as amostras sejam analisadas simultaneamente, mas para fim de aprendizado esta é uma estratégia.
         :::
 
-4.  **Filtragem de Variantes (opcional):**
+5.  **Filtragem de Variantes (opcional):**
 
-    -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo freebayes para reduzir o número de falsos positivos.
+    -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo `freebayes` para reduzir o número de falsos positivos. Abaixo estão alguns exemplos
 
-    -   `bcftools view --exclude 'QUAL>5' variantes.vcf > variantes_filtradas.vcf`
+    -   `bcftools view --exclude 'QUAL>1' variantes.vcf > variantes_filtradas.vcf`
+
+    -   `bcftools view --trim-alt-alleles variantes_filtradas.vcf > variantes_filtradas_trim.vcf`
+
+    -   `bcftools view --min-ac 1 variantes_filtradas_trim.vcf > variantes_filtradas_trim_minac.vcf`
+
+    -   `bcftools norm -f hg38.fa variantes_filtradas_trim_minac.vcf > variantes_filtradas_trim_minac_norm.vcf`
 
     -   Adapte os critérios de filtragem conforme necessário.
 
-5.  **Análise e Interpretação de Variantes:**
+6.  **Análise e Interpretação de Variantes:**
 
-    -   Utilize ferramentas como `VCFtools` ou `bcftools` para realizar análises adicionais no arquivo VCF, como filtragem específica, anotações e interpretação biológica.
+    -   Utilize ferramentas como `VCFtools` para realizar análises adicionais no arquivo VCF, como filtragem específica e anotações.
 
-6.  **Visualização de Variantes:**
+7.  **Visualização de Variantes:**
 
     -   Use o `IGV` para visualizar as variantes em relação ao genoma de referência e avaliar sua qualidade.
+    -   Você pode abrir ao mesmo tempo o VCF e o alinhamento (BAM) de uma mesma amostra. Caso deseje.
 
 <!-- 7.  **Anotação de Variantes:** -->
 

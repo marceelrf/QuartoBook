@@ -2,13 +2,13 @@
 
 ## Configurações de sistema
 
-Antes de iniciarmos o tutorial, é imperativo garantir que o sistema atenda às configurações mínimas para uma experiência estável. Utilizaremos sistema Linux. Recomenda-se que a máquina disponha de, no mínimo, 30 GB de armazenamento e 8 GB de memória RAM. No entanto, para uma performance ideal e considerando o potencial de expansão das aplicações, encorajamos a utilização de um sistema com mais de 50 GB de armazenamento e, no mínimo, 16 GB de memória RAM. Essas configurações mais robustas assegurarão não apenas a instalação suave do software, mas também a capacidade de executar múltiplas aplicações de forma eficiente, proporcionando uma experiência mais fluida e responsiva ao usuário.
+Antes de iniciarmos o tutorial, é imperativo garantir que o sistema atenda às configurações mínimas para uma experiência estável. Utilizaremos sistema Linux. Recomenda-se que a máquina disponha de, no mínimo, 40 GB de armazenamento, 8 GB de memória RAM e um processador i5/i7 ou compatível. No entanto, para uma performance ideal e considerando o potencial de expansão das aplicações, encorajamos a utilização de um sistema com mais de 60 GB de armazenamento e, no mínimo, 16 GB de memória RAM. Essas configurações mais robustas assegurarão não apenas a instalação suave do software, mas também a capacidade de executar múltiplas aplicações de forma eficiente, proporcionando uma experiência mais fluida e responsiva ao usuário.
 
 ## Softwares necessários {#sec-softwares-necessários}
 
 ### Usuários Windows
 
--   WSL (Windows Subsystem for Linux)
+-   [WSL](https://learn.microsoft.com/pt-br/windows/wsl/install) (Windows Subsystem for Linux)
 -   [IGV](https://data.broadinstitute.org/igv/projects/downloads/2.16/IGV_Win_2.16.2-WithJava-installer.exe) [@robinson2011]
 -   [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.12.1.zip)
 -   [notepad++](https://notepad-plus-plus.org/downloads/)
@@ -30,24 +30,20 @@ Siga o tutorial da microsoft para instalar o `WSL`.
 -   [minimap2](https://github.com/lh3/minimap2) [@li2018; @li2021]
 -   [samtools](https://github.com/samtools/samtools) [@danecek2021]
 -   [freebayes](https://github.com/freebayes/freebayes) [@garrison2012]
--   [gatk](https://github.com/broadinstitute/gatk)
 -   [vcftools](https://github.com/vcftools/vcftools) [@danecek2011]
 -   [bcftools](https://github.com/samtools/bcftools) [@danecek2021]
--   [WhatsHap](https://github.com/whatshap/whatshap) [@martin2016]
 -   [NanoPlot](https://github.com/wdecoster/NanoPlot) [@decoster2023]
 -   [chopper](https://github.com/wdecoster/chopper) [@decoster2023]
 -   [cramino](https://github.com/wdecoster/cramino) [@decoster2023]
-
-#### Opcionais
-
 -   [gzip](https://www.gnu.org/software/gzip/)
--   [HTSlib](https://github.com/samtools/htslib)
 
 ## Instalação
 
 ::: {.callout-warning title="Usuários windows"}
 Usuários windows precisam instalar o Subsistema Windows para Linux (`WSL`).\
 Os softwares `FASTQC` e `IGV` precisam ser instalados no windows e **não no `WSL`**.
+
+Anote a `senha` que você configurou. Ela será fundamental durante o uso do `WSL`!!!!
 :::
 
 Ao terminar a instalação do `WSL` e de configurar seu usuário no linux utilize os seguintes comandos:
@@ -64,7 +60,7 @@ Estes comandos irão garantir que o seu sistema esteja atualizado.
 O comando `sudo` permite ao usuário executar comandos com permissão superior. Para isso você precisará da sua **senha** (ou do administrador)!
 :::
 
-Para instalar softwares utilize o comando `apt install` da seguinte forma:
+Para instalar softwares no linux (diretamente ou no `WSL`) utilize o comando `apt install` da seguinte forma:
 
 `sudo apt install [SOFTWARE]`
 
@@ -73,9 +69,9 @@ Para instalar softwares utilize o comando `apt install` da seguinte forma:
 Baixe os dados que serão utilizados neste workshop via [**Google Drive**](https://drive.google.com/drive/folders/1YV_zIfeF-cOksse5gHau_UPgLfIugBX5?usp=drive_link);
 
 ::: {.callout-important title="Utilize o email correto"}
-Para ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro entre em contato com a organização.
+Para ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro, entre em contato com a organização.
 
-Os dados totalizam \~13 GB, se atente para isso.
+Os dados totalizam \~20 GB. **Atente-se para isso!!!**
 :::
 
 Os dados estão contidos nesta estrutura de pastas descritas a baixo:
@@ -119,16 +115,16 @@ Os dados estão contidos nesta estrutura de pastas descritas a baixo:
 
 [^primeiropassos-3]: Instalador obtido em https://community.nanoporetech.com/
 
-::: callout-tip
-## Dicas
+<!-- ::: callout-tip -->
+<!-- ## Dicas -->
 
-Utilize o comando `htop` para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial.
+<!-- Utilize o comando `htop` para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial. -->
 
-Utilize os argumento `-h` ou `--help` para visualizar ajuda sobre o uso dos softwares via terminal.
+<!-- Utilize os argumento `-h` ou `--help` para visualizar ajuda sobre o uso dos softwares via terminal. -->
 
-`SOFTWARE -h`
+<!-- `SOFTWARE -h` -->
 
-Adicionar o comando `time` antes de rodar os códigos, para saber o tempo que demorou, irá te ajudar a se programar para atividades futuras.
+<!-- Adicionar o comando `time` antes de rodar os códigos, para saber o tempo que demorou, irá te ajudar a se programar para atividades futuras. -->
 
-`time [COMANDOS...]`
-:::
+<!-- `time [COMANDOS...]` -->
+<!-- ::: -->

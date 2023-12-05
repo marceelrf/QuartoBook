@@ -10,18 +10,20 @@ Verifique se o `FASTQC` esta instalado.
 
 Serão utilizados os arquivos contidos na pasta **`WorkshopDados/shortReads/`**.
 
+Estão dados vieram do projeto 1000 genomas (<https://www.internationalgenome.org/home>) e compreendem 10 amostras: dois trios e quatro amostras isoladas.
 
 ## Atividades
 
 O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequenciamento de nova geração (NGS) para garantir a confiabilidade dos resultados. Abaixo estão as etapas típicas do controle de qualidade:
 
 1.  **Análise Inicial com FASTQC:**
-    -   Execute o `FASTQC` nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.
-2.  **Identificação de Adaptação (Adapter) e Trimagem:**
+    -   Execute o `FASTQC` nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências *overrepresented*, entre outros.
+2.  **Identificação de Adaptadores e Trimagem:**
     -   Com base nos resultados do `FASTQC`, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize o `Trimmomatic` para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.
-    -   
+    -   `[COMANDO]`
 3.  **Remoção de Leituras de Baixa Qualidade:**
     -   Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema.
+    -   `[COMANDO]`
 4.  **Filtragem de Leituras Curtas ou Longas:**
     -   Dependendo do seu experimento, você pode querer filtrar leituras muito curtas ou muito longas que possam representar artefatos ou problemas experimentais.
 
@@ -36,7 +38,8 @@ O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequ
 
 <!--    - Em alguns casos, pode ser útil estimar a diversidade da amostra e verificar a presença de contaminação. Ferramentas como FastQ Screen podem ser úteis nesse contexto. -->
 
-6.  **Relatório Final de Controle de Qualidade:**
-    -   Compile todos os resultados de QC em um relatório final que destaque os principais aspectos da qualidade dos dados. Isso é útil para comunicação interna, bem como para garantir a transparência na publicação de resultados.
+<!-- 6.  **Relatório Final de Controle de Qualidade:** -->
+
+<!--     -   Compile todos os resultados de QC em um relatório final que destaque os principais aspectos da qualidade dos dados. Isso é útil para comunicação interna, bem como para garantir a transparência na publicação de resultados. -->
 
 <!-- Essas etapas são fundamentais para garantir que os dados utilizados nas análises subsequentes sejam de alta qualidade e que os resultados sejam mais confiáveis. Lembre-se de que os detalhes específicos podem variar com base no tipo de experimento e na plataforma de sequenciamento utilizada. -->
