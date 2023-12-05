@@ -49,6 +49,15 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 2.  **Avaliação da qualidade do arquivo resultado `.fastq`:**
 
     -   Utilize o `NanoPlot` para gerar gráficos de qualidade da amostra;
+
+        ::: {.callout-note collapse="true"}
+        ## Instalação `NanoPlot`
+
+        A instalação do NanoPlot deve ser feita via pip ou conda.
+
+        `pip install NanoPlot`
+        :::
+
     -   `NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose`
 
 3.  **Filtre as leituras baseado no tamanho e qualidade:**
@@ -73,6 +82,10 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
         `~/miniconda3/bin/conda init zsh`
 
         Será necessário reinciar seu sistema (Ubuntu ou `WSL`) após isso.
+
+        `conda config --add channels conda-forge`
+
+        `conda config --set channel_priority strict`
 
         `conda install -c bioconda chopper`
         :::

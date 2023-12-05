@@ -243,14 +243,31 @@ Aviso
 </div></li>
 <li><p><strong>Avaliação da qualidade do arquivo resultado <code>.fastq</code>:</strong></p>
 <ul>
-<li>Utilize o <code>NanoPlot</code> para gerar gráficos de qualidade da amostra;</li>
-<li><code>NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose</code></li>
+<li><p>Utilize o <code>NanoPlot</code> para gerar gráficos de qualidade da amostra;</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Instalação <code>NanoPlot</code>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A instalação do NanoPlot deve ser feita via pip ou conda.</p>
+<p><code>pip install NanoPlot</code></p>
+</div>
+</div>
+</div></li>
+<li><p><code>NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose</code></p></li>
 </ul></li>
 <li><p><strong>Filtre as leituras baseado no tamanho e qualidade:</strong></p>
 <ul>
 <li><p>Utilize <code>chopper</code> para isso.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -259,7 +276,7 @@ Instalação do <code>chopper</code>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para instalar o <code>chopper</code> pode ser necessário ter o <code>conda</code> em seu sistema. Para isso utilize os seguintes comandos:</p>
 <p><code>mkdir -p ~/miniconda3</code></p>
@@ -269,6 +286,8 @@ Instalação do <code>chopper</code>
 <p><code>~/miniconda3/bin/conda init bash</code></p>
 <p><code>~/miniconda3/bin/conda init zsh</code></p>
 <p>Será necessário reinciar seu sistema (Ubuntu ou <code>WSL</code>) após isso.</p>
+<p><code>conda config --add channels conda-forge</code></p>
+<p><code>conda config --set channel_priority strict</code></p>
 <p><code>conda install -c bioconda chopper</code></p>
 </div>
 </div>
@@ -276,7 +295,7 @@ Instalação do <code>chopper</code>
 <li><p><code>chopper &lt; [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] &gt; [AMOSTRA]_filtrada.fastq</code></p></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -285,7 +304,7 @@ Por que usar <code>&lt;</code> no comando <code>chopper</code>?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>O comando <code>&lt;</code> garante que o arquivo fastq da amostra seja direcionado para entrada (<strong><code>stdin</code></strong>) do comando no <code>chopper</code>. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.</p>
 </div>
@@ -331,7 +350,7 @@ Tempo de execução do <code>bwa</code>
 <p><code>-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] &gt; [AMOSTRA].sam</code></p></li>
 </ul>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -340,7 +359,7 @@ Opcional
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Realize uma montagem <em>de novo</em> utilizando o pipeline <code>minimap2</code>-<code>miniasm</code>. Este processo pode levar várias horas/dias. <code>Tome cuidado!</code></p>
 </div>
