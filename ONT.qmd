@@ -50,10 +50,10 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
     -   Utilize o `NanoPlot` para gerar gráficos de qualidade da amostra;
 
-        ::: {.callout-note collapse="true"}
-        ## Instalação `NanoPlot`
+        ::: {.callout-tip collapse="true"}
+        ## Instalação do `NanoPlot`
 
-        A instalação do NanoPlot deve ser feita via pip ou conda.
+        A instalação do `NanoPlot` deve ser feita via pip ou conda.
 
         `pip install NanoPlot`
         :::
