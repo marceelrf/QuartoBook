@@ -77,45 +77,15 @@ Os dados totalizam \~20 GB. **Atente-se para isso!!!**
 Os dados estão contidos nesta estrutura de pastas descritas a baixo:
 
 **WorkshopDados/**                                        \
-   ¦\--**genome/**                                \
-   ¦   ¦\--chr17.fas[^primeiropassos-1]                        \
-   ¦   °\--hg38.fa                          \
-   ¦\--**fast5/**                      \
-   ¦   °\--\*arquivos.fast5[^primeiropassos-2]    \
+   ¦\--**genome/**                                                        \
+   ¦\--**fast5/**                       \
    ¦\--**guppy_installer/**                      \
-   ¦   °\--ont-guppy-cpu_6.5.7_linux64.tar.gz[^primeiropassos-3]\
-   ¦\--**LongReadsFastq/**                        \
-   ¦   ¦\--HG00096.hg38.fastq                \
-   ¦   °\--HG00099.hg38.fastq                \
-  °\--**ShortReadsFastq/**                      \
-      ¦\--HG00096_r1.fastq                  \
-      ¦\--HG00096_r2.fastq                  \
-      ¦\--HG00097_r1.fastq                  \
-      ¦\--HG00097_r2.fastq                  \
-      ¦\--HG00099_r1.fastq                  \
-      ¦\--HG00099_r2.fastq                  \
-      ¦\--HG00100_r1.fastq                  \
-      ¦\--HG00100_r2.fastq                  \
-      ¦\--NA18486_r1.fastq                  \
-      ¦\--NA18486_r2.fastq                  \
-      ¦\--NA18487_r1.fastq                  \
-      ¦\--NA18487_r2.fastq                  \
-      ¦\--NA18488_r1.fastq                  \
-      ¦\--NA18488_r2.fastq                  \
-      ¦\--NA19648_r1.fastq                  \
-      ¦\--NA19648_r2.fastq                  \
-      ¦\--NA19649_r1.fastq                  \
-      ¦\--NA19649_r2.fastq                  \
-      ¦\--NA19651_r1.fastq                  \
-      °\--NA19651_r2.fastq
-
-[^primeiropassos-1]: Genoma do cromossomo 17 obtido em https://timkahlke.github.io/LongRead_tutorials/
-
-[^primeiropassos-2]: Arquivos `fast5` obtidos em https://timkahlke.github.io/LongRead_tutorials/
-
-[^primeiropassos-3]: Instalador obtido em https://community.nanoporetech.com/
+   ¦\--**pre_run/**\
+   ¦\--**LongReadsFastq/**                                                  \
+  °\--**ShortReadsFastq/**                                       
 
 <!-- ::: callout-tip -->
+
 <!-- ## Dicas -->
 
 <!-- Utilize o comando `htop` para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial. -->
@@ -127,4 +97,5 @@ Os dados estão contidos nesta estrutura de pastas descritas a baixo:
 <!-- Adicionar o comando `time` antes de rodar os códigos, para saber o tempo que demorou, irá te ajudar a se programar para atividades futuras. -->
 
 <!-- `time [COMANDOS...]` -->
+
 <!-- ::: -->
