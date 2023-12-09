@@ -1,1 +1,15 @@
 # Dia 5 - Genotipagem de STRs a partir de dados de NGS {#sec-dia5 .unnumbered}
+
+## Atividades
+
+1.  Baixar `toaSTR`
+2.  Baixar `Docker`
+3.  Instalar no computador;
+4.  Fazer login no `toaSTR`;
+
+## toaSTR
+
+1.  Criar os painéis de marcadores que serão utilizados;
+2.  Subir e correr uma amostra no `toaSTR` ;
+
+## Interpretação dos resultados

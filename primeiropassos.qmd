@@ -34,7 +34,7 @@ Siga o tutorial da microsoft para instalar o `WSL`.
 -   [bcftools](https://github.com/samtools/bcftools) [@danecek2021]
 -   [NanoPlot](https://github.com/wdecoster/NanoPlot) [@decoster2023]
 -   [chopper](https://github.com/wdecoster/chopper) [@decoster2023]
--   [cramino](https://github.com/wdecoster/cramino) [@decoster2023]
+-   [toaSTR](https://github.com/labconowl/toastr) [@ganschow2017]
 -   [gzip](https://www.gnu.org/software/gzip/)
 
 ## Instalação
