@@ -2,6 +2,8 @@
 
 ## Arquivos
 
+Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
+
 ## Atividades
 
 1.  **Preparação do Ambiente:**
