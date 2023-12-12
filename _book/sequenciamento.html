@@ -239,11 +239,13 @@ Importante
 <p>Como sugestão recomendamos que deixe este arquivo na pasta Downlodas em sua <code>home</code>. Lembre-se se alterar <code>USER</code> para o seu nome de usuário. Desde modo os comandos a seguir serão executados sem erros.</p>
 </div>
 </div></li>
+<li><p>Adapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:</p></li>
 <li><p><code>java -jar '/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar' PE -phred33 ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa':2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36</code></p></li>
 </ul></li>
 <li><strong>Remoção de Leituras de Baixa Qualidade:</strong>
 <ul>
 <li>Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.</li>
+<li>Novamente, adapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:</li>
 <li><code>java -jar '/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar' PE -phred33 ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa':2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:27 MINLEN:100</code></li>
 </ul></li>
 <li><strong>Filtragem de Leituras Curtas ou Longas:</strong>
