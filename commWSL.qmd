@@ -1,119 +1,173 @@
+---
+engine: knitr
+---
+
 # ANEXO: Dicas para uso do Ubuntu/WSL {.unnumbered}
 
 ## Navegação e Diretórios
 
 ### Listar Conteúdo do Diretório
 
-`ls`
+```{bash, eval=F}
+ls
+```
 
 ### **Mudar de Diretório**
 
-`cd nome_do_diretorio`
+```{bash, eval=F}
+cd nome_do_diretorio
+```
 
 ### **Diretório Atual**
 
-`pwd`
+```{bash,eval=F}
+pwd
+```
 
 ### **Criar Diretório**
 
-`mkdir nome_do_novo_diretorio`
+```{bash,eval=F}
+mkdir nome_do_novo_diretorio
+```
 
 ## **Manipulação de Arquivos**
 
 ### **Copiar Arquivo**
 
-`cp arquivo_origem destino`
+```{bash,eval=F}
+cp arquivo_origem destino
+```
 
 ### **Mover/Renomear Arquivo**
 
-`mv arquivo_origem novo_nome_ou_destino`
+```{bash,eval = F}
+mv arquivo_origem novo_nome_ou_destino
+```
 
 ### **Remover Arquivo**
 
-`rm nome_do_arquivo`
+```{bash,eval=F}
+rm nome_do_arquivo
+```
 
 ## **Visualização de Conteúdo**
 
 ### **Visualizar Conteúdo do Arquivo**
 
-`cat nome_do_arquivo`
+```{bash,eval = F}
+cat nome_do_arquivo
+```
 
 ### **Visualizar Conteúdo do Arquivo (página por página)**
 
-`less nome_do_arquivo`
+```{bash,eval=F}
+less nome_do_arquivo
+```
 
 ## **Pacotes e Atualizações**
 
 ### **Atualizar Lista de Pacotes**
 
-`sudo apt update`
+```{bash,eval=F}
+sudo apt update
+```
 
 ### **Atualizar Pacotes Instalados**
 
-`sudo apt upgrade`
+```{bash,eval=F}
+sudo apt upgrade
+```
 
 ### **Instalar Novo Pacote**
 
-`sudo apt install nome_do_pacote`
+```{bash,eval=F}
+sudo apt install nome_do_pacote
+```
 
 ## **Gerenciamento de Usuários**
 
 ### **Adicionar Usuário ao Grupo**
 
-`sudo usermod -aG nome_do_grupo nome_do_usuario`
+```{bash,eval=F}
+sudo usermod -aG nome_do_grupo nome_do_usuario
+```
 
 ### **Mudar Senha do Usuário**
 
-`passwd nome_do_usuario`
+```{bash,eval=F}
+passwd nome_do_usuario
+```
 
 ## **Processos**
 
 ### **Listar Processos**
 
-`ps aux`
+```{bash,eval=F}
+ps aux
+```
 
 ### **Matar um Processo por ID**
 
-`kill -9 processo_id`
+```{bash,eval=F}
+kill -9 processo_id
+```
 
 ### **Monitorar Recursos do Sistema (htop)**
 
-`htop`
+```{bash,eval=F}
+htop
+```
 
 ### **Medir Tempo de Execução de um Comando (time)**
 
-`time comando_a_ser_medido`
+```{bash,eval=F}
+time comando_a_ser_medido
+```
 
 ## **Rede**
 
 ### **Verificar Configurações de Rede**
 
-`ifconfig`
+```{bash,eval=F}
+ifconfig
+```
 
 ### **Testar Conexão com um Endereço IP**
 
-`ping endereco_ip`
+```{bash,eval=F}
+ping endereco_ip
+```
 
 ## **Entrada e Saída Padrão (stdin/stdout)**
 
 -   **stdin (Standard Input):** É a entrada padrão de dados. Um programa pode ler dados a partir do stdin. Exemplo:
 
--   `cat < nome_do_arquivo`
+    ```{bash,eval=F}
+    cat < nome_do_arquivo
+    ```
 
 -   **stdout (Standard Output):** É a saída padrão de dados. Um programa geralmente imprime resultados no stdout. Exemplo:
 
--   `ls > lista_de_arquivos.txt`
+    ```{bash,eval=F}
+    ls > lista_de_arquivos.txt
+    ```
 
 -   **stderr (Standard Error):** É a saída padrão para mensagens de erro. Exemplo:
 
--   `comando_inexistente 2> erro.log`
+    ```{bash,eval=F}
+    comando_inexistente 2> erro.log
+    ```
 
 ## **Outros Comandos Úteis**
 
 ### **Ajuda sobre um Comando**
 
-`man nome_do_comando`
+```{bash,eval=F}
+man nome_do_comando
+```
 
 ### **Sair do Terminal**
 
-`exit`
+```{bash,eval=F}
+exit
+```

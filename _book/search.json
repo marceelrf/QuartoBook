@@ -4,216 +4,349 @@
     "href": "index.html",
     "title": "Tutorial Bioinformatica",
     "section": "",
-    "text": "Sobre esse curso"
+    "text": "Sobre esse curso",
+    "crumbs": [
+      "Sobre esse curso"
+    ]
   },
   {
     "objectID": "index.html#realização",
     "href": "index.html#realização",
     "title": "Tutorial Bioinformatica",
     "section": "Realização",
-    "text": "Realização\n\n\n\nRealização UnB, UNESP e USP."
+    "text": "Realização\n\n\n\nRealização UnB, UNESP e USP.",
+    "crumbs": [
+      "Sobre esse curso"
+    ]
   },
   {
     "objectID": "index.html#apoio",
     "href": "index.html#apoio",
     "title": "Tutorial Bioinformatica",
     "section": "Apoio",
-    "text": "Apoio\n\n\n\nCAPES-PROCAD Edital n° 16/2020. Processos 88887.516236/2020-00 e 88881.516238/2020-01."
+    "text": "Apoio\n\n\n\nCAPES-PROCAD Edital n° 16/2020. Processos 88887.516236/2020-00 e 88881.516238/2020-01.",
+    "crumbs": [
+      "Sobre esse curso"
+    ]
   },
   {
     "objectID": "index.html#autores",
     "href": "index.html#autores",
     "title": "Tutorial Bioinformatica",
     "section": "Autores",
-    "text": "Autores\nCelso Teixeira Mendes Junior\nErick da Cruz Castelli\nMarcel Rodrigues Ferreira\nTamara Soledad Frontanilla Recalde"
+    "text": "Autores\nCelso Teixeira Mendes Junior\nErick da Cruz Castelli\nMarcel Rodrigues Ferreira\nTamara Soledad Frontanilla Recalde",
+    "crumbs": [
+      "Sobre esse curso"
+    ]
   },
   {
     "objectID": "index.html#colaboradores",
     "href": "index.html#colaboradores",
     "title": "Tutorial Bioinformatica",
     "section": "Colaboradores",
-    "text": "Colaboradores"
+    "text": "Colaboradores",
+    "crumbs": [
+      "Sobre esse curso"
+    ]
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "Introdução",
     "section": "",
-    "text": "Bem-vindos ao Workshop de Bioinformática Aplicada à Genética Forense: Análise de Dados de Sequenciamento de Segunda e Terceira Geração. Este curso abrangente foi projetado para fornecer a vocês uma imersão prática nas técnicas de análise de dados genômicos, com foco especial na aplicação forense.\nA genética forense tornou-se uma ferramenta essencial na resolução de casos criminais, identificação de indivíduos e estabelecimento de relações familiares. Neste workshop de cinco dias, exploraremos os fundamentos e as aplicações práticas do sequenciamento de DNA, abordando desde os conceitos básicos até as técnicas avançadas de genotipagem de STRs (Short Tandem Repeats) a partir de dados de Next-Generation Sequencing (NGS).\nDia 1 - Sequenciamento de DNA: Iniciaremos nossa jornada explorando os princípios fundamentais do sequenciamento de DNA de segunda geração. Compreenderemos as tecnologias por trás desses métodos e sua importância na geração de dados genômicos de alta qualidade. Também serão analisados dados brutos de sequenciamento e seu controle qualidade.\nDia 2 - Alinhamento de Sequências de DNA: No segundo dia, mergulharemos na etapa crucial de alinhamento de sequências de DNA. A precisão dessa fase é vital para extrair informações significativas dos dados brutos e identificar variações genéticas.\nDia 3 - Identificação de Variantes: Aprofundando-nos ainda mais, dedicaremos o terceiro dia à identificação de variantes genéticas. Exploraremos ferramentas e estratégias para detectar mutações, SNPs (Single Nucleotide Polymorphisms), InDels, e outras variantes que desempenham um papel crucial na individualidade genômica.\nDia 4 - Análise de Sequenciamento Oxford Nanopore: No quarto dia, abordaremos uma tecnologia revolucionária: o sequenciamento Oxford Nanopore. Compreenderemos suas vantagens, desafios e exploraremos casos de uso específicos na genética forense.\nDia 5 - Genotipagem de STRs a partir de dados de NGS: Encerraremos o workshop com uma exploração prática da genotipagem de STRs, uma ferramenta valiosa para estabelecer perfis genéticos únicos. Aprenderemos a interpretar e analisar esses dados, fornecendo insights fundamentais para investigações forenses.\nAo longo desta semana, vocês serão desafiados a aplicar os conhecimentos adquiridos em exercícios práticos e estudos de caso, preparando-os para enfrentar os desafios reais da genética forense na era da bioinformática. Esteja preparado para uma jornada intensiva de aprendizado e descoberta!"
+    "text": "Bem-vindos ao Workshop de Bioinformática Aplicada à Genética Forense: Análise de Dados de Sequenciamento de Segunda e Terceira Geração. Este curso abrangente foi projetado para fornecer a vocês uma imersão prática nas técnicas de análise de dados genômicos, com foco especial na aplicação forense.\nA genética forense tornou-se uma ferramenta essencial na resolução de casos criminais, identificação de indivíduos e estabelecimento de relações familiares. Neste workshop de cinco dias, exploraremos os fundamentos e as aplicações práticas do sequenciamento de DNA, abordando desde os conceitos básicos até as técnicas avançadas de genotipagem de STRs (Short Tandem Repeats) a partir de dados de Next-Generation Sequencing (NGS).\nDia 1 - Sequenciamento de DNA: Iniciaremos nossa jornada explorando os princípios fundamentais do sequenciamento de DNA de segunda geração. Compreenderemos as tecnologias por trás desses métodos e sua importância na geração de dados genômicos de alta qualidade. Também serão analisados dados brutos de sequenciamento e seu controle qualidade.\nDia 2 - Alinhamento de Sequências de DNA: No segundo dia, mergulharemos na etapa crucial de alinhamento de sequências de DNA. A precisão dessa fase é vital para extrair informações significativas dos dados brutos e identificar variações genéticas.\nDia 3 - Identificação de Variantes: Aprofundando-nos ainda mais, dedicaremos o terceiro dia à identificação de variantes genéticas. Exploraremos ferramentas e estratégias para detectar mutações, SNPs (Single Nucleotide Polymorphisms), InDels, e outras variantes que desempenham um papel crucial na individualidade genômica.\nDia 4 - Análise de Sequenciamento Oxford Nanopore: No quarto dia, abordaremos uma tecnologia revolucionária: o sequenciamento Oxford Nanopore. Compreenderemos suas vantagens, desafios e exploraremos casos de uso específicos na genética forense.\nDia 5 - Genotipagem de STRs a partir de dados de NGS: Encerraremos o workshop com uma exploração prática da genotipagem de STRs, uma ferramenta valiosa para estabelecer perfis genéticos únicos. Aprenderemos a interpretar e analisar esses dados, fornecendo insights fundamentais para investigações forenses.\nAo longo desta semana, vocês serão desafiados a aplicar os conhecimentos adquiridos em exercícios práticos e estudos de caso, preparando-os para enfrentar os desafios reais da genética forense na era da bioinformática. Esteja preparado para uma jornada intensiva de aprendizado e descoberta!",
+    "crumbs": [
+      "Introdução"
+    ]
   },
   {
-    "objectID": "primeiropassos.html#configurações-de-sistema",
-    "href": "primeiropassos.html#configurações-de-sistema",
+    "objectID": "primeiropassos.html",
+    "href": "primeiropassos.html",
     "title": "Primeiros passos",
-    "section": "Configurações de sistema",
-    "text": "Configurações de sistema\nAntes de iniciarmos o tutorial, é imperativo garantir que o sistema atenda às configurações mínimas para uma experiência estável. Utilizaremos sistema Linux. Recomenda-se que a máquina disponha de, no mínimo, 40 GB de armazenamento, 8 GB de memória RAM e um processador i5/i7 ou compatível. No entanto, para uma performance ideal e considerando o potencial de expansão das aplicações, encorajamos a utilização de um sistema com mais de 60 GB de armazenamento e, no mínimo, 16 GB de memória RAM. Essas configurações mais robustas assegurarão não apenas a instalação suave do software, mas também a capacidade de executar múltiplas aplicações de forma eficiente, proporcionando uma experiência mais fluida e responsiva ao usuário."
+    "section": "",
+    "text": "Configurações de sistema\nAntes de iniciarmos o tutorial, é imperativo garantir que o sistema atenda às configurações mínimas para uma experiência estável. Utilizaremos sistema Linux. Recomenda-se que a máquina disponha de, no mínimo, 40 GB de armazenamento, 8 GB de memória RAM e um processador i5/i7 ou compatível. No entanto, para uma performance ideal e considerando o potencial de expansão das aplicações, encorajamos a utilização de um sistema com mais de 60 GB de armazenamento e, no mínimo, 16 GB de memória RAM. Essas configurações mais robustas assegurarão não apenas a instalação suave do software, mas também a capacidade de executar múltiplas aplicações de forma eficiente, proporcionando uma experiência mais fluida e responsiva ao usuário.",
+    "crumbs": [
+      "Primeiros passos"
+    ]
   },
   {
     "objectID": "primeiropassos.html#sec-softwares-necessários",
     "href": "primeiropassos.html#sec-softwares-necessários",
     "title": "Primeiros passos",
     "section": "Softwares necessários",
-    "text": "Softwares necessários\n\nUsuários Windows\n\nWSL (Windows Subsystem for Linux)\nIGV (Robinson et al. 2011)\nFASTQC\nnotepad++\n\n\n\n\n\n\n\nTutorial para instalar o WSL\n\n\n\n\n\nSiga o tutorial da microsoft para instalar o WSL.\nhttps://learn.microsoft.com/pt-br/windows/wsl/install\n\n\n\n\n\nNo Ubuntu\n\nIGV (Robinson et al. 2011)\nFASTQC\nTrimmomatic (Bolger, Lohse, and Usadel 2014)\nbwa (Li 2013)\nminimap2 (Li 2018, 2021)\nsamtools (Danecek et al. 2021)\nfreebayes (Garrison and Marth 2012)\nvcftools (Danecek et al. 2011)\nbcftools (Danecek et al. 2021)\nNanoPlot (De Coster and Rademakers 2023)\nchopper (De Coster and Rademakers 2023)\ntoaSTR (Ganschow, Wiegand, and Tiemann 2017)\ngzip"
+    "text": "Softwares necessários\n\nUsuários Windows\n\nWSL (Windows Subsystem for Linux)\nIGV (Robinson et al. 2011)\nFASTQC\nnotepad++\n\n\n\n\n\n\n\nTutorial para instalar o WSL\n\n\n\n\n\nSiga o tutorial da microsoft para instalar o WSL.\nhttps://learn.microsoft.com/pt-br/windows/wsl/install\n\n\n\n\n\nNo Ubuntu\n\nIGV (Robinson et al. 2011)\nFASTQC\nTrimmomatic (Bolger, Lohse, and Usadel 2014)\nbwa (Li 2013)\nminimap2 (Li 2018, 2021)\nsamtools (Danecek et al. 2021)\nfreebayes (Garrison and Marth 2012)\nvcftools (Danecek et al. 2011)\nbcftools (Danecek et al. 2021)\nNanoPlot (De Coster and Rademakers 2023)\nchopper (De Coster and Rademakers 2023)\ntoaSTR (Ganschow, Wiegand, and Tiemann 2017)\ngzip",
+    "crumbs": [
+      "Primeiros passos"
+    ]
   },
   {
     "objectID": "primeiropassos.html#instalação",
     "href": "primeiropassos.html#instalação",
     "title": "Primeiros passos",
     "section": "Instalação",
-    "text": "Instalação\n\n\n\n\n\n\nUsuários windows\n\n\n\nUsuários windows precisam instalar o Subsistema Windows para Linux (WSL).\nOs softwares FASTQC e IGV precisam ser instalados no windows e não no WSL.\nAnote a senha que você configurou. Ela será fundamental durante o uso do WSL!!!!\n\n\nAo terminar a instalação do WSL e de configurar seu usuário no linux utilize os seguintes comandos:\nsudo apt-get update\nsudo apt-get upgrade\nEstes comandos irão garantir que o seu sistema esteja atualizado.\n\n\n\n\n\n\nSobre o comando sudo\n\n\n\nO comando sudo permite ao usuário executar comandos com permissão superior. Para isso você precisará da sua senha (ou do administrador)!\n\n\nPara instalar softwares no linux (diretamente ou no WSL) utilize o comando apt install da seguinte forma:\nsudo apt install [SOFTWARE]"
+    "text": "Instalação\n\n\n\n\n\n\nUsuários windows\n\n\n\nUsuários windows precisam instalar o Subsistema Windows para Linux (WSL).\nOs softwares FASTQC e IGV precisam ser instalados no windows e não no WSL.\nAnote a senha que você configurou. Ela será fundamental durante o uso do WSL!!!!\n\n\nAo terminar a instalação do WSL e de configurar seu usuário no linux utilize os seguintes comandos:\n\nsudo apt-get update\n\nsudo apt-get upgrade\n\nEstes comandos irão garantir que o seu sistema esteja atualizado.\n\n\n\n\n\n\nSobre o comando sudo\n\n\n\nO comando sudo permite ao usuário executar comandos com permissão superior. Para isso você precisará da sua senha (ou do administrador)!\n\n\nPara instalar softwares no linux (diretamente ou no WSL) utilize o comando apt install da seguinte forma:\n\nsudo apt install [SOFTWARE]",
+    "crumbs": [
+      "Primeiros passos"
+    ]
   },
   {
     "objectID": "primeiropassos.html#sec-dados-utilizados",
     "href": "primeiropassos.html#sec-dados-utilizados",
     "title": "Primeiros passos",
     "section": "Dados utilizados",
-    "text": "Dados utilizados\nBaixe os dados que serão utilizados neste workshop via Google Drive;\n\n\n\n\n\n\nUtilize o email correto\n\n\n\nPara ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro, entre em contato com a organização.\nOs dados totalizam ~20 GB. Atente-se para isso!!!\n\n\nOs dados estão contidos nesta estrutura de pastas descritas a baixo:\nWorkshopDados/                                        \n   ¦--genome/                                                        \n   ¦--fast5/                       \n   ¦--guppy_installer/                      \n   ¦--pre_run/\n   ¦--LongReadsFastq/                                                  \n  °--ShortReadsFastq/                                       \n\n\n\n\n\n\n\n\n\n\n\n\nBolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014. “Trimmomatic: A Flexible Trimmer for Illumina Sequence Data.” Bioinformatics 30 (15): 2114–20. https://doi.org/10.1093/bioinformatics/btu170.\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The Variant Call Format and VCFtools.” Bioinformatics 27 (15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve Years of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2: Population-Scale Evaluation of Long-Read Sequencing Data.” Edited by Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGanschow, Sebastian, Peter Wiegand, and Carsten Tiemann. 2017. “toaSTR: A Web-Based Forensic Tool for the Analysis of Short Tandem Repeats in Massively Parallel Sequencing Data.” Forensic Science International: Genetics Supplement Series 6 (December): e119–21. https://doi.org/10.1016/j.fsigss.2017.09.034.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant Detection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and Assembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide Sequences.” Edited by Inanc Birol. Bioinformatics 34 (18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment Accuracy.” Edited by Can Alkan. Bioinformatics 37 (23): 4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011. “Integrative Genomics Viewer.” Nature Biotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
+    "text": "Dados utilizados\nBaixe os dados que serão utilizados neste workshop via Google Drive;\n\n\n\n\n\n\nUtilize o email correto\n\n\n\nPara ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro, entre em contato com a organização.\nOs dados totalizam ~20 GB. Atente-se para isso!!!\n\n\nOs dados estão contidos nesta estrutura de pastas descritas a baixo:\nWorkshopDados/                                        \n   ¦--genome/                                                        \n   ¦--fast5/                       \n   ¦--guppy_installer/                      \n   ¦--pre_run/\n   ¦--LongReadsFastq/                                                  \n  °--ShortReadsFastq/                                       \n\n\n\n\n\n\n\n\n\n\n\n\nBolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014. “Trimmomatic: A Flexible Trimmer for Illumina Sequence Data.” Bioinformatics 30 (15): 2114–20. https://doi.org/10.1093/bioinformatics/btu170.\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric Banks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The Variant Call Format and VCFtools.” Bioinformatics 27 (15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve Years of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2: Population-Scale Evaluation of Long-Read Sequencing Data.” Edited by Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGanschow, Sebastian, Peter Wiegand, and Carsten Tiemann. 2017. “toaSTR: A Web-Based Forensic Tool for the Analysis of Short Tandem Repeats in Massively Parallel Sequencing Data.” Forensic Science International: Genetics Supplement Series 6 (December): e119–21. https://doi.org/10.1016/j.fsigss.2017.09.034.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant Detection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and Assembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide Sequences.” Edited by Inanc Birol. Bioinformatics 34 (18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment Accuracy.” Edited by Can Alkan. Bioinformatics 37 (23): 4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011. “Integrative Genomics Viewer.” Nature Biotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754.",
+    "crumbs": [
+      "Primeiros passos"
+    ]
   },
   {
-    "objectID": "sequenciamento.html#arquivos",
-    "href": "sequenciamento.html#arquivos",
+    "objectID": "sequenciamento.html",
+    "href": "sequenciamento.html",
     "title": "Dia 1 - Sequenciamento de DNA",
-    "section": "Arquivos",
-    "text": "Arquivos\nSerão utilizados os arquivos contidos na pasta WorkshopDados/shortReads/.\nEstão dados vieram do projeto 1000 genomas (https://www.internationalgenome.org/home) e compreendem 10 amostras: dois trios e quatro amostras isoladas."
+    "section": "",
+    "text": "Arquivos\nSerão utilizados os arquivos contidos na pasta WorkshopDados/shortReads/.\nEstão dados vieram do projeto 1000 genomas (https://www.internationalgenome.org/home) e compreendem 10 amostras: dois trios e quatro amostras isoladas.",
+    "crumbs": [
+      "Dia 1 - Sequenciamento de DNA"
+    ]
   },
   {
     "objectID": "sequenciamento.html#atividades",
     "href": "sequenciamento.html#atividades",
     "title": "Dia 1 - Sequenciamento de DNA",
     "section": "Atividades",
-    "text": "Atividades\nO controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequenciamento de nova geração (NGS) para garantir a confiabilidade dos resultados. Abaixo estão as etapas típicas do controle de qualidade:\n\nAnálise Inicial com FASTQC:\n\nExecute o FASTQC nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.\n\nIdentificação de Adaptadores e Trimagem:\n\nCom base nos resultados do FASTQC, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize o Trimmomatic para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.\n\n\n\n\n\n\nTrimmomatic - Instalação e uso\n\n\n\nO Trimmomatic é um software escrito em java que deve ser executado utilizando o comando java -jar CAMINHO/.jar.\nComo sugestão recomendamos que deixe este arquivo na pasta Downlodas em sua home. Lembre-se se alterar USER para o seu nome de usuário. Desde modo os comandos a seguir serão executados sem erros.\n\n\nAdapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:\njava -jar '/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar' PE -phred33 ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa':2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36\n\nRemoção de Leituras de Baixa Qualidade:\n\nAlgumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.\nNovamente, adapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:\njava -jar '/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar' PE -phred33 ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa':2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:27 MINLEN:100\n\nFiltragem de Leituras Curtas ou Longas:\n\nDependendo do seu experimento, você pode querer filtrar leituras muito curtas ou muito longas que possam representar artefatos ou problemas experimentais.\n\n\n\n\n\nAvaliação de Qualidade Pós-Trimagem:\n\nApós a trimagem e filtragem, execute novamente o FASTQC para avaliar como essas etapas afetaram a qualidade dos dados. Isso ajudará a garantir que você atingiu os padrões de qualidade desejados."
+    "text": "Atividades\nO controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequenciamento de nova geração (NGS) para garantir a confiabilidade dos resultados. Abaixo estão as etapas típicas do controle de qualidade:\n\nAnálise Inicial com FASTQC:\n\nExecute o FASTQC nas suas leituras brutas para avaliar a qualidade geral. Isso inclui gráficos e estatísticas que indicam a distribuição da qualidade das bases ao longo das reads, a presença de adaptadores, a presença de sequências overrepresented, entre outros.\n\nIdentificação de Adaptadores e Trimagem:\n\nCom base nos resultados do FASTQC, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize o Trimmomatic para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.\n\n\n\n\n\n\nTrimmomatic - Instalação e uso\n\n\n\nO Trimmomatic é um software escrito em java que deve ser executado utilizando o comando java -jar CAMINHO/.jar.\nComo sugestão recomendamos que deixe este arquivo na pasta Downlodas em sua home. Lembre-se se alterar USER para o seu nome de usuário. Desde modo os comandos a seguir serão executados sem erros.\n\n\nAdapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:\n\njava -jar '/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar' PE -phred33 ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa':2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36\n\n\nRemoção de Leituras de Baixa Qualidade:\n\nAlgumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.\nNovamente, adapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:\n\njava -jar '/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar' PE -phred33 ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa':2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:27 MINLEN:100\n\n\nFiltragem de Leituras Curtas ou Longas:\n\nDependendo do seu experimento, você pode querer filtrar leituras muito curtas ou muito longas que possam representar artefatos ou problemas experimentais.\n\n\n\n\n\nAvaliação de Qualidade Pós-Trimagem:\n\nApós a trimagem e filtragem, execute novamente o FASTQC para avaliar como essas etapas afetaram a qualidade dos dados. Isso ajudará a garantir que você atingiu os padrões de qualidade desejados.",
+    "crumbs": [
+      "Dia 1 - Sequenciamento de DNA"
+    ]
+  },
+  {
+    "objectID": "alinhamento.html",
+    "href": "alinhamento.html",
+    "title": "Dia 2 - Alinhamento de sequências de DNA",
+    "section": "",
+    "text": "Arquivos\nOs arquivos utilizados para estas analises serão os .fastq analisados no primeiro dia.",
+    "crumbs": [
+      "Dia 2 - Alinhamento de sequências de DNA"
+    ]
   },
   {
     "objectID": "alinhamento.html#arquivos",
     "href": "alinhamento.html#arquivos",
     "title": "Dia 2 - Alinhamento de sequências de DNA",
-    "section": "Arquivos",
-    "text": "Arquivos\nOs arquivos utilizados para estas analises serão os .fastq analisados no primeiro dia.\n\n\n\n\n\n\nArquivos .fastq\n\n\n\nPreste atenção para o caminho da pasta aonde estão os .fastq. Eles estão na pasta WorkshopDados/shortReads/"
+    "section": "",
+    "text": "Arquivos .fastq\n\n\n\nPreste atenção para o caminho da pasta aonde estão os .fastq. Eles estão na pasta WorkshopDados/shortReads/",
+    "crumbs": [
+      "Dia 2 - Alinhamento de sequências de DNA"
+    ]
   },
   {
     "objectID": "alinhamento.html#atividades",
     "href": "alinhamento.html#atividades",
     "title": "Dia 2 - Alinhamento de sequências de DNA",
     "section": "Atividades",
-    "text": "Atividades\n\n\n\n\n\n\nIndexação do Genoma de Referência:\n\nPara o alinhamento de sequências utilizaremos o programa bwa. Há outros, como bowtie2, minimap2, que podem ser utilizados caso seja conveniente. Os comandos abaixo preparam o genoma de referência para o bwa.\nAntes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando bwa index. Isso cria arquivos que aceleram o processo de alinhamento.\nbwa index hg38.fa\n\n\n\n\n\n\n\nIndexação do genoma\n\n\n\nO processo para criar o indice do genoma via bwa index demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta WorkshopDados/genome/ os arquivo resultantes desta etapa, que são os arquivos com extensão .amb, .ann, .bwt, .fai, .pac e .sa.\nO genoma de referência humano esta no arquivo hg38.fa. Esse é a última versão do genoma de referência e a mais utilizada no mundo.\nCaso deseje testar em um genoma menor, utilize o chr12.fasta.\n\n\nAlinhamento de Sequências:\n\nUse o bwa mem para alinhar suas sequências de DNA ao genoma de referência.\nbwa mem -R \"@RG\\tID:{SAMPLE}\\tSM:{SAMPLE}\" hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq -o {SAMPLE}.sam\n\nSubstitua reference_genome.fa, {SAMPLE} pelos nomes dos arquivos correspondentes.\n\n\n\n\n\n\nAutomatizando o processo (Opicional)\n\n\n\nCaso tenha experiência em programação, você pode utilizar um loop, como for ou while, para rodar todas as amostras ao mesmo tempo. Você pode utilizar o própio bash (ubuntu) ou sua linguagem de programação favorita, como python, perl, R, etc.\nVocê poderá incluir as etapas seguintes no mesmo loop.\n\n\nConverter Formato SAM para BAM e ordenar os reads:\n\nO arquivo de saída do bwa mem é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.\nsamtools sort {SAMPLE}.sam &gt; {SAMPLE}.bam\n\nIndexar o Arquivo BAM:\n\nOrdene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.\nsamtools index {SAMPLE}.bam\n\n\n\n\n\n\nVisualização do Alinhamento:\n\nUse o IGV (Integrative Genomics Viewer) para visualizar o alinhamento ({SAMPLE}.bam) e verificar sua qualidade.\n\n\n\n\n\n\nRegiões com reads\n\n\n\nOs arquivos fastq fornecidos para este curso foram preparados contendo apenas as regiões que estão nos arquivos bed fornecidos.\n\n\n\n\n\n\n\n\nUse o IGV para observar várias amostras ao mesmo tempo"
+    "text": "Atividades\n\n\n\n\n\n\nIndexação do Genoma de Referência:\n\nPara o alinhamento de sequências utilizaremos o programa bwa. Há outros, como bowtie2, minimap2, que podem ser utilizados caso seja conveniente. Os comandos abaixo preparam o genoma de referência para o bwa.\nAntes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando bwa index. Isso cria arquivos que aceleram o processo de alinhamento.\n\nbwa index hg38.fa\n\n\n\n\n\n\n\n\nIndexação do genoma\n\n\n\nO processo para criar o indice do genoma via bwa index demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta WorkshopDados/genome/ os arquivo resultantes desta etapa, que são os arquivos com extensão .amb, .ann, .bwt, .fai, .pac e .sa.\nO genoma de referência humano esta no arquivo hg38.fa. Esse é a última versão do genoma de referência e a mais utilizada no mundo.\nCaso deseje testar em um genoma menor, utilize o chr12.fasta.\n\n\nAlinhamento de Sequências:\n\nUse o bwa mem para alinhar suas sequências de DNA ao genoma de referência.\n\nbwa mem -R \"@RG\\tID:{SAMPLE}\\tSM:{SAMPLE}\" hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq -o {SAMPLE}.sam\n\n\nSubstitua reference_genome.fa, {SAMPLE} pelos nomes dos arquivos correspondentes.\n\n\n\n\n\n\nAutomatizando o processo (Opicional)\n\n\n\nCaso tenha experiência em programação, você pode utilizar um loop, como for ou while, para rodar todas as amostras ao mesmo tempo. Você pode utilizar o própio bash (ubuntu) ou sua linguagem de programação favorita, como python, perl, R, etc.\nVocê poderá incluir as etapas seguintes no mesmo loop.\n\n\nConverter Formato SAM para BAM e ordenar os reads:\n\nO arquivo de saída do bwa mem é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.\n\nsamtools sort {SAMPLE}.sam &gt; {SAMPLE}.bam\n\n\nIndexar o Arquivo BAM:\n\nOrdene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.\n\nsamtools index {SAMPLE}.bam\n\n\n\n\n\n\n\nVisualização do Alinhamento:\n\nUse o IGV (Integrative Genomics Viewer) para visualizar o alinhamento ({SAMPLE}.bam) e verificar sua qualidade.\n\n\n\n\n\n\nRegiões com reads\n\n\n\nOs arquivos fastq fornecidos para este curso foram preparados contendo apenas as regiões que estão nos arquivos bed fornecidos.\n\n\n\n\n\n\n\n\nUse o IGV para observar várias amostras ao mesmo tempo",
+    "crumbs": [
+      "Dia 2 - Alinhamento de sequências de DNA"
+    ]
   },
   {
-    "objectID": "genotipagem.html#arquivos",
-    "href": "genotipagem.html#arquivos",
+    "objectID": "genotipagem.html",
+    "href": "genotipagem.html",
     "title": "Dia 3 - Genotipagem",
-    "section": "Arquivos",
-    "text": "Arquivos\nSerão utilizados os arquivos BAM que foram gerados no dia 2."
+    "section": "",
+    "text": "Arquivos\nSerão utilizados os arquivos BAM que foram gerados no dia 2.",
+    "crumbs": [
+      "Dia 3 - Genotipagem"
+    ]
   },
   {
     "objectID": "genotipagem.html#atividades",
     "href": "genotipagem.html#atividades",
     "title": "Dia 3 - Genotipagem",
     "section": "Atividades",
-    "text": "Atividades\n\nPreparação do Ambiente:\n\nCertifique-se de que o freebayes está instalado no seu ambiente. Você pode instalar com sudo apt install freebayes.\n\nIndexação do Genoma de Referência (se ainda não estiver indexado):\n\nAssim como na etapa de alinhamento, o genoma de referência deve ser indexado.\nsamtools faidx hg38.fa\nCaso utilize um genoma menor, atualize o nome.\n\nCrie um arquivo com os nomes da amostras BAM:\n\nEntre na pasta onde estão os arquivos BAM gerados e utilize o comando ls como abaixo\nls *.bam &gt; bam_list.txt\n\nChamada de Variantes com freebayes:\n\nExecute o freebayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.\nfreebayes -f reference_genome.fa -L bam_list.txt -t bed_file.bed &gt; variantes.vcf\n\n\n\n\n\n\nOtimizando o uso do freebayes\n\n\n\nCaso o computador que esteja utilizando aborte o processo por falta de memória, você pode optar por reduzir o número de amostras em bam_list.txt. É importante destacar que a analise correta de genotipagem via freebayes requer que todas as amostras sejam analisadas simultaneamente, mas para fim de aprendizado esta é uma estratégia.\n\n\n\nFiltragem de Variantes (opcional):\n\nDependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo freebayes para reduzir o número de falsos positivos. Abaixo estão alguns exemplos\nbcftools view --exclude 'QUAL&gt;1' variantes.vcf &gt; variantes_filtradas.vcf\nbcftools view --trim-alt-alleles variantes_filtradas.vcf &gt; variantes_filtradas_trim.vcf\nbcftools view --min-ac 1 variantes_filtradas_trim.vcf &gt; variantes_filtradas_trim_minac.vcf\nbcftools norm -f hg38.fa variantes_filtradas_trim_minac.vcf &gt; variantes_filtradas_trim_minac_norm.vcf\nAdapte os critérios de filtragem conforme necessário.\n\nAnálise e Interpretação de Variantes:\n\nUtilize ferramentas como VCFtools para realizar análises adicionais no arquivo VCF, como filtragem específica e anotações.\n\nVisualização de Variantes:\n\nUse o IGV para visualizar as variantes em relação ao genoma de referência e avaliar sua qualidade.\nVocê pode abrir ao mesmo tempo o VCF e o alinhamento (BAM) de uma mesma amostra. Caso deseje."
+    "text": "Atividades\n\nPreparação do Ambiente:\n\nCertifique-se de que o freebayes está instalado no seu ambiente. Você pode instalar com:\n\nsudo apt install freebayes\n\n\nIndexação do Genoma de Referência (se ainda não estiver indexado):\n\nAssim como na etapa de alinhamento, o genoma de referência deve ser indexado.\n\nsamtools faidx hg38.fa\n\nCaso utilize um genoma menor, atualize o nome.\n\nCrie um arquivo com os nomes da amostras BAM:\n\nEntre na pasta onde estão os arquivos BAM gerados e utilize o comando ls como abaixo\n\nls *.bam &gt; bam_list.txt\n\n\nChamada de Variantes com freebayes:\n\nExecute o freebayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.\n\nfreebayes -f reference_genome.fa -L bam_list.txt -t bed_file.bed &gt; variantes.vcf\n\n\n\n\n\n\n\nOtimizando o uso do freebayes\n\n\n\nCaso o computador que esteja utilizando aborte o processo por falta de memória, você pode optar por reduzir o número de amostras em bam_list.txt. É importante destacar que a analise correta de genotipagem via freebayes requer que todas as amostras sejam analisadas simultaneamente, mas para fim de aprendizado esta é uma estratégia.\n\n\n\nFiltragem de Variantes (opcional):\n\nDependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo freebayes para reduzir o número de falsos positivos. Abaixo estão alguns exemplos:\n\nbcftools view --exclude 'QUAL&gt;1' variantes.vcf &gt; variantes_filtradas.vcf\n\nbcftools view --trim-alt-alleles variantes_filtradas.vcf &gt; variantes_filtradas_trim.vcf\n\nbcftools view --min-ac 1 variantes_filtradas_trim.vcf &gt; variantes_filtradas_trim_minac.vcf\n\nbcftools norm -f hg38.fa variantes_filtradas_trim_minac.vcf &gt; variantes_filtradas_trim_minac_norm.vcf\n\nAdapte os critérios de filtragem conforme necessário.\n\nAnálise e Interpretação de Variantes:\n\nUtilize ferramentas como VCFtools para realizar análises adicionais no arquivo VCF, como filtragem específica e anotações.\n\nVisualização de Variantes:\n\nUse o IGV para visualizar as variantes em relação ao genoma de referência e avaliar sua qualidade.\nVocê pode abrir ao mesmo tempo o VCF e o alinhamento (BAM) de uma mesma amostra. Caso deseje.",
+    "crumbs": [
+      "Dia 3 - Genotipagem"
+    ]
+  },
+  {
+    "objectID": "ONT.html",
+    "href": "ONT.html",
+    "title": "Dia 4 - Análise de sequenciamento Oxford Nanopore",
+    "section": "",
+    "text": "Atividades",
+    "crumbs": [
+      "Dia 4 - Análise de sequenciamento Oxford Nanopore"
+    ]
   },
   {
     "objectID": "ONT.html#atividades",
     "href": "ONT.html#atividades",
     "title": "Dia 4 - Análise de sequenciamento Oxford Nanopore",
-    "section": "Atividades",
-    "text": "Atividades\n\nRealize uma chamada de base utilizando guppy (Opicional):\n\nVerifique os workflows disponíveis para esta versão de guppy;\n./Downloads/ont-guppy-cpu/bin/guppy_basecaller --print_workflows\nSabendo que este sequenciamento foi realizado utilizando o kit SQK-LSK108 e a flowcell MIN106, qual a configuração a ser utilizada?\nRealize a chamada de base para todos os arquivos fast5 contidos na pasta WorkshopDados/fast5/;\n./Downloads/ont-guppy-cpu/bin/guppy_basecaller –i [PASTAFAST5] –s /\n./guppy_out –c [CONFIG].cfg  --num_callers 2 --cpu_threads_per_caller 1\n\n\n\n\n\n\n\nAviso\n\n\n\nO tempo de execução da chama de base (para este conjunto de dados) é superior a 12 horas em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta WorkshopDados/LongReadsFastq/\n\n\nAvaliação da qualidade do arquivo resultado .fastq:\n\nUtilize o NanoPlot para gerar gráficos de qualidade da amostra;\n\n\n\n\n\n\nInstalação do NanoPlot\n\n\n\n\n\nA instalação do NanoPlot deve ser feita via pip ou conda.\npip install NanoPlot\n\n\n\nNanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose\n\nFiltre as leituras baseado no tamanho e qualidade:\n\nUtilize chopper para isso.\n\n\n\n\n\n\nInstalação do chopper\n\n\n\n\n\nPara instalar o chopper pode ser necessário ter o conda em seu sistema. Para isso utilize os seguintes comandos:\nmkdir -p ~/miniconda3\nwget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh\nbash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3\nrm -rf ~/miniconda3/miniconda.sh\n~/miniconda3/bin/conda init bash\n~/miniconda3/bin/conda init zsh\nSerá necessário reinciar seu sistema (Ubuntu ou WSL) após isso.\nconda config --add channels conda-forge\nconda config --set channel_priority strict\nconda install -c bioconda chopper\n\n\n\nchopper &lt; [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] &gt; [AMOSTRA]_filtrada.fastq\n\n\n\n\n\n\n\nPor que usar &lt; no comando chopper?\n\n\n\n\n\nO comando &lt; garante que o arquivo fastq da amostra seja direcionado para entrada (stdin) do comando no chopper. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.\n\n\n\nAlinhamento das Sequências:\n\nUse o minimap2 para alinhar suas sequências de DNA ao genoma de referência.\nminimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /\n-R \"@RG\\tID:{SAMPLE}\\tSM:{SAMPLE}\" -t [THREADS] &gt; [AMOSTRA].sam\n\n\n\n\n\n\n\nConsumo de memória durante a etapa\n\n\n\nO alinhamento via minimap2 tem pico de consumo de memória de ~ 13 GB. Caso seu computador disponha desta capacidade utilize o arquivo resultante na pasta WorkshopDados/pre_run/Dia4/\n\n\n\nRealize novamento utilizando bwa mem desta vez (Opicional);\n\n\n\n\n\n\n\nTempo de execução do bwa\n\n\n\nAtenção, o bwa demora quase 10x mais que o minimap2\n\n\n\nbwa mem -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /\n-R \"@RG\\tID:{SAMPLE}\\tSM:{SAMPLE}\" -t [THREADS] &gt; [AMOSTRA].sam\n\n\n\n\n\n\n\nOpcional\n\n\n\n\n\nRealize uma montagem de novo utilizando o pipeline minimap2-miniasm. Este processo pode levar várias horas/dias. Tome cuidado!\n\n\n\nGerar o arquivo BAM indexado:\n\nRepita os passos 3 e 4 do dia 2 utilizando samtools;\n\nVisualização do Alinhamento:\n\nImporte o BAM para o IGV e avalie sua qualidade;\nCompare as amostras com suas respectivas amostras de short reads;\n\nRealize a Genotipagem das Amostras de long reads:\n\nUtilize o freebayes para realizar a genotipagem e modo similar ao passo 3 do dia 3;\n\n\n\n\n\n\n\nTempo de execução da genotipagem em Long Reads\n\n\n\nO tempo de execução do freebayes para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo bed fornecido para trabalhar com menos regiões.\nPara os formulários utilize o vcf resultante em WorkshopDados/pre_run/Dia4/\n\n\n\nRepita as métricas de filtragem utilizadas no passo 4 do dia 3;\nRepita os passos 5 e 6 do dia 3, comparando aos resultados de short reads."
+    "section": "",
+    "text": "Realize uma chamada de base utilizando guppy (Opicional):\n\nVerifique os workflows disponíveis para esta versão de guppy;\n\n./Downloads/ont-guppy-cpu/bin/guppy_basecaller --print_workflows\n\nSabendo que este sequenciamento foi realizado utilizando o kit SQK-LSK108 e a flowcell MIN106, qual a configuração a ser utilizada?\nRealize a chamada de base para todos os arquivos fast5 contidos na pasta WorkshopDados/fast5/;\n\n./Downloads/ont-guppy-cpu/bin/guppy_basecaller –i [PASTAFAST5] –s /\n\n./guppy_out –c [CONFIG].cfg  --num_callers 2 --cpu_threads_per_caller 1\n\n\n\n\n\n\n\n\nAviso\n\n\n\nO tempo de execução da chama de base (para este conjunto de dados) é superior a 12 horas em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta WorkshopDados/LongReadsFastq/\n\n\nAvaliação da qualidade do arquivo resultado .fastq:\n\nUtilize o NanoPlot para gerar gráficos de qualidade da amostra;\n\n\n\n\n\n\nInstalação do NanoPlot\n\n\n\n\n\nA instalação do NanoPlot deve ser feita via pip ou conda.\n\npip install NanoPlot\n\n\n\n\n\nNanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose\n\n\nFiltre as leituras baseado no tamanho e qualidade:\n\nUtilize chopper para isso.\n\n\n\n\n\n\nInstalação do chopper\n\n\n\n\n\nPara instalar o chopper pode ser necessário ter o conda em seu sistema. Para isso utilize os seguintes comandos:\n\nmkdir -p ~/miniconda3\n\nwget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh\n\nbash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3\n\nrm -rf ~/miniconda3/miniconda.sh\n\n~/miniconda3/bin/conda init bash\n\n~/miniconda3/bin/conda init zsh\n\nSerá necessário reinciar seu sistema (Ubuntu ou WSL) após isso.\n\nconda config --add channels conda-forge\n\nconda config --set channel_priority strict\n\nconda install -c bioconda chopper\n\n\n\n\n\nchopper &lt; [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] &gt; [AMOSTRA]_filtrada.fastq\n\n\n\n\n\n\n\n\nPor que usar &lt; no comando chopper?\n\n\n\n\n\nO comando &lt; garante que o arquivo fastq da amostra seja direcionado para entrada (stdin) do comando no chopper. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.\n\n\n\nAlinhamento das Sequências:\n\nUse o minimap2 para alinhar suas sequências de DNA ao genoma de referência.\n\nminimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /\n\n-R \"@RG\\tID:{SAMPLE}\\tSM:{SAMPLE}\" -t [THREADS] &gt; [AMOSTRA].sam\n\n\n\n\n\n\n\n\nConsumo de memória durante a etapa\n\n\n\nO alinhamento via minimap2 tem pico de consumo de memória de ~ 13 GB. Caso seu computador disponha desta capacidade utilize o arquivo resultante na pasta WorkshopDados/pre_run/Dia4/\n\n\n\nRealize novamento utilizando bwa mem desta vez (Opicional);\n\n\n\n\n\n\n\nTempo de execução do bwa\n\n\n\nAtenção, o bwa demora quase 10x mais que o minimap2\n\n\n\n\nbwa mem -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /\n\n-R \"@RG\\tID:{SAMPLE}\\tSM:{SAMPLE}\" -t [THREADS] &gt; [AMOSTRA].sam\n\n\n\n\n\n\n\n\nOpcional\n\n\n\n\n\nRealize uma montagem de novo utilizando o pipeline minimap2-miniasm. Este processo pode levar várias horas/dias. Tome cuidado!\n\n\n\nGerar o arquivo BAM indexado:\n\nRepita os passos 3 e 4 do dia 2 utilizando samtools;\n\nVisualização do Alinhamento:\n\nImporte o BAM para o IGV e avalie sua qualidade;\nCompare as amostras com suas respectivas amostras de short reads;\n\nRealize a Genotipagem das Amostras de long reads:\n\nUtilize o freebayes para realizar a genotipagem e modo similar ao passo 3 do dia 3;\n\n\n\n\n\n\n\nTempo de execução da genotipagem em Long Reads\n\n\n\nO tempo de execução do freebayes para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo bed fornecido para trabalhar com menos regiões.\nPara os formulários utilize o vcf resultante em WorkshopDados/pre_run/Dia4/\n\n\n\nRepita as métricas de filtragem utilizadas no passo 4 do dia 3;\nRepita os passos 5 e 6 do dia 3, comparando aos resultados de short reads.",
+    "crumbs": [
+      "Dia 4 - Análise de sequenciamento Oxford Nanopore"
+    ]
   },
   {
     "objectID": "ONT.html#footnotes",
     "href": "ONT.html#footnotes",
     "title": "Dia 4 - Análise de sequenciamento Oxford Nanopore",
     "section": "",
-    "text": "https://timkahlke.github.io/LongRead_tutorials/↩︎"
+    "text": "https://timkahlke.github.io/LongRead_tutorials/↩︎",
+    "crumbs": [
+      "Dia 4 - Análise de sequenciamento Oxford Nanopore"
+    ]
+  },
+  {
+    "objectID": "Dia5.html",
+    "href": "Dia5.html",
+    "title": "Dia 5 - Genotipagem de STRs a partir de dados de NGS",
+    "section": "",
+    "text": "Atividades",
+    "crumbs": [
+      "Dia 5 - Genotipagem de STRs a partir de dados de NGS"
+    ]
   },
   {
     "objectID": "Dia5.html#atividades",
     "href": "Dia5.html#atividades",
     "title": "Dia 5 - Genotipagem de STRs a partir de dados de NGS",
-    "section": "Atividades",
-    "text": "Atividades\n\nBaixar toaSTR\nBaixar Docker\nInstalar no computador;\nFazer login no toaSTR;"
+    "section": "",
+    "text": "Baixar toaSTR\nBaixar Docker\nInstalar no computador;\nFazer login no toaSTR;",
+    "crumbs": [
+      "Dia 5 - Genotipagem de STRs a partir de dados de NGS"
+    ]
   },
   {
     "objectID": "Dia5.html#toastr",
     "href": "Dia5.html#toastr",
     "title": "Dia 5 - Genotipagem de STRs a partir de dados de NGS",
     "section": "toaSTR",
-    "text": "toaSTR\n\nCriar os painéis de marcadores que serão utilizados;\nSubir e correr uma amostra no toaSTR ;"
+    "text": "toaSTR\n\nCriar os painéis de marcadores que serão utilizados;\nSubir e correr uma amostra no toaSTR ;",
+    "crumbs": [
+      "Dia 5 - Genotipagem de STRs a partir de dados de NGS"
+    ]
   },
   {
     "objectID": "Dia5.html#interpretação-dos-resultados",
     "href": "Dia5.html#interpretação-dos-resultados",
     "title": "Dia 5 - Genotipagem de STRs a partir de dados de NGS",
     "section": "Interpretação dos resultados",
-    "text": "Interpretação dos resultados"
+    "text": "Interpretação dos resultados",
+    "crumbs": [
+      "Dia 5 - Genotipagem de STRs a partir de dados de NGS"
+    ]
   },
   {
     "objectID": "references.html",
     "href": "references.html",
     "title": "Referências",
     "section": "",
-    "text": "Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014.\n“Trimmomatic: A Flexible Trimmer for Illumina Sequence\nData.” Bioinformatics 30 (15): 2114–20. https://doi.org/10.1093/bioinformatics/btu170.\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric\nBanks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The\nVariant Call Format and VCFtools.” Bioinformatics 27\n(15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu\nOhan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve\nYears of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2:\nPopulation-Scale Evaluation of Long-Read Sequencing Data.” Edited\nby Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGanschow, Sebastian, Peter Wiegand, and Carsten Tiemann. 2017.\n“toaSTR: A Web-Based Forensic Tool for the Analysis of Short\nTandem Repeats in Massively Parallel Sequencing Data.”\nForensic Science International: Genetics Supplement Series 6\n(December): e119–21. https://doi.org/10.1016/j.fsigss.2017.09.034.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant\nDetection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and\nAssembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide\nSequences.” Edited by Inanc Birol. Bioinformatics 34\n(18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment\nAccuracy.” Edited by Can Alkan. Bioinformatics 37 (23):\n4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell\nGuttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011.\n“Integrative Genomics Viewer.” Nature\nBiotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754."
+    "text": "Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. 2014.\n“Trimmomatic: A Flexible Trimmer for Illumina Sequence\nData.” Bioinformatics 30 (15): 2114–20. https://doi.org/10.1093/bioinformatics/btu170.\n\n\nDanecek, Petr, Adam Auton, Goncalo Abecasis, Cornelis A. Albers, Eric\nBanks, Mark A. DePristo, Robert E. Handsaker, et al. 2011. “The\nVariant Call Format and VCFtools.” Bioinformatics 27\n(15): 2156–58. https://doi.org/10.1093/bioinformatics/btr330.\n\n\nDanecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu\nOhan, Martin O Pollard, Andrew Whitwham, et al. 2021. “Twelve\nYears of SAMtools and BCFtools.” GigaScience 10 (2). https://doi.org/10.1093/gigascience/giab008.\n\n\nDe Coster, Wouter, and Rosa Rademakers. 2023. “NanoPack2:\nPopulation-Scale Evaluation of Long-Read Sequencing Data.” Edited\nby Can Alkan. Bioinformatics 39 (5). https://doi.org/10.1093/bioinformatics/btad311.\n\n\nGanschow, Sebastian, Peter Wiegand, and Carsten Tiemann. 2017.\n“toaSTR: A Web-Based Forensic Tool for the Analysis of Short\nTandem Repeats in Massively Parallel Sequencing Data.”\nForensic Science International: Genetics Supplement Series 6\n(December): e119–21. https://doi.org/10.1016/j.fsigss.2017.09.034.\n\n\nGarrison, Erik, and Gabor Marth. 2012. “Haplotype-Based Variant\nDetection from Short-Read Sequencing.” https://doi.org/10.48550/ARXIV.1207.3907.\n\n\nLi, Heng. 2013. “Aligning Sequence Reads, Clone Sequences and\nAssembly Contigs with BWA-MEM.” https://doi.org/10.48550/ARXIV.1303.3997.\n\n\n———. 2018. “Minimap2: Pairwise Alignment for Nucleotide\nSequences.” Edited by Inanc Birol. Bioinformatics 34\n(18): 3094–3100. https://doi.org/10.1093/bioinformatics/bty191.\n\n\n———. 2021. “New Strategies to Improve Minimap2 Alignment\nAccuracy.” Edited by Can Alkan. Bioinformatics 37 (23):\n4572–74. https://doi.org/10.1093/bioinformatics/btab705.\n\n\nRobinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell\nGuttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011.\n“Integrative Genomics Viewer.” Nature\nBiotechnology 29 (1): 24–26. https://doi.org/10.1038/nbt.1754.",
+    "crumbs": [
+      "Referências"
+    ]
+  },
+  {
+    "objectID": "commWSL.html",
+    "href": "commWSL.html",
+    "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
+    "section": "",
+    "text": "Navegação e Diretórios",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#navegação-e-diretórios",
     "href": "commWSL.html#navegação-e-diretórios",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
-    "section": "Navegação e Diretórios",
-    "text": "Navegação e Diretórios\n\nListar Conteúdo do Diretório\nls\n\n\nMudar de Diretório\ncd nome_do_diretorio\n\n\nDiretório Atual\npwd\n\n\nCriar Diretório\nmkdir nome_do_novo_diretorio"
+    "section": "",
+    "text": "Listar Conteúdo do Diretório\n\nls\n\n\n\nMudar de Diretório\n\ncd nome_do_diretorio\n\n\n\nDiretório Atual\n\npwd\n\n\n\nCriar Diretório\n\nmkdir nome_do_novo_diretorio",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#manipulação-de-arquivos",
     "href": "commWSL.html#manipulação-de-arquivos",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Manipulação de Arquivos",
-    "text": "Manipulação de Arquivos\n\nCopiar Arquivo\ncp arquivo_origem destino\n\n\nMover/Renomear Arquivo\nmv arquivo_origem novo_nome_ou_destino\n\n\nRemover Arquivo\nrm nome_do_arquivo"
+    "text": "Manipulação de Arquivos\n\nCopiar Arquivo\n\ncp arquivo_origem destino\n\n\n\nMover/Renomear Arquivo\n\nmv arquivo_origem novo_nome_ou_destino\n\n\n\nRemover Arquivo\n\nrm nome_do_arquivo",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#visualização-de-conteúdo",
     "href": "commWSL.html#visualização-de-conteúdo",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Visualização de Conteúdo",
-    "text": "Visualização de Conteúdo\n\nVisualizar Conteúdo do Arquivo\ncat nome_do_arquivo\n\n\nVisualizar Conteúdo do Arquivo (página por página)\nless nome_do_arquivo"
+    "text": "Visualização de Conteúdo\n\nVisualizar Conteúdo do Arquivo\n\ncat nome_do_arquivo\n\n\n\nVisualizar Conteúdo do Arquivo (página por página)\n\nless nome_do_arquivo",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#pacotes-e-atualizações",
     "href": "commWSL.html#pacotes-e-atualizações",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Pacotes e Atualizações",
-    "text": "Pacotes e Atualizações\n\nAtualizar Lista de Pacotes\nsudo apt update\n\n\nAtualizar Pacotes Instalados\nsudo apt upgrade\n\n\nInstalar Novo Pacote\nsudo apt install nome_do_pacote"
+    "text": "Pacotes e Atualizações\n\nAtualizar Lista de Pacotes\n\nsudo apt update\n\n\n\nAtualizar Pacotes Instalados\n\nsudo apt upgrade\n\n\n\nInstalar Novo Pacote\n\nsudo apt install nome_do_pacote",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#gerenciamento-de-usuários",
     "href": "commWSL.html#gerenciamento-de-usuários",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Gerenciamento de Usuários",
-    "text": "Gerenciamento de Usuários\n\nAdicionar Usuário ao Grupo\nsudo usermod -aG nome_do_grupo nome_do_usuario\n\n\nMudar Senha do Usuário\npasswd nome_do_usuario"
+    "text": "Gerenciamento de Usuários\n\nAdicionar Usuário ao Grupo\n\nsudo usermod -aG nome_do_grupo nome_do_usuario\n\n\n\nMudar Senha do Usuário\n\npasswd nome_do_usuario",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#processos",
     "href": "commWSL.html#processos",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Processos",
-    "text": "Processos\n\nListar Processos\nps aux\n\n\nMatar um Processo por ID\nkill -9 processo_id\n\n\nMonitorar Recursos do Sistema (htop)\nhtop\n\n\nMedir Tempo de Execução de um Comando (time)\ntime comando_a_ser_medido"
+    "text": "Processos\n\nListar Processos\n\nps aux\n\n\n\nMatar um Processo por ID\n\nkill -9 processo_id\n\n\n\nMonitorar Recursos do Sistema (htop)\n\nhtop\n\n\n\nMedir Tempo de Execução de um Comando (time)\n\ntime comando_a_ser_medido",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#rede",
     "href": "commWSL.html#rede",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Rede",
-    "text": "Rede\n\nVerificar Configurações de Rede\nifconfig\n\n\nTestar Conexão com um Endereço IP\nping endereco_ip"
+    "text": "Rede\n\nVerificar Configurações de Rede\n\nifconfig\n\n\n\nTestar Conexão com um Endereço IP\n\nping endereco_ip",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#entrada-e-saída-padrão-stdinstdout",
     "href": "commWSL.html#entrada-e-saída-padrão-stdinstdout",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Entrada e Saída Padrão (stdin/stdout)",
-    "text": "Entrada e Saída Padrão (stdin/stdout)\n\nstdin (Standard Input): É a entrada padrão de dados. Um programa pode ler dados a partir do stdin. Exemplo:\ncat &lt; nome_do_arquivo\nstdout (Standard Output): É a saída padrão de dados. Um programa geralmente imprime resultados no stdout. Exemplo:\nls &gt; lista_de_arquivos.txt\nstderr (Standard Error): É a saída padrão para mensagens de erro. Exemplo:\ncomando_inexistente 2&gt; erro.log"
+    "text": "Entrada e Saída Padrão (stdin/stdout)\n\nstdin (Standard Input): É a entrada padrão de dados. Um programa pode ler dados a partir do stdin. Exemplo:\n\ncat &lt; nome_do_arquivo\n\nstdout (Standard Output): É a saída padrão de dados. Um programa geralmente imprime resultados no stdout. Exemplo:\n\nls &gt; lista_de_arquivos.txt\n\nstderr (Standard Error): É a saída padrão para mensagens de erro. Exemplo:\n\ncomando_inexistente 2&gt; erro.log",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   },
   {
     "objectID": "commWSL.html#outros-comandos-úteis",
     "href": "commWSL.html#outros-comandos-úteis",
     "title": "ANEXO: Dicas para uso do Ubuntu/WSL",
     "section": "Outros Comandos Úteis",
-    "text": "Outros Comandos Úteis\n\nAjuda sobre um Comando\nman nome_do_comando\n\n\nSair do Terminal\nexit"
+    "text": "Outros Comandos Úteis\n\nAjuda sobre um Comando\n\nman nome_do_comando\n\n\n\nSair do Terminal\n\nexit",
+    "crumbs": [
+      "ANEXO: Dicas para uso do Ubuntu/WSL"
+    ]
   }
 ]

@@ -1,3 +1,7 @@
+---
+engine: knitr
+---
+
 # Dia 2 - Alinhamento de sequências de DNA {.unnumbered}
 
 ## Arquivos
@@ -28,7 +32,9 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 
     -   Antes de realizar o alinhamento, é necessário indexar o genoma de referência usando o comando **`bwa index`**. Isso cria arquivos que aceleram o processo de alinhamento.
 
-        `bwa index hg38.fa`
+        ```{bash,eval=FALSE}
+        bwa index hg38.fa
+        ```
 
     ::: callout-warning
     ## Indexação do genoma
@@ -44,7 +50,9 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 
     -   Use o **`bwa mem`** para alinhar suas sequências de DNA ao genoma de referência.
 
-    -   `bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq -o {SAMPLE}.sam`
+        ```{bash,eval=FALSE}
+        bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq -o {SAMPLE}.sam
+        ```
 
     Substitua **`reference_genome.fa`**, `{SAMPLE}` pelos nomes dos arquivos correspondentes.
 
@@ -60,13 +68,17 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 
     -   O arquivo de saída do **`bwa mem`** é no formato SAM. Converta-o para o formato BAM, mais compacto e eficiente.
 
-    -   `samtools sort {SAMPLE}.sam > {SAMPLE}.bam`
+        ```{bash,eval=FALSE}
+        samtools sort {SAMPLE}.sam > {SAMPLE}.bam
+        ```
 
 4.  **Indexar o Arquivo BAM:**
 
     -   Ordene o arquivo BAM para facilitar a busca e indexe-o para melhorar o desempenho de ferramentas subsequentes.
 
-    -   `samtools index {SAMPLE}.bam`
+        ```{bash,eval=FALSE}
+        samtools index {SAMPLE}.bam
+        ```
 
 <!-- 5.  **Remoção de Duplicatas (opcional):** -->
 

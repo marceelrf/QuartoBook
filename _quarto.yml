@@ -33,4 +33,4 @@ format:
     documentclass: scrreprt
 
 editor: visual
-
+engine: knitr

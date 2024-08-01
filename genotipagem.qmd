@@ -1,3 +1,7 @@
+---
+engine: knitr
+---
+
 # Dia 3 - Genotipagem {.unnumbered}
 
 ## Arquivos
@@ -8,13 +12,19 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 
 1.  **Preparação do Ambiente:**
 
-    -   Certifique-se de que o `freebayes` está instalado no seu ambiente. Você pode instalar com `sudo apt install freebayes`.
+    -   Certifique-se de que o `freebayes` está instalado no seu ambiente. Você pode instalar com:
+
+        ```{bash, eval=F}
+        sudo apt install freebayes
+        ```
 
 2.  **Indexação do Genoma de Referência (se ainda não estiver indexado):**
 
     -   Assim como na etapa de alinhamento, o genoma de referência deve ser indexado.
 
-    -   `samtools faidx hg38.fa`
+        ```{bash,eval=F}
+        samtools faidx hg38.fa
+        ```
 
     -   Caso utilize um genoma menor, atualize o nome.
 
@@ -22,13 +32,17 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 
     -   Entre na pasta onde estão os arquivos `BAM` gerados e utilize o comando `ls` como abaixo
 
-    -   `ls *.bam > bam_list.txt`
+        ```{bash,eval=F}
+        ls *.bam > bam_list.txt
+        ```
 
 4.  **Chamada de Variantes com `freebayes`:**
 
     -   Execute o freebayes para chamar variantes a partir do arquivo BAM gerado após o alinhamento.
 
-    -   `freebayes -f reference_genome.fa -L bam_list.txt -t bed_file.bed > variantes.vcf`
+        ```{bash,eval=F}
+        freebayes -f reference_genome.fa -L bam_list.txt -t bed_file.bed > variantes.vcf
+        ```
 
         ::: callout-warning
         ## Otimizando o uso do `freebayes`
@@ -38,15 +52,17 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 
 5.  **Filtragem de Variantes (opcional):**
 
-    -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo `freebayes` para reduzir o número de falsos positivos. Abaixo estão alguns exemplos
+    -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo `freebayes` para reduzir o número de falsos positivos. Abaixo estão alguns exemplos:
 
-    -   `bcftools view --exclude 'QUAL>1' variantes.vcf > variantes_filtradas.vcf`
+        ```{bash,eval=F}
+        bcftools view --exclude 'QUAL>1' variantes.vcf > variantes_filtradas.vcf
 
-    -   `bcftools view --trim-alt-alleles variantes_filtradas.vcf > variantes_filtradas_trim.vcf`
+        bcftools view --trim-alt-alleles variantes_filtradas.vcf > variantes_filtradas_trim.vcf
 
-    -   `bcftools view --min-ac 1 variantes_filtradas_trim.vcf > variantes_filtradas_trim_minac.vcf`
+        bcftools view --min-ac 1 variantes_filtradas_trim.vcf > variantes_filtradas_trim_minac.vcf
 
-    -   `bcftools norm -f hg38.fa variantes_filtradas_trim_minac.vcf > variantes_filtradas_trim_minac_norm.vcf`
+        bcftools norm -f hg38.fa variantes_filtradas_trim_minac.vcf > variantes_filtradas_trim_minac_norm.vcf
+        ```
 
     -   Adapte os critérios de filtragem conforme necessário.
 

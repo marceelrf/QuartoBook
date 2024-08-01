@@ -1,3 +1,7 @@
+---
+engine: knitr
+---
+
 # Dia 4 - Análise de sequenciamento Oxford Nanopore {.unnumbered}
 
 ::: callout-important
@@ -9,15 +13,21 @@ Para instalar siga os seguintes passos:
 
 Acesse a pasta que contem o arquivo `.tar` e descompacte;
 
-`tar -xf ont-guppy-cpu_6.5.7_linux64.tar.gz`
+```{bash,eval=F}
+tar -xf ont-guppy-cpu_6.5.7_linux64.tar.gz
+```
 
 Verifique o caminho completo para a pasta
 
-`pwd`
+```{bash,eval=F}
+pwd
+```
 
 Executando `guppy` via caminho completo (Exemplo pedindo ajuda)
 
-`./guppy_basecaller --help`
+```{bash,eval=F}
+./guppy_basecaller --help
+```
 :::
 
 Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experiências durante os trabalhos com ONT.
@@ -30,15 +40,19 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
     -   Verifique os workflows disponíveis para esta versão de `guppy`;
 
-    -   `./Downloads/ont-guppy-cpu/bin/guppy_basecaller --print_workflows`
+        ```{bash,eval=F}
+        ./Downloads/ont-guppy-cpu/bin/guppy_basecaller --print_workflows
+        ```
 
     -   Sabendo que este sequenciamento foi realizado utilizando o kit SQK-LSK108 e a flowcell MIN106, qual a configuração a ser utilizada?
 
     -   Realize a chamada de base para todos os arquivos `fast5` contidos na pasta **WorkshopDados/fast5/**;
 
-    -   `./Downloads/ont-guppy-cpu/bin/guppy_basecaller –i [PASTAFAST5] –s /`
+        ```{bash,eval=F}
+        ./Downloads/ont-guppy-cpu/bin/guppy_basecaller –i [PASTAFAST5] –s /
 
-        `./guppy_out –c [CONFIG].cfg  --num_callers 2 --cpu_threads_per_caller 1`
+        ./guppy_out –c [CONFIG].cfg  --num_callers 2 --cpu_threads_per_caller 1
+        ```
 
     ::: callout-warning
     ## Aviso
@@ -55,10 +69,14 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
         A instalação do `NanoPlot` deve ser feita via pip ou conda.
 
-        `pip install NanoPlot`
+        ```{bash,eval=F}
+        pip install NanoPlot
+        ```
         :::
 
-    -   `NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose`
+        ```{bash,eval=F}
+        NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose
+        ```
 
 3.  **Filtre as leituras baseado no tamanho e qualidade:**
 
@@ -69,28 +87,34 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
         Para instalar o `chopper` pode ser necessário ter o `conda` em seu sistema. Para isso utilize os seguintes comandos:
 
-        `mkdir -p ~/miniconda3`
+        ```{bash,eval=F}
+        mkdir -p ~/miniconda3
 
-        `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh`
+        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 
-        `bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3`
+        bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 
-        `rm -rf ~/miniconda3/miniconda.sh`
+        rm -rf ~/miniconda3/miniconda.sh
 
-        `~/miniconda3/bin/conda init bash`
+        ~/miniconda3/bin/conda init bash
 
-        `~/miniconda3/bin/conda init zsh`
+        ~/miniconda3/bin/conda init zsh
+        ```
 
         Será necessário reinciar seu sistema (Ubuntu ou `WSL`) após isso.
 
-        `conda config --add channels conda-forge`
+        ```{bash,eval=F}
+        conda config --add channels conda-forge
 
-        `conda config --set channel_priority strict`
+        conda config --set channel_priority strict
 
-        `conda install -c bioconda chopper`
+        conda install -c bioconda chopper
+        ```
         :::
 
-    -   `chopper < [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] > [AMOSTRA]_filtrada.fastq`
+        ```{bash,eval=F}
+        chopper < [AMOSTRA].fastq -q [QUALIDADE] -l [TAMANHO_MIN] > [AMOSTRA]_filtrada.fastq
+        ```
 
     ::: {.callout-important collapse="true"}
     ## Por que usar `<` no comando `chopper`?
@@ -102,9 +126,11 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
     -   Use o `minimap2` para alinhar suas sequências de DNA ao genoma de referência.
 
-    -   `minimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /`
+        ```{bash,eval=F}
+        minimap2 -ax map-ont [REFERENCE_GENOME].fa [AMOSTRA].fastq /
 
-        `-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam`
+        -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam
+        ```
 
     ::: callout-caution
     ## Consumo de memória durante a etapa
@@ -120,9 +146,13 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
     Atenção, o `bwa` demora quase 10x mais que o `minimap2`
     :::
 
-    -   `bwa mem -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /`
+    -   
 
-        `-R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam`
+        ```{bash,eval=F}
+        bwa mem -x ont2d [REFERENCE_GENOME].fa [AMOSTRA].fastq /
+
+        -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" -t [THREADS] > [AMOSTRA].sam
+        ```
 
     ::: {.callout-note collapse="true" icon="false"}
     ## Opcional

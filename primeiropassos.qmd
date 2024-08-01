@@ -1,3 +1,7 @@
+---
+engine: knitr
+---
+
 # Primeiros passos {.unnumbered}
 
 ## Configurações de sistema
@@ -48,9 +52,11 @@ Anote a `senha` que você configurou. Ela será fundamental durante o uso do `WS
 
 Ao terminar a instalação do `WSL` e de configurar seu usuário no linux utilize os seguintes comandos:
 
-`sudo apt-get update`
+```{bash,eval=FALSE}
+sudo apt-get update
 
-`sudo apt-get upgrade`
+sudo apt-get upgrade
+```
 
 Estes comandos irão garantir que o seu sistema esteja atualizado.
 
@@ -62,7 +68,9 @@ O comando `sudo` permite ao usuário executar comandos com permissão superior. 
 
 Para instalar softwares no linux (diretamente ou no `WSL`) utilize o comando `apt install` da seguinte forma:
 
-`sudo apt install [SOFTWARE]`
+```{bash, eval=F}
+sudo apt install [SOFTWARE]
+```
 
 ## Dados utilizados {#sec-dados-utilizados}
 

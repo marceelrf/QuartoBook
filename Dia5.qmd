@@ -1,3 +1,6 @@
+---
+engine: knitr
+---
 # Dia 5 - Genotipagem de STRs a partir de dados de NGS {#sec-dia5 .unnumbered}
 
 ## Atividades
