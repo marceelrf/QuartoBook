@@ -294,7 +294,7 @@ Otimizando o uso do <code>freebayes</code>
 <ul>
 <li><p>Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo <code>freebayes</code> para reduzir o número de falsos positivos. Abaixo estão alguns exemplos:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bcftools</span> view <span class="at">--exclude</span> <span class="st">'QUAL&gt;1'</span> variantes.vcf <span class="op">&gt;</span> variantes_filtradas.vcf</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bcftools</span> view <span class="at">--exclude</span> <span class="st">'QUAL&lt;1'</span> variantes.vcf <span class="op">&gt;</span> variantes_filtradas.vcf</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">bcftools</span> view <span class="at">--trim-alt-alleles</span> variantes_filtradas.vcf <span class="op">&gt;</span> variantes_filtradas_trim.vcf</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -319,6 +319,13 @@ Otimizando o uso do <code>freebayes</code>
 </section>
 <section id="atividades-da-tarde" class="level2">
 <h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
+<ol type="1">
+<li>Quantos SNPs e indels foram identificados em sua amostras?</li>
+<li>Qual é a qualidade das variantes identificadas?</li>
+<li>As variantes identificadas estão localizadas em regiões codificadoras ou não codificadoras do genomas?</li>
+<li>Como é a relação heterozigosidade/homozigosidade em todas as amostras?</li>
+<li>Há algum gene ou região genômica específica com uma densidade excepcionalmente alta de variantes?</li>
+</ol>
 
 
 </section>

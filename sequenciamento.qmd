@@ -29,21 +29,13 @@ O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequ
 2.  **Identificação de Adaptadores e Trimagem:**
     -   Com base nos resultados do `FASTQC`, identifique a presença de adaptadores e sequências indesejadas nas extremidades das reads. Utilize o `Trimmomatic` para remover essas sequências, garantindo que apenas dados de alta qualidade sejam mantidos.
 
-        ::: callout-important
-        ## `Trimmomatic` - Instalação e uso
-
-        O `Trimmomatic` é um software escrito em java que deve ser executado utilizando o comando `java -jar CAMINHO/.jar`.
-
-        Como sugestão recomendamos que deixe este arquivo na pasta Downlodas em sua `home`. Lembre-se se alterar `USER` para o seu nome de usuário. Desde modo os comandos a seguir serão executados sem erros.
-        :::
-
-    -   Adapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:
+    -   Adapte o comando abaixo para a amostra que esta analisando, substituindo HG00097 pelo código dela:
 
         ```{bash, eval=FALSE}
-        java -jar '/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar' PE -phred33 \
+        trimmomatic PE -phred33 \
         WGS_ShortReads/fastq/HG00097_r1.fastq WGS_ShortReads/fastq/HG00097_r2.fastq \
         trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq \
-        ILLUMINACLIP:'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa':2:30:10 \
+        ILLUMINACLIP:~/miniconda3/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 \
         LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
         ```
 3.  **Remoção de Leituras de Baixa Qualidade:**
@@ -69,3 +61,9 @@ O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequ
 <!-- Essas etapas são fundamentais para garantir que os dados utilizados nas análises subsequentes sejam de alta qualidade e que os resultados sejam mais confiáveis. Lembre-se de que os detalhes específicos podem variar com base no tipo de experimento e na plataforma de sequenciamento utilizada. -->
 
 ## Atividades da tarde
+
+1.  Qual é a pontuação geral de qualidade em todas as bases de sua amostra?
+2.  Há alguma contaminação de adaptador nas leituras de sequenciamento?
+3.  As sequências têm algum conteúdo incomum de GC?
+4.  Qual é a distribuição de comprimento das leituras de sequenciamento?
+5.  Há alguma sequência super-representada presente nos dados?

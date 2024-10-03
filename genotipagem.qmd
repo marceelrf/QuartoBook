@@ -55,7 +55,7 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
     -   Dependendo dos seus critérios e do tipo de análise, pode ser necessário filtrar as variantes chamadas pelo `freebayes` para reduzir o número de falsos positivos. Abaixo estão alguns exemplos:
 
         ```{bash,eval=F}
-        bcftools view --exclude 'QUAL>1' variantes.vcf > variantes_filtradas.vcf
+        bcftools view --exclude 'QUAL<1' variantes.vcf > variantes_filtradas.vcf
 
         bcftools view --trim-alt-alleles variantes_filtradas.vcf > variantes_filtradas_trim.vcf
 
@@ -80,3 +80,9 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 <!--     -   Anote as variantes chamadas usando ferramentas como ANNOVAR, Variant Effect Predictor (VEP) ou AnnovarR. -->
 
 ## Atividades da tarde
+
+1.  Quantos SNPs e indels foram identificados em sua amostras?
+2.  Qual é a qualidade das variantes identificadas?
+3.  As variantes identificadas estão localizadas em regiões codificadoras ou não codificadoras do genomas?
+4.  Como é a relação heterozigosidade/homozigosidade em todas as amostras?
+5.  Há algum gene ou região genômica específica com uma densidade excepcionalmente alta de variantes?

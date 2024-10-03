@@ -11,7 +11,7 @@ Os arquivos utilizados para estas analises serão os `.fastq` analisados no prim
 ::: callout-warning
 ## Arquivos .fastq
 
-Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão na pasta **`WorkshopDados/shortReads/`**
+Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão nas pastas **`Exome_ShortReads/fastq`** e `WGS_ShortReads/fastq`.
 :::
 
 ## Atividades da manhã
@@ -93,7 +93,7 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
         ::: callout-important
         ## Regiões com reads
 
-        Os arquivos `fastq` fornecidos para este curso foram preparados contendo apenas as regiões que estão nos arquivos `bed` fornecidos.
+        Os arquivos `fastq` fornecidos para este curso foram preparados contendo apenas as regiões que estão nos arquivos `bed` fornecidos na pasta `Genome/`.
         :::
 
 <!-- 6.  **Avaliação de Cobertura:** -->
@@ -105,3 +105,9 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 6.  **Use o `IGV` para observar várias amostras ao mesmo tempo**
 
 ## Atividades da tarde
+
+1.  Qual porcentagem de leituras foi alinhada com sucesso ao genoma de referência?
+2.  Existem regiões do genoma com cobertura ruim?
+3.  Qual é a profundidade média de cobertura das leituras alinhadas?
+4.  Há alguma região com uma alta porcentagem de mismatches ou
+5.  Quão uniformemente as leituras estão distribuídas no genoma de referência?
