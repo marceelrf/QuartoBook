@@ -14,7 +14,7 @@ Os arquivos utilizados para estas analises serão os `.fastq` analisados no prim
 Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão na pasta **`WorkshopDados/shortReads/`**
 :::
 
-## Atividades
+## Atividades da manhã
 
 <!-- -   Realize o alinhamento das amostras utilizando `BWA` e o genoma de referência `hg38.fa`; -->
 
@@ -103,3 +103,5 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 <!--     -   `samtools depth alinhamento_sorted.bam > cobertura.txt` -->
 
 6.  **Use o `IGV` para observar várias amostras ao mesmo tempo**
+
+## Atividades da tarde

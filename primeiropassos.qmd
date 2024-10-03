@@ -38,7 +38,7 @@ Siga o tutorial da microsoft para instalar o `WSL`.
 -   [bcftools](https://github.com/samtools/bcftools) [@danecek2021]
 -   [NanoPlot](https://github.com/wdecoster/NanoPlot) [@decoster2023]
 -   [chopper](https://github.com/wdecoster/chopper) [@decoster2023]
--   [toaSTR](https://github.com/labconowl/toastr) [@ganschow2017]
+-   [HipSTR](https://hipstr-tool.github.io/HipSTR/) [@willems2017]
 -   [gzip](https://www.gnu.org/software/gzip/)
 
 ## Instalação
@@ -72,9 +72,81 @@ Para instalar softwares no linux (diretamente ou no `WSL`) utilize o comando `ap
 sudo apt install [SOFTWARE]
 ```
 
+## Instalando via CONDA
+
+Usar o CONDA para criar um ambiente garante que todos os participantes estejam utilizando exatamente os mesmos programas e versões, evitando problemas que podem surgir por diferenças entre os computadores. Assim, você terá todas as ferramentas necessárias instaladas de forma organizada e padronizada, facilitando o acompanhamento durante o workshop, mesmo se você não tiver muita experiência com a instalação de programas. Isso ajuda a garantir que todos possam focar no conteúdo sem se preocupar com configurações complicadas.
+
+### Instalando o CONDA via Miniconda
+
+Utilize os comandos a baixo
+
+```{bash}
+#| eval: false
+
+cd ~
+
+mkdir -p ~/miniconda3
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+
+rm -rf ~/miniconda3/miniconda.sh
+
+~/miniconda3/bin/conda init bash
+
+~/miniconda3/bin/conda init zsh
+```
+
+Reinicie o sistema. No **WSL** é só fechar a abrir novamente.
+
+Baixe o arquivo de configuração do CONDA para o Workshop clicando [aqui](https://1drv.ms/u/s!Aug0fBvVf82yj5dTJujT9quiT53bfA?e=sYzYD0).
+
+### Crie e ative o ambiente
+
+```{bash}
+#| eval: false
+
+conda env create -f workshopbioinfo.yml
+
+conda activate workshopbioinfo
+```
+
+### Instale o HipSTR
+
+~~Infelizmente~~ O HipSTR não está disponível para instalação via CONDA. Então faremos manualmente. Para isso primeiro vamos clonar o repositório do github com os códigos. Para garantir reprodutibilidade vamos fazer isso na pasta home. O comando abaixo entra na pasta home.
+
+```{bash}
+#| eval: false
+cd ~
+```
+
+Em seguida vamos clonar o repositório:
+
+```{bash}
+#| eval: false
+git clone https://github.com/HipSTR-Tool/HipSTR
+```
+
+Entramos na pasta HipSTR e fazemos a instalação com `make`.
+
+```{bash}
+#| eval: false
+cd HipSTR
+
+make
+```
+
+Para rodar o HipSTR:
+
+```{bash}
+#| eval: false
+./HipSTR --help
+```
+
 ## Dados utilizados {#sec-dados-utilizados}
 
-Baixe os dados que serão utilizados neste workshop via [**Google Drive**](https://drive.google.com/drive/folders/1YV_zIfeF-cOksse5gHau_UPgLfIugBX5?usp=drive_link);
+Baixe os dados que serão utilizados neste workshop via [**OneDrive**](https://1drv.ms/f/s!Aug0fBvVf82yjvkrB5R-N_v3rFDHzg?e=FtqWjx);
 
 ::: {.callout-important title="Utilize o email correto"}
 Para ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro, entre em contato com a organização.
@@ -82,15 +154,49 @@ Para ter acesso aos dados utilize o email que foi fornecido durante a inscriçã
 Os dados totalizam \~20 GB. **Atente-se para isso!!!**
 :::
 
+As amostras utilizadas neste curso foram sequenciadas pelo projeto 1000 genomas.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+
+# tbl <- clipr::read_clip_tbl()
+# readr::write_tsv(tbl,file = "amostras.tsv")
+tbl <- read_tsv(file = "amostras.tsv")
+
+knitr::kable(tbl)
+```
+
 Os dados estão contidos nesta estrutura de pastas descritas a baixo:
 
-**WorkshopDados/**                                        \
-   ¦\--**genome/**                                                        \
-   ¦\--**fast5/**                       \
-   ¦\--**guppy_installer/**                      \
-   ¦\--**pre_run/**\
-   ¦\--**LongReadsFastq/**                                                  \
-  °\--**ShortReadsFastq/**                                       
+**WorkshopBioinfo2024/**
+
+**├── Genome/**
+
+**├── R10/**
+
+**│ ├── fastq/**
+
+**│ └── bam/**
+
+**├── Exome_ShortReads/**
+
+**│ ├── fastq/**
+
+**│ └── bam/**
+
+**├── WGS_ShortReads/**
+
+**│ ├── fastq/**
+
+**│ └── bam/**
+
+**└── SimulatedReads/**
+
+                                
 
 <!-- ::: callout-tip -->
 

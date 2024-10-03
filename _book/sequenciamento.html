@@ -188,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Dia5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></a>
+ <span class="menu-text">Dia 5 - Marcadores STRs</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -214,7 +214,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#arquivos" id="toc-arquivos" class="nav-link active" data-scroll-target="#arquivos">Arquivos</a></li>
-  <li><a href="#atividades" id="toc-atividades" class="nav-link" data-scroll-target="#atividades">Atividades</a></li>
+  <li><a href="#atividades-da-manhã" id="toc-atividades-da-manhã" class="nav-link" data-scroll-target="#atividades-da-manhã">Atividades da manhã</a></li>
+  <li><a href="#atividades-da-tarde" id="toc-atividades-da-tarde" class="nav-link" data-scroll-target="#atividades-da-tarde">Atividades da tarde</a></li>
   </ul>
 </nav>
     </div>
@@ -255,11 +256,15 @@ Importante
 </div>
 <section id="arquivos" class="level2">
 <h2 class="anchored" data-anchor-id="arquivos">Arquivos</h2>
-<p>Serão utilizados os arquivos contidos na pasta <strong><code>WorkshopDados/shortReads/</code></strong>.</p>
-<p>Estão dados vieram do projeto 1000 genomas (<a href="https://www.internationalgenome.org/home" class="uri">https://www.internationalgenome.org/home</a>) e compreendem 10 amostras: dois trios e quatro amostras isoladas.</p>
+<p>Serão utilizados os arquivos contidos na pastas:</p>
+<ul>
+<li><p><strong><code>WorkshopBioinfo2024/WGS_ShortReads/fastq/</code></strong></p></li>
+<li><p><strong><code>WorkshopBioinfo2024/Exome_ShortReads/fastq/</code></strong></p></li>
+</ul>
+<p>Estão dados vieram do projeto <a href="https://www.internationalgenome.org/home">1000 genomas</a>.</p>
 </section>
-<section id="atividades" class="level2">
-<h2 class="anchored" data-anchor-id="atividades">Atividades</h2>
+<section id="atividades-da-manhã" class="level2">
+<h2 class="anchored" data-anchor-id="atividades-da-manhã">Atividades da manhã</h2>
 <p>O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequenciamento de nova geração (NGS) para garantir a confiabilidade dos resultados. Abaixo estão as etapas típicas do controle de qualidade:</p>
 <ol type="1">
 <li><strong>Análise Inicial com FASTQC:</strong>
@@ -285,16 +290,16 @@ Importante
 </div></li>
 <li><p>Adapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> <span class="st">'/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar'</span> PE <span class="at">-phred33</span> ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:<span class="st">'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa'</span>:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> <span class="st">'/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar'</span> PE <span class="at">-phred33</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>WGS_ShortReads/fastq/HG00097_r1.fastq WGS_ShortReads/fastq/HG00097_r2.fastq <span class="dt">\</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq <span class="dt">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>ILLUMINACLIP:<span class="st">'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa'</span>:2:30:10 <span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul></li>
 <li><strong>Remoção de Leituras de Baixa Qualidade:</strong>
 <ul>
-<li><p>Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.</p></li>
-<li><p>Novamente, adapte o comando abaixo para a amostra que esta analisando, substituindo HG00099 pelo código dela:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">-jar</span> <span class="st">'/home/USER/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar'</span> PE <span class="at">-phred33</span> ShortReadsFastq/HG00099_r1.fastq ShortReadsFastq/HG00099_r2.fastq trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq ILLUMINACLIP:<span class="st">'/home/USER/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa'</span>:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:27 MINLEN:100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
+<li>Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.</li>
 </ul></li>
 <li><strong>Filtragem de Leituras Curtas ou Longas:</strong>
 <ul>
@@ -314,6 +319,9 @@ Importante
 <!-- 6.  **Relatório Final de Controle de Qualidade:** -->
 <!--     -   Compile todos os resultados de QC em um relatório final que destaque os principais aspectos da qualidade dos dados. Isso é útil para comunicação interna, bem como para garantir a transparência na publicação de resultados. -->
 <!-- Essas etapas são fundamentais para garantir que os dados utilizados nas análises subsequentes sejam de alta qualidade e que os resultados sejam mais confiáveis. Lembre-se de que os detalhes específicos podem variar com base no tipo de experimento e na plataforma de sequenciamento utilizada. -->
+</section>
+<section id="atividades-da-tarde" class="level2">
+<h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
 
 
 </section>

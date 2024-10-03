@@ -8,7 +8,7 @@ engine: knitr
 
 Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 
-## Atividades
+## Atividades da manhã
 
 1.  **Preparação do Ambiente:**
 
@@ -78,3 +78,5 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 <!-- 7.  **Anotação de Variantes:** -->
 
 <!--     -   Anote as variantes chamadas usando ferramentas como ANNOVAR, Variant Effect Predictor (VEP) ou AnnovarR. -->
+
+## Atividades da tarde

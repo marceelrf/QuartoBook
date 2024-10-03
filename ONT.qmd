@@ -34,7 +34,7 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
 [^ont-1]:  https://timkahlke.github.io/LongRead_tutorials/
 
-## Atividades
+## Atividades da manhã
 
 1.  **Realize uma chamada de base utilizando guppy (Opicional):**
 
@@ -183,3 +183,5 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
     -   Repita as métricas de filtragem utilizadas no passo 4 do dia 3;
     -   Repita os passos 5 e 6 do dia 3, comparando aos resultados de short reads.
+
+## Atividades da tarde

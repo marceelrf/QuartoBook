@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial Bioinformatica - Dia 5 - Genotipagem de STRs a partir de dados de NGS</title>
+<title>Tutorial Bioinformatica - Dia 5 - Marcadores STRs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Dia5.html">Dia 5 - Genotipagem de STRs a partir de dados de NGS</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Dia5.html">Dia 5 - Marcadores STRs</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -154,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Dia5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></a>
+ <span class="menu-text">Dia 5 - Marcadores STRs</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -179,9 +213,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Nesta seção</h2>
    
   <ul>
-  <li><a href="#atividades" id="toc-atividades" class="nav-link active" data-scroll-target="#atividades">Atividades</a></li>
-  <li><a href="#toastr" id="toc-toastr" class="nav-link" data-scroll-target="#toastr">toaSTR</a></li>
-  <li><a href="#interpretação-dos-resultados" id="toc-interpretação-dos-resultados" class="nav-link" data-scroll-target="#interpretação-dos-resultados">Interpretação dos resultados</a></li>
+  <li><a href="#primer-paso---descargas" id="toc-primer-paso---descargas" class="nav-link active" data-scroll-target="#primer-paso---descargas">PRIMER PASO - DESCARGAS</a></li>
+  <li><a href="#hipstr" id="toc-hipstr" class="nav-link" data-scroll-target="#hipstr">HIPSTR</a>
+  <ul class="collapse">
+  <li><a href="#instalação" id="toc-instalação" class="nav-link" data-scroll-target="#instalação">INSTALAÇÃO</a></li>
+  <li><a href="#cómo-criar-os-índices-das-amostras" id="toc-cómo-criar-os-índices-das-amostras" class="nav-link" data-scroll-target="#cómo-criar-os-índices-das-amostras">CÓMO CRIAR OS ÍNDICES DAS AMOSTRAS?</a></li>
+  <li><a href="#comandos" id="toc-comandos" class="nav-link" data-scroll-target="#comandos">COMANDOS</a></li>
+  <li><a href="#interpretação-do-arquivo-de-saída" id="toc-interpretação-do-arquivo-de-saída" class="nav-link" data-scroll-target="#interpretação-do-arquivo-de-saída">INTERPRETAÇÃO DO ARQUIVO DE SAÍDA</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -190,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-dia5" class="quarto-section-identifier">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></h1>
+<h1 class="title"><span id="sec-dia5" class="quarto-section-identifier">Dia 5 - Marcadores STRs</span></h1>
 </div>
 
 
@@ -207,26 +246,94 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="atividades" class="level2">
-<h2 class="anchored" data-anchor-id="atividades">Atividades</h2>
-<ol type="1">
-<li>Baixar <code>toaSTR</code></li>
-<li>Baixar <code>Docker</code></li>
-<li>Instalar no computador;</li>
-<li>Fazer login no <code>toaSTR</code>;</li>
-</ol>
+<p>Para esse curso, utilizaremos um computador virtual, devido à incompatibilidades com a nova versão do compilador C++. Portanto, teremos que baixar o computador virtual com os arquivos necessários para o curso, e virtual box que permitirá executar o computador virtual.</p>
+<section id="primer-paso---descargas" class="level2">
+<h2 class="anchored" data-anchor-id="primer-paso---descargas">PRIMER PASO - DESCARGAS</h2>
+<p>1. Baixar o computador virtual Ubuntu (baixar e descomprimir o arquivo zip).</p>
+<p>Link para baixar o computador virtual: <a href="https://drive.google.com/file/d/1Pnw3KGixyB6ur2h9zDA3zSAeHj8OzvyX/view?usp=drive_link" class="uri">https://drive.google.com/file/d/1Pnw3KGixyB6ur2h9zDA3zSAeHj8OzvyX/view?usp=drive_link</a></p>
+<p>1. Baixar virtual box e o pacote de instalação.</p>
+<p>Link para baixar virtual box que mostrará o computador virtual Linux: <a href="https://www.virtualbox.org/wiki/Downloads" class="uri">https://www.virtualbox.org/wiki/Downloads</a></p>
+<p>Baixar DUAS coisas deste link virtual box:</p>
+<p>1. <strong>VirtualBox Platform Packages</strong></p>
+<p>2. <strong>VirtualBox Extension Pack</strong></p>
+<p>Escolher o sistema operativo do computador (windows, mac ou linux) e baixar.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Screenshot 2024-10-02 at 11.13.45.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Logo de instalar, escolher o computador virtual Ubuntu que baixamos no primer link.</p>
+<p>Senha do computador virtual instalado: bioinformatica</p>
+<p>Link tutorial de ajuda: <a href="https://drive.google.com/file/d/1bPgrcmzdD3b_ELsGPKUMBllZ7G0SJR18/view?usp=drive_link" class="uri">https://drive.google.com/file/d/1bPgrcmzdD3b_ELsGPKUMBllZ7G0SJR18/view?usp=drive_link</a></p>
 </section>
-<section id="toastr" class="level2">
-<h2 class="anchored" data-anchor-id="toastr">toaSTR</h2>
-<ol type="1">
-<li>Criar os painéis de marcadores que serão utilizados;</li>
-<li>Subir e correr uma amostra no <code>toaSTR</code> ;</li>
-</ol>
+<section id="hipstr" class="level2">
+<h2 class="anchored" data-anchor-id="hipstr">HIPSTR</h2>
+<p><strong>H</strong>aplotype&nbsp;<strong>i</strong>nference and&nbsp;<strong>p</strong>hasing for&nbsp;<strong>S</strong>hort&nbsp;<strong>T</strong>andem&nbsp;<strong>R</strong>epeats ou <code>HipSTR</code> é um programa que foi desenvolvido por Thomas Willems para capturar marcadores STRs a partir de dados de sequenciamento de nova geração.</p>
+<p>Link do Github:</p>
+<p><a href="https://github.com/tfwillems/HipSTR" class="uri">https://github.com/tfwillems/HipSTR</a></p>
+<section id="instalação" class="level3">
+<h3 class="anchored" data-anchor-id="instalação">INSTALAÇÃO</h3>
+<p>Infelizmente a última versão do compilador C++ apresenta uma incompatibilidade com <code>HipSTR</code>. Portanto, iremos utilizar um computador virtual que já contem o programa instalado.</p>
+<p>O computador virtual tem uma pasta chamada “curso” no desktop, onde se encontra:</p>
+<ul>
+<li><p>O genoma de referência <code>(arquivo.fa</code>)</p></li>
+<li><p>O índice do genoma de referência <code>(arquivo.fai</code>)</p></li>
+<li><p>Amostras em formato bam (<code>HG00118.bam</code>, etc)</p></li>
+<li><p>O arquivo bed com as regiões que serão analizadas.</p></li>
+</ul>
+<p>Com isso, iremos correr o comando do <code>HipSTR</code> para genotipar essas amostras</p>
 </section>
-<section id="interpretação-dos-resultados" class="level2">
-<h2 class="anchored" data-anchor-id="interpretação-dos-resultados">Interpretação dos resultados</h2>
+<section id="cómo-criar-os-índices-das-amostras" class="level3">
+<h3 class="anchored" data-anchor-id="cómo-criar-os-índices-das-amostras">CÓMO CRIAR OS ÍNDICES DAS AMOSTRAS?</h3>
+<ul>
+<li>Utilizaremos <code>samtools index</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">samtools</span> index nome_da_amostra.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Fazer esse comando para todas as amostras.</p>
+<p>Link tutorial de ajuda: <a href="https://drive.google.com/file/d/17vv41Hf0ezyEHzAHne1e4iPbzCemDgXN/view?usp=drive_link" class="uri">https://drive.google.com/file/d/17vv41Hf0ezyEHzAHne1e4iPbzCemDgXN/view?usp=drive_link</a></p>
+</section>
+<section id="comandos" class="level3">
+<h3 class="anchored" data-anchor-id="comandos">COMANDOS</h3>
+<p>Arquivos necessários</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image (1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+IMPORTANTE
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Antes de correr o comando do <code>HipSTR</code>, verifiquem que todas as amostras que serão incluidas no comando, já tenham o seu índice (Arquivo fai, gerado com samtools index)</p></li>
+<li><p>Preparar o comando previamente em algum arquivo de texto, substituindo nome_da_amostra1 pelo nome real da amostra.</p></li>
+<li><p>Podem rodar varias amostras no mesmo comando, separando elas por virgulas SEM espaço, como no exemplo embaixo.</p></li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">--bams</span> nome_da_amostra1.bam,nome_da_amostra2.bam <span class="at">--fasta</span> GRCh38_full_analysis_set_plus_decoy_hla.fa <span class="at">--regions</span> regionsx.bed <span class="at">--str-vcf</span> nome_de_saida.vcf.gz <span class="at">--min-reads</span> 8 <span class="at">--def-stutter-model</span> <span class="at">--max-flank-indel</span> 0.50 <span class="at">--max-str-len</span> 127 <span class="at">--viz-out</span> aln.viz.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Link de ajuda: <a href="https://drive.google.com/file/d/1Vzw8K7-Jh-ud7ul_0bNhKpJ4gw0zxqvo/view?usp=drive_link" class="uri">https://drive.google.com/file/d/1Vzw8K7-Jh-ud7ul_0bNhKpJ4gw0zxqvo/view?usp=drive_link</a></p>
+</section>
+<section id="interpretação-do-arquivo-de-saída" class="level3">
+<h3 class="anchored" data-anchor-id="interpretação-do-arquivo-de-saída">INTERPRETAÇÃO DO ARQUIVO DE SAÍDA</h3>
+<p><code>HipSTR</code> gera como arquivo de saída um arquivo vcf.gz. Logo de descomprimir o arquivo teremos um vcf.</p>
+<p>O vcf podemos abrir com Excel e realizar a interpretação dos dados para genotipar as amostras.</p>
+<p>Durante a aula aprenderemos a realizar essa interpretação.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

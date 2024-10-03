@@ -208,7 +208,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Dia5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dia 5 - Genotipagem de STRs a partir de dados de NGS</span></a>
+ <span class="menu-text">Dia 5 - Marcadores STRs</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -240,6 +240,12 @@ div.csl-indent {
   <li><a href="#no-ubuntu" id="toc-no-ubuntu" class="nav-link" data-scroll-target="#no-ubuntu">No Ubuntu</a></li>
   </ul></li>
   <li><a href="#instalação" id="toc-instalação" class="nav-link" data-scroll-target="#instalação">Instalação</a></li>
+  <li><a href="#instalando-via-conda" id="toc-instalando-via-conda" class="nav-link" data-scroll-target="#instalando-via-conda">Instalando via CONDA</a>
+  <ul class="collapse">
+  <li><a href="#instalando-o-conda-via-miniconda" id="toc-instalando-o-conda-via-miniconda" class="nav-link" data-scroll-target="#instalando-o-conda-via-miniconda">Instalando o CONDA via Miniconda</a></li>
+  <li><a href="#crie-e-ative-o-ambiente" id="toc-crie-e-ative-o-ambiente" class="nav-link" data-scroll-target="#crie-e-ative-o-ambiente">Crie e ative o ambiente</a></li>
+  <li><a href="#instale-o-hipstr" id="toc-instale-o-hipstr" class="nav-link" data-scroll-target="#instale-o-hipstr">Instale o HipSTR</a></li>
+  </ul></li>
   <li><a href="#sec-dados-utilizados" id="toc-sec-dados-utilizados" class="nav-link" data-scroll-target="#sec-dados-utilizados">Dados utilizados</a></li>
   </ul>
 </nav>
@@ -312,7 +318,7 @@ Tutorial para instalar o <code>WSL</code>
 <li><a href="https://github.com/samtools/bcftools">bcftools</a> <span class="citation" data-cites="danecek2021">(<a href="references.html#ref-danecek2021" role="doc-biblioref">Danecek et al. 2021</a>)</span></li>
 <li><a href="https://github.com/wdecoster/NanoPlot">NanoPlot</a> <span class="citation" data-cites="decoster2023">(<a href="references.html#ref-decoster2023" role="doc-biblioref">De Coster and Rademakers 2023</a>)</span></li>
 <li><a href="https://github.com/wdecoster/chopper">chopper</a> <span class="citation" data-cites="decoster2023">(<a href="references.html#ref-decoster2023" role="doc-biblioref">De Coster and Rademakers 2023</a>)</span></li>
-<li><a href="https://github.com/labconowl/toastr">toaSTR</a> <span class="citation" data-cites="ganschow2017">(<a href="references.html#ref-ganschow2017" role="doc-biblioref">Ganschow, Wiegand, and Tiemann 2017</a>)</span></li>
+<li><a href="https://hipstr-tool.github.io/HipSTR/">HipSTR</a> <span class="citation" data-cites="willems2017">(<a href="references.html#ref-willems2017" role="doc-biblioref">Willems et al. 2017</a>)</span></li>
 <li><a href="https://www.gnu.org/software/gzip/">gzip</a></li>
 </ul>
 </section>
@@ -359,9 +365,63 @@ Sobre o comando <code>sudo</code>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="pp">[</span><span class="ss">SOFTWARE</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="instalando-via-conda" class="level2">
+<h2 class="anchored" data-anchor-id="instalando-via-conda">Instalando via CONDA</h2>
+<p>Usar o CONDA para criar um ambiente garante que todos os participantes estejam utilizando exatamente os mesmos programas e versões, evitando problemas que podem surgir por diferenças entre os computadores. Assim, você terá todas as ferramentas necessárias instaladas de forma organizada e padronizada, facilitando o acompanhamento durante o workshop, mesmo se você não tiver muita experiência com a instalação de programas. Isso ajuda a garantir que todos possam focar no conteúdo sem se preocupar com configurações complicadas.</p>
+<section id="instalando-o-conda-via-miniconda" class="level3">
+<h3 class="anchored" data-anchor-id="instalando-o-conda-via-miniconda">Instalando o CONDA via Miniconda</h3>
+<p>Utilize os comandos a baixo</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init bash</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init zsh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Reinicie o sistema. No <strong>WSL</strong> é só fechar a abrir novamente.</p>
+<p>Baixe o arquivo de configuração do CONDA para o Workshop clicando <a href="https://1drv.ms/u/s!Aug0fBvVf82yj5dTJujT9quiT53bfA?e=sYzYD0">aqui</a>.</p>
+</section>
+<section id="crie-e-ative-o-ambiente" class="level3">
+<h3 class="anchored" data-anchor-id="crie-e-ative-o-ambiente">Crie e ative o ambiente</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> workshopbioinfo.yml</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate workshopbioinfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="instale-o-hipstr" class="level3">
+<h3 class="anchored" data-anchor-id="instale-o-hipstr">Instale o HipSTR</h3>
+<p><del>Infelizmente</del> O HipSTR não está disponível para instalação via CONDA. Então faremos manualmente. Para isso primeiro vamos clonar o repositório do github com os códigos. Para garantir reprodutibilidade vamos fazer isso na pasta home. O comando abaixo entra na pasta home.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Em seguida vamos clonar o repositório:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/HipSTR-Tool/HipSTR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Entramos na pasta HipSTR e fazemos a instalação com <code>make</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> HipSTR</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para rodar o HipSTR:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./HipSTR</span> <span class="at">--help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
 <section id="sec-dados-utilizados" class="level2">
 <h2 class="anchored" data-anchor-id="sec-dados-utilizados">Dados utilizados</h2>
-<p>Baixe os dados que serão utilizados neste workshop via <a href="https://drive.google.com/drive/folders/1YV_zIfeF-cOksse5gHau_UPgLfIugBX5?usp=drive_link"><strong>Google Drive</strong></a>;</p>
+<p>Baixe os dados que serão utilizados neste workshop via <a href="https://1drv.ms/f/s!Aug0fBvVf82yjvkrB5R-N_v3rFDHzg?e=FtqWjx"><strong>OneDrive</strong></a>;</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Utilize o email correto">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -376,14 +436,81 @@ Utilize o email correto
 <p>Os dados totalizam ~20 GB. <strong>Atente-se para isso!!!</strong></p>
 </div>
 </div>
+<p>As amostras utilizadas neste curso foram sequenciadas pelo projeto 1000 genomas.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Amostra</th>
+<th style="text-align: left;">Sexo</th>
+<th style="text-align: left;">População</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">HG00097</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">British</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HG00142</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">British</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HG00143</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">British</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HG00145</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">British</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HG00263</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">British</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HG00277</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Finnish</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HG00372</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Finnish</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HG00463</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Han Chinese</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HG01063</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">Puerto Rican</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Os dados estão contidos nesta estrutura de pastas descritas a baixo:</p>
-<p><strong>WorkshopDados/</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
-&nbsp; &nbsp;¦--<strong>genome/</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
-&nbsp; &nbsp;¦--<strong>fast5/</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
-&nbsp; &nbsp;¦--<strong>guppy_installer/</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
-&nbsp; &nbsp;¦--<strong>pre_run/</strong><br>
-&nbsp; &nbsp;¦--<strong>LongReadsFastq/</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
-&nbsp; °--<strong>ShortReadsFastq/</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><strong>WorkshopBioinfo2024/</strong></p>
+<p><strong>├── Genome/</strong></p>
+<p><strong>├── R10/</strong></p>
+<p><strong>│ ├── fastq/</strong></p>
+<p><strong>│ └── bam/</strong></p>
+<p><strong>├── Exome_ShortReads/</strong></p>
+<p><strong>│ ├── fastq/</strong></p>
+<p><strong>│ └── bam/</strong></p>
+<p><strong>├── WGS_ShortReads/</strong></p>
+<p><strong>│ ├── fastq/</strong></p>
+<p><strong>│ └── bam/</strong></p>
+<p><strong>└── SimulatedReads/</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
 <!-- ::: callout-tip -->
 <!-- ## Dicas -->
 <!-- Utilize o comando `htop` para monitorar o consumo de memória em seu computador durante todas as atividades deste tutorial. -->
@@ -407,9 +534,6 @@ Danecek, Petr, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, M
 <div id="ref-decoster2023" class="csl-entry" role="listitem">
 De Coster, Wouter, and Rosa Rademakers. 2023. <span>“NanoPack2: Population-Scale Evaluation of Long-Read Sequencing Data.”</span> Edited by Can Alkan. <em>Bioinformatics</em> 39 (5). <a href="https://doi.org/10.1093/bioinformatics/btad311">https://doi.org/10.1093/bioinformatics/btad311</a>.
 </div>
-<div id="ref-ganschow2017" class="csl-entry" role="listitem">
-Ganschow, Sebastian, Peter Wiegand, and Carsten Tiemann. 2017. <span>“toaSTR: A Web-Based Forensic Tool for the Analysis of Short Tandem Repeats in Massively Parallel Sequencing Data.”</span> <em>Forensic Science International: Genetics Supplement Series</em> 6 (December): e119–21. <a href="https://doi.org/10.1016/j.fsigss.2017.09.034">https://doi.org/10.1016/j.fsigss.2017.09.034</a>.
-</div>
 <div id="ref-garrison2012" class="csl-entry" role="listitem">
 Garrison, Erik, and Gabor Marth. 2012. <span>“Haplotype-Based Variant Detection from Short-Read Sequencing.”</span> <a href="https://doi.org/10.48550/ARXIV.1207.3907">https://doi.org/10.48550/ARXIV.1207.3907</a>.
 </div>
@@ -424,6 +548,9 @@ Li, Heng. 2013. <span>“Aligning Sequence Reads, Clone Sequences and Assembly C
 </div>
 <div id="ref-robinson2011" class="csl-entry" role="listitem">
 Robinson, James T, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S Lander, Gad Getz, and Jill P Mesirov. 2011. <span>“Integrative Genomics Viewer.”</span> <em>Nature Biotechnology</em> 29 (1): 24–26. <a href="https://doi.org/10.1038/nbt.1754">https://doi.org/10.1038/nbt.1754</a>.
+</div>
+<div id="ref-willems2017" class="csl-entry" role="listitem">
+Willems, Thomas, Dina Zielinski, Jie Yuan, Assaf Gordon, Melissa Gymrek, and Yaniv Erlich. 2017. <span>“Genome-Wide Profiling of Heritable and de Novo STR Variations.”</span> <em>Nature Methods</em> 14 (6): 590–92. <a href="https://doi.org/10.1038/nmeth.4267">https://doi.org/10.1038/nmeth.4267</a>.
 </div>
 </div>
 </section>
