@@ -239,13 +239,12 @@ div.csl-indent {
   <li><a href="#usuários-windows" id="toc-usuários-windows" class="nav-link" data-scroll-target="#usuários-windows">Usuários Windows</a></li>
   <li><a href="#no-ubuntu" id="toc-no-ubuntu" class="nav-link" data-scroll-target="#no-ubuntu">No Ubuntu</a></li>
   </ul></li>
-  <li><a href="#instalação" id="toc-instalação" class="nav-link" data-scroll-target="#instalação">Instalação</a></li>
   <li><a href="#instalando-via-conda" id="toc-instalando-via-conda" class="nav-link" data-scroll-target="#instalando-via-conda">Instalando via CONDA</a>
   <ul class="collapse">
   <li><a href="#instalando-o-conda-via-miniconda" id="toc-instalando-o-conda-via-miniconda" class="nav-link" data-scroll-target="#instalando-o-conda-via-miniconda">Instalando o CONDA via Miniconda</a></li>
   <li><a href="#crie-e-ative-o-ambiente" id="toc-crie-e-ative-o-ambiente" class="nav-link" data-scroll-target="#crie-e-ative-o-ambiente">Crie e ative o ambiente</a></li>
-  <li><a href="#instale-o-hipstr" id="toc-instale-o-hipstr" class="nav-link" data-scroll-target="#instale-o-hipstr">Instale o HipSTR</a></li>
   </ul></li>
+  <li><a href="#instalação-via-linha-de-comando" id="toc-instalação-via-linha-de-comando" class="nav-link" data-scroll-target="#instalação-via-linha-de-comando">Instalação via linha de comando</a></li>
   <li><a href="#sec-dados-utilizados" id="toc-sec-dados-utilizados" class="nav-link" data-scroll-target="#sec-dados-utilizados">Dados utilizados</a></li>
   </ul>
 </nav>
@@ -303,6 +302,21 @@ Tutorial para instalar o <code>WSL</code>
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Usuários windows">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Usuários windows
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Usuários windows precisam instalar o Subsistema Windows para Linux (<code>WSL</code>).<br>
+Os softwares <code>FASTQC</code> e <code>IGV</code> precisam ser instalados no windows e <strong>não no <code>WSL</code></strong>.</p>
+<p>Anote a <code>senha</code> que você configurou. Ela será fundamental durante o uso do <code>WSL</code>!!!!</p>
+</div>
+</div>
 </section>
 <section id="no-ubuntu" class="level3">
 <h3 class="anchored" data-anchor-id="no-ubuntu">No Ubuntu</h3>
@@ -323,28 +337,44 @@ Tutorial para instalar o <code>WSL</code>
 </ul>
 </section>
 </section>
-<section id="instalação" class="level2">
-<h2 class="anchored" data-anchor-id="instalação">Instalação</h2>
-<div class="callout callout-style-default callout-warning callout-titled" title="Usuários windows">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="instalando-via-conda" class="level2">
+<h2 class="anchored" data-anchor-id="instalando-via-conda">Instalando via CONDA</h2>
+<p>Usar o CONDA para criar um ambiente garante que todos os participantes estejam utilizando exatamente os mesmos programas e versões, evitando problemas que podem surgir por diferenças entre os computadores. Assim, você terá todas as ferramentas necessárias instaladas de forma organizada e padronizada, facilitando o acompanhamento durante o workshop, mesmo se você não tiver muita experiência com a instalação de programas. Isso ajuda a garantir que todos possam focar no conteúdo sem se preocupar com configurações complicadas.</p>
+<section id="instalando-o-conda-via-miniconda" class="level3">
+<h3 class="anchored" data-anchor-id="instalando-o-conda-via-miniconda">Instalando o CONDA via Miniconda</h3>
+<p>Utilize os comandos a baixo</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init bash</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init zsh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-title-container flex-fill">
-Usuários windows
+<p>Reinicie o sistema. No <strong>WSL</strong> é só fechar a abrir novamente.</p>
+<p>Baixe o arquivo de configuração do CONDA para o Workshop clicando <a href="https://1drv.ms/u/s!Aug0fBvVf82yj5dTJujT9quiT53bfA?e=sYzYD0">aqui</a>.</p>
+</section>
+<section id="crie-e-ative-o-ambiente" class="level3">
+<h3 class="anchored" data-anchor-id="crie-e-ative-o-ambiente">Crie e ative o ambiente</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> workshopbioinfo.yml</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate workshopbioinfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Usuários windows precisam instalar o Subsistema Windows para Linux (<code>WSL</code>).<br>
-Os softwares <code>FASTQC</code> e <code>IGV</code> precisam ser instalados no windows e <strong>não no <code>WSL</code></strong>.</p>
-<p>Anote a <code>senha</code> que você configurou. Ela será fundamental durante o uso do <code>WSL</code>!!!!</p>
-</div>
-</div>
+</section>
+</section>
+<section id="instalação-via-linha-de-comando" class="level2">
+<h2 class="anchored" data-anchor-id="instalação-via-linha-de-comando">Instalação via linha de comando</h2>
 <p>Ao terminar a instalação do <code>WSL</code> e de configurar seu usuário no linux utilize os seguintes comandos:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get upgrade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update  sudo apt-get upgrade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Estes comandos irão garantir que o seu sistema esteja atualizado.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -362,62 +392,8 @@ Sobre o comando <code>sudo</code>
 </div>
 <p>Para instalar softwares no linux (diretamente ou no <code>WSL</code>) utilize o comando <code>apt install</code> da seguinte forma:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="pp">[</span><span class="ss">SOFTWARE</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="pp">[</span><span class="ss">SOFTWARE</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="instalando-via-conda" class="level2">
-<h2 class="anchored" data-anchor-id="instalando-via-conda">Instalando via CONDA</h2>
-<p>Usar o CONDA para criar um ambiente garante que todos os participantes estejam utilizando exatamente os mesmos programas e versões, evitando problemas que podem surgir por diferenças entre os computadores. Assim, você terá todas as ferramentas necessárias instaladas de forma organizada e padronizada, facilitando o acompanhamento durante o workshop, mesmo se você não tiver muita experiência com a instalação de programas. Isso ajuda a garantir que todos possam focar no conteúdo sem se preocupar com configurações complicadas.</p>
-<section id="instalando-o-conda-via-miniconda" class="level3">
-<h3 class="anchored" data-anchor-id="instalando-o-conda-via-miniconda">Instalando o CONDA via Miniconda</h3>
-<p>Utilize os comandos a baixo</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/miniconda3</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init bash</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init zsh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Reinicie o sistema. No <strong>WSL</strong> é só fechar a abrir novamente.</p>
-<p>Baixe o arquivo de configuração do CONDA para o Workshop clicando <a href="https://1drv.ms/u/s!Aug0fBvVf82yj5dTJujT9quiT53bfA?e=sYzYD0">aqui</a>.</p>
-</section>
-<section id="crie-e-ative-o-ambiente" class="level3">
-<h3 class="anchored" data-anchor-id="crie-e-ative-o-ambiente">Crie e ative o ambiente</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> workshopbioinfo.yml</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate workshopbioinfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="instale-o-hipstr" class="level3">
-<h3 class="anchored" data-anchor-id="instale-o-hipstr">Instale o HipSTR</h3>
-<p><del>Infelizmente</del> O HipSTR não está disponível para instalação via CONDA. Então faremos manualmente. Para isso primeiro vamos clonar o repositório do github com os códigos. Para garantir reprodutibilidade vamos fazer isso na pasta home. O comando abaixo entra na pasta home.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Em seguida vamos clonar o repositório:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/HipSTR-Tool/HipSTR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Entramos na pasta HipSTR e fazemos a instalação com <code>make</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> HipSTR</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Para rodar o HipSTR:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./HipSTR</span> <span class="at">--help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
 </section>
 <section id="sec-dados-utilizados" class="level2">
 <h2 class="anchored" data-anchor-id="sec-dados-utilizados">Dados utilizados</h2>
@@ -437,6 +413,41 @@ Utilize o email correto
 </div>
 </div>
 <p>As amostras utilizadas neste curso foram sequenciadas pelo projeto 1000 genomas.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Regiões com reads
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os arquivos <code>fastq</code> fornecidos para este curso foram preparados contendo apenas as regiões que estão nos arquivos <code>bed</code> fornecidos na pasta <code>Genome/</code>.</p>
+<p><strong>Exemplo:</strong></p>
+<p>Abrindo o arquivo BED podemos notar que ele contém a informção da posição baseda no cromossomo (<strong>coluna 1</strong>) e seu inicio (<strong>coluna 2</strong>) e fim (<strong>coluna 3</strong>). De fato, estas são as únicas colunas obrigatórias de um BED. A coluna 4 neste arquivo contém anotação da região que iremos trabalhar.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Slide2.PNG" class="img-fluid figure-img"></p>
+<figcaption>Estrutura de um arquivo BED.</figcaption>
+</figure>
+</div>
+<p>Quando abrimos o arquivo BED no IGV ele marca em azul as posições das coordenadas genomicas:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Slide1.PNG" class="img-fluid figure-img"></p>
+<figcaption>Abrindo o arquivo regions.bed no IGV</figcaption>
+</figure>
+</div>
+<p>Para visualizar a região no IGV devemos utilizar a seguinte notação: <code>{cromossomo}:{start}-{end}</code>. Para o D1S1656 fica <code>chr1:230769616-230769683</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Slide3.PNG" class="img-fluid figure-img"></p>
+<figcaption>Região do D1S1656.</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">

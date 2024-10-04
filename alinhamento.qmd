@@ -42,8 +42,6 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
     O processo para criar o indice do genoma via `bwa index` demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta **`WorkshopDados/genome/`** os arquivo resultantes desta etapa, que são os arquivos com extensão `.amb`, `.ann`, `.bwt`, `.fai`, `.pac` e `.sa`.
 
     O genoma de referência humano esta no arquivo `hg38.fa`. Esse é a última versão do genoma de referência e a mais utilizada no mundo.
-
-    Caso deseje testar em um genoma menor, utilize o `chr12.fasta`.
     :::
 
 2.  **Alinhamento de Sequências:**
@@ -54,7 +52,7 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
         bwa mem -R "@RG\tID:{SAMPLE}\tSM:{SAMPLE}" hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq -o {SAMPLE}.sam
         ```
 
-    Substitua **`reference_genome.fa`**, `{SAMPLE}` pelos nomes dos arquivos correspondentes.
+    Substitua `{SAMPLE}` pelos nomes dos arquivos correspondentes.
 
     ::: callout-tip
     ## Automatizando o processo (Opicional)
@@ -109,5 +107,5 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 1.  Qual porcentagem de leituras foi alinhada com sucesso ao genoma de referência?
 2.  Existem regiões do genoma com cobertura ruim?
 3.  Qual é a profundidade média de cobertura das leituras alinhadas?
-4.  Há alguma região com uma alta porcentagem de mismatches ou
+4.  Há alguma região com uma alta porcentagem de mismatches ou indes?
 5.  Quão uniformemente as leituras estão distribuídas no genoma de referência?

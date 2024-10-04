@@ -25,6 +25,13 @@ Siga o tutorial da microsoft para instalar o `WSL`.
 <https://learn.microsoft.com/pt-br/windows/wsl/install>
 :::
 
+::: {.callout-warning title="Usuários windows"}
+Usuários windows precisam instalar o Subsistema Windows para Linux (`WSL`).\
+Os softwares `FASTQC` e `IGV` precisam ser instalados no windows e **não no `WSL`**.
+
+Anote a `senha` que você configurou. Ela será fundamental durante o uso do `WSL`!!!!
+:::
+
 ### No Ubuntu
 
 -   [IGV](https://software.broadinstitute.org/software/igv/download) [@robinson2011]
@@ -40,37 +47,6 @@ Siga o tutorial da microsoft para instalar o `WSL`.
 -   [chopper](https://github.com/wdecoster/chopper) [@decoster2023]
 -   [HipSTR](https://hipstr-tool.github.io/HipSTR/) [@willems2017]
 -   [gzip](https://www.gnu.org/software/gzip/)
-
-## Instalação
-
-::: {.callout-warning title="Usuários windows"}
-Usuários windows precisam instalar o Subsistema Windows para Linux (`WSL`).\
-Os softwares `FASTQC` e `IGV` precisam ser instalados no windows e **não no `WSL`**.
-
-Anote a `senha` que você configurou. Ela será fundamental durante o uso do `WSL`!!!!
-:::
-
-Ao terminar a instalação do `WSL` e de configurar seu usuário no linux utilize os seguintes comandos:
-
-```{bash,eval=FALSE}
-sudo apt-get update
-
-sudo apt-get upgrade
-```
-
-Estes comandos irão garantir que o seu sistema esteja atualizado.
-
-::: callout-caution
-## Sobre o comando `sudo`
-
-O comando `sudo` permite ao usuário executar comandos com permissão superior. Para isso você precisará da sua **senha** (ou do administrador)!
-:::
-
-Para instalar softwares no linux (diretamente ou no `WSL`) utilize o comando `apt install` da seguinte forma:
-
-```{bash, eval=F}
-sudo apt install [SOFTWARE]
-```
 
 ## Instalando via CONDA
 
@@ -112,36 +88,26 @@ conda env create -f workshopbioinfo.yml
 conda activate workshopbioinfo
 ```
 
-### Instale o HipSTR
+## Instalação via linha de comando
 
-~~Infelizmente~~ O HipSTR não está disponível para instalação via CONDA. Então faremos manualmente. Para isso primeiro vamos clonar o repositório do github com os códigos. Para garantir reprodutibilidade vamos fazer isso na pasta home. O comando abaixo entra na pasta home.
+Ao terminar a instalação do `WSL` e de configurar seu usuário no linux utilize os seguintes comandos:
 
-```{bash}
-#| eval: false
-cd ~
+```{bash,eval=FALSE}
+sudo apt-get update  sudo apt-get upgrade
 ```
 
-Em seguida vamos clonar o repositório:
+Estes comandos irão garantir que o seu sistema esteja atualizado.
 
-```{bash}
-#| eval: false
-git clone https://github.com/HipSTR-Tool/HipSTR
-```
+::: callout-caution
+## Sobre o comando `sudo`
 
-Entramos na pasta HipSTR e fazemos a instalação com `make`.
+O comando `sudo` permite ao usuário executar comandos com permissão superior. Para isso você precisará da sua **senha** (ou do administrador)!
+:::
 
-```{bash}
-#| eval: false
-cd HipSTR
+Para instalar softwares no linux (diretamente ou no `WSL`) utilize o comando `apt install` da seguinte forma:
 
-make
-```
-
-Para rodar o HipSTR:
-
-```{bash}
-#| eval: false
-./HipSTR --help
+```{bash, eval=F}
+sudo apt install [SOFTWARE]
 ```
 
 ## Dados utilizados {#sec-dados-utilizados}
@@ -155,6 +121,26 @@ Os dados totalizam \~20 GB. **Atente-se para isso!!!**
 :::
 
 As amostras utilizadas neste curso foram sequenciadas pelo projeto 1000 genomas.
+
+::: callout-important
+## Regiões com reads
+
+Os arquivos `fastq` fornecidos para este curso foram preparados contendo apenas as regiões que estão nos arquivos `bed` fornecidos na pasta `Genome/`.
+
+**Exemplo:**
+
+Abrindo o arquivo BED podemos notar que ele contém a informção da posição baseda no cromossomo (**coluna 1**) e seu inicio (**coluna 2**) e fim (**coluna 3**). De fato, estas são as únicas colunas obrigatórias de um BED. A coluna 4 neste arquivo contém anotação da região que iremos trabalhar.
+
+![Estrutura de um arquivo BED.](images/Slide2.PNG){fig-align="center"}
+
+Quando abrimos o arquivo BED no IGV ele marca em azul as posições das coordenadas genomicas:
+
+![Abrindo o arquivo regions.bed no IGV](images/Slide1.PNG){fig-align="center"}
+
+Para visualizar a região no IGV devemos utilizar a seguinte notação: `{cromossomo}:{start}-{end}`. Para o D1S1656 fica `chr1:230769616-230769683`.
+
+![Região do D1S1656.](images/Slide3.PNG){fig-align="center"}
+:::
 
 ```{r}
 #| echo: false

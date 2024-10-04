@@ -286,7 +286,6 @@ Indexação do genoma
 <div class="callout-body-container callout-body">
 <p>O processo para criar o indice do genoma via <code>bwa index</code> demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta <strong><code>WorkshopDados/genome/</code></strong> os arquivo resultantes desta etapa, que são os arquivos com extensão <code>.amb</code>, <code>.ann</code>, <code>.bwt</code>, <code>.fai</code>, <code>.pac</code> e <code>.sa</code>.</p>
 <p>O genoma de referência humano esta no arquivo <code>hg38.fa</code>. Esse é a última versão do genoma de referência e a mais utilizada no mundo.</p>
-<p>Caso deseje testar em um genoma menor, utilize o <code>chr12.fasta</code>.</p>
 </div>
 </div></li>
 <li><p><strong>Alinhamento de Sequências:</strong></p>
@@ -296,7 +295,7 @@ Indexação do genoma
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bwa</span> mem <span class="at">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> hg38.fa {SAMPLE}_r1.fastq {SAMPLE}_r2.fastq <span class="at">-o</span> {SAMPLE}.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
-<p>Substitua <strong><code>reference_genome.fa</code></strong>, <code>{SAMPLE}</code> pelos nomes dos arquivos correspondentes.</p>
+<p>Substitua <code>{SAMPLE}</code> pelos nomes dos arquivos correspondentes.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
