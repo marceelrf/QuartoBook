@@ -81,7 +81,7 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 
 ## Atividades da tarde
 
-1.  Quantos SNPs e indels foram identificados em sua amostras?
+1.  Quantos SNPs e *indels* foram identificados em suas amostras?
 2.  Qual é a qualidade das variantes identificadas?
 3.  As variantes identificadas estão localizadas em regiões codificadoras ou não codificadoras do genomas?
 4.  Como é a relação heterozigosidade/homozigosidade em todas as amostras?

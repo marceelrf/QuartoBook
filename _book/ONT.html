@@ -326,49 +326,12 @@ Instalação do <code>NanoPlot</code>
 <li><p><strong>Filtre as leituras baseado no tamanho e qualidade:</strong></p>
 <ul>
 <li><p>Utilize <code>chopper</code> para isso.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Instalação do <code>chopper</code>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Para instalar o <code>chopper</code> pode ser necessário ter o <code>conda</code> em seu sistema. Para isso utilize os seguintes comandos:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/miniconda3</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init bash</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">~/miniconda3/bin/conda</span> init zsh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Será necessário reinciar seu sistema (Ubuntu ou <code>WSL</code>) após isso.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels conda-forge</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--set</span> channel_priority strict</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> bioconda chopper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chopper</span> <span class="op">&lt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-q</span> <span class="pp">[</span><span class="ss">QUALIDADE</span><span class="pp">]</span> <span class="at">-l</span> <span class="pp">[</span><span class="ss">TAMANHO_MIN</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>_filtrada.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chopper</span> <span class="op">&lt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-q</span> <span class="pp">[</span><span class="ss">QUALIDADE</span><span class="pp">]</span> <span class="at">-l</span> <span class="pp">[</span><span class="ss">TAMANHO_MIN</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>_filtrada.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -377,7 +340,7 @@ Por que usar <code>&lt;</code> no comando <code>chopper</code>?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>O comando <code>&lt;</code> garante que o arquivo fastq da amostra seja direcionado para entrada (<strong><code>stdin</code></strong>) do comando no <code>chopper</code>. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.</p>
 </div>
@@ -387,9 +350,9 @@ Por que usar <code>&lt;</code> no comando <code>chopper</code>?
 <ul>
 <li><p>Use o <code>minimap2</code> para alinhar suas sequências de DNA ao genoma de referência.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">minimap2</span> <span class="at">-ax</span> map-ont <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">minimap2</span> <span class="at">-ax</span> map-ont <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -402,7 +365,7 @@ Consumo de memória durante a etapa
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>O alinhamento via <code>minimap2</code> tem pico de consumo de memória de ~ 13 GB. Caso seu computador disponha desta capacidade utilize o arquivo resultante na pasta <strong>WorkshopDados/pre_run/Dia4/</strong></p>
+<p>O alinhamento via <code>minimap2</code> tem pico de consumo de memória de ~ 13 GB.</p>
 </div>
 </div>
 <ul>
@@ -421,28 +384,10 @@ Tempo de execução do <code>bwa</code>
 <p>Atenção, o <code>bwa</code> demora quase 10x mais que o <code>minimap2</code></p>
 </div>
 </div>
-<ul>
-<li><div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bwa</span> mem <span class="at">-x</span> ont2d <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
-</ul>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Opcional
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Realize uma montagem <em>de novo</em> utilizando o pipeline <code>minimap2</code>-<code>miniasm</code>. Este processo pode levar várias horas/dias. <code>Tome cuidado!</code></p>
-</div>
-</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bwa</span> mem <span class="at">-x</span> ont2d <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p><strong>Gerar o arquivo BAM indexado:</strong></p>
 <ul>
@@ -475,10 +420,21 @@ Tempo de execução da genotipagem em Long Reads
 <li>Repita as métricas de filtragem utilizadas no passo 4 do dia 3;</li>
 <li>Repita os passos 5 e 6 do dia 3, comparando aos resultados de short reads.</li>
 </ul></li>
+<li><p><strong>Análise de modificações de bases</strong></p>
+<ul>
+<li></li>
+</ul></li>
 </ol>
 </section>
 <section id="atividades-da-tarde" class="level2">
 <h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
+<ol type="1">
+<li>s</li>
+<li>s</li>
+<li>s</li>
+<li>s</li>
+<li>s</li>
+</ol>
 
 
 </section>

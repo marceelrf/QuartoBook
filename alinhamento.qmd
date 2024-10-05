@@ -104,8 +104,9 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 
 ## Atividades da tarde
 
-1.  Qual porcentagem de leituras foi alinhada com sucesso ao genoma de referência?
-2.  Existem regiões do genoma com cobertura ruim?
-3.  Qual é a profundidade média de cobertura das leituras alinhadas?
-4.  Há alguma região com uma alta porcentagem de mismatches ou indes?
-5.  Quão uniformemente as leituras estão distribuídas no genoma de referência?
+Para resolver os exercícios, utilizem todas as amostras do conjunto de dados, com exceção da amostra HG00097.
+
+1.  Qual a cobertura das amostras para os marcadores `PentaE`, `PentaD`, `vWA` **`[PODEM SER OUTROS]`**.
+2.  Qual é a profundidade média de cobertura das leituras alinhadas?
+3.  Há alguma região com uma alta porcentagem de *mismatches* ou *indels* no genes MC1R e SLC45A2?
+4.  Quão uniformemente as leituras estão distribuídas no genoma de referência?
