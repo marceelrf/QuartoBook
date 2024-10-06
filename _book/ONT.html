@@ -300,38 +300,19 @@ Aviso
 <li><p><strong>Avaliação da qualidade do arquivo resultado <code>.fastq</code>:</strong></p>
 <ul>
 <li><p>Utilize o <code>NanoPlot</code> para gerar gráficos de qualidade da amostra;</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Instalação do <code>NanoPlot</code>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>A instalação do <code>NanoPlot</code> deve ser feita via pip ou conda.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install NanoPlot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">NanoPlot</span> <span class="at">--fastq</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-o</span> <span class="pp">[</span><span class="ss">OUTDIR</span><span class="pp">]</span> <span class="at">--N50</span> <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">NanoPlot</span> <span class="at">--fastq</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-o</span> <span class="pp">[</span><span class="ss">OUTDIR</span><span class="pp">]</span> <span class="at">--N50</span> <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul></li>
 <li><p><strong>Filtre as leituras baseado no tamanho e qualidade:</strong></p>
 <ul>
 <li><p>Utilize <code>chopper</code> para isso.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chopper</span> <span class="op">&lt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-q</span> <span class="pp">[</span><span class="ss">QUALIDADE</span><span class="pp">]</span> <span class="at">-l</span> <span class="pp">[</span><span class="ss">TAMANHO_MIN</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>_filtrada.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chopper</span> <span class="op">&lt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-q</span> <span class="pp">[</span><span class="ss">QUALIDADE</span><span class="pp">]</span> <span class="at">-l</span> <span class="pp">[</span><span class="ss">TAMANHO_MIN</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>_filtrada.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -340,7 +321,7 @@ Por que usar <code>&lt;</code> no comando <code>chopper</code>?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>O comando <code>&lt;</code> garante que o arquivo fastq da amostra seja direcionado para entrada (<strong><code>stdin</code></strong>) do comando no <code>chopper</code>. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.</p>
 </div>
@@ -350,9 +331,9 @@ Por que usar <code>&lt;</code> no comando <code>chopper</code>?
 <ul>
 <li><p>Use o <code>minimap2</code> para alinhar suas sequências de DNA ao genoma de referência.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">minimap2</span> <span class="at">-ax</span> map-ont <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">minimap2</span> <span class="at">-ax</span> map-ont <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -385,9 +366,9 @@ Tempo de execução do <code>bwa</code>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bwa</span> mem <span class="at">-x</span> ont2d <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bwa</span> mem <span class="at">-x</span> ont2d <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p><strong>Gerar o arquivo BAM indexado:</strong></p>
 <ul>
@@ -422,18 +403,24 @@ Tempo de execução da genotipagem em Long Reads
 </ul></li>
 <li><p><strong>Análise de modificações de bases</strong></p>
 <ul>
-<li></li>
+<li><p>Use modkit para avaliar as modificações de base.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">modkit</span> pileup {sample}.bam {sample}_pileup.bed <span class="at">--log-filepath</span> {sample}.log</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">--ref</span> path/to/reference.fasta</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">--preset</span> traditional</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Avalie as modificações no IGV.</p></li>
 </ul></li>
 </ol>
 </section>
 <section id="atividades-da-tarde" class="level2">
 <h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
 <ol type="1">
+<li>Avalie a qualidade das leituras das amostras com <code>NanoPlot</code>. Qual a qualidade média das sequencias?</li>
 <li>s</li>
+<li>Compare a genotipagem dos genes MC1R e SLC45A2 obtidas com ONT com as obtidas com short reads.</li>
 <li>s</li>
-<li>s</li>
-<li>s</li>
-<li>s</li>
+<li>Avalie as modificações 5mC e 5hmC nos genes MC1R e SLC45A2.</li>
 </ol>
 
 

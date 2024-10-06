@@ -64,16 +64,6 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
     -   Utilize o `NanoPlot` para gerar gráficos de qualidade da amostra;
 
-        ::: {.callout-tip collapse="true"}
-        ## Instalação do `NanoPlot`
-
-        A instalação do `NanoPlot` deve ser feita via pip ou conda.
-
-        ```{bash,eval=F}
-        pip install NanoPlot
-        ```
-        :::
-
         ```{bash,eval=F}
         NanoPlot --fastq [AMOSTRA].fastq -o [OUTDIR] --N50 --verbose
         ```
@@ -148,12 +138,20 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 
 8.  **Análise de modificações de bases**
 
-    -   
+    -   Use modkit para avaliar as modificações de base.
+
+        ```{bash, eval=FALSE}
+        modkit pileup {sample}.bam {sample}_pileup.bed --log-filepath {sample}.log
+        --ref path/to/reference.fasta
+        --preset traditional
+        ```
+
+    -   Avalie as modificações no IGV.
 
 ## Atividades da tarde
 
-1.  s
+1.  Avalie a qualidade das leituras das amostras com `NanoPlot`. Qual a qualidade média das sequencias?
 2.  s
-3.  s
+3.  Compare a genotipagem dos genes MC1R e SLC45A2 obtidas com ONT com as obtidas com short reads.
 4.  s
-5.  s
+5.  Avalie as modificações 5mC e 5hmC nos genes MC1R e SLC45A2.
