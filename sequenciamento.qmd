@@ -40,6 +40,14 @@ O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequ
         ```
 3.  **Remoção de Leituras de Baixa Qualidade:**
     -   Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.
+
+        ```{bash, eval=FALSE}
+        trimmomatic PE -phred33 \
+        WGS_ShortReads/fastq/HG00097_r1.fastq WGS_ShortReads/fastq/HG00097_r2.fastq \
+        trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq \
+        ILLUMINACLIP:~/miniconda3/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 \
+        LEADING:3 TRAILING:3 SLIDINGWINDOW:4:27 MINLEN:100
+        ```
 4.  **Filtragem de Leituras Curtas ou Longas:**
     -   Dependendo do seu experimento, você pode querer filtrar leituras muito curtas ou muito longas que possam representar artefatos ou problemas experimentais.
 
@@ -62,8 +70,10 @@ O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequ
 
 ## Atividades da tarde
 
+De 1 a 3, compare dos dados de cada amostra para WGS e Exoma.
+
 1.  Qual é a pontuação geral de qualidade em todas as bases de sua amostra?
 2.  Há alguma contaminação de adaptador nas leituras de sequenciamento?
 3.  As sequências têm algum conteúdo incomum de GC?
-4.  Qual é a distribuição de comprimento das leituras de sequenciamento?
-5.  Há alguma sequência super-representada presente nos dados?
+4.  Execute `FASTQC` para as leituras simuladas (**`WorkshopBioinfo2024/SimulatedReads`**). Quais as principais diferenças entre as amostras?
+5.  O que acontece se você realizar a trimagem utilizando `trimmomatic` com os paramêtros qualidade acima de 30 e tamanho mínimo de 100 com ambas as amostras?

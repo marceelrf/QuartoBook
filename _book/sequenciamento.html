@@ -285,7 +285,14 @@ Importante
 </ul></li>
 <li><strong>Remoção de Leituras de Baixa Qualidade:</strong>
 <ul>
-<li>Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.</li>
+<li><p>Algumas leituras podem conter regiões de baixa qualidade. Considere a remoção dessas leituras ou a trimagem de regiões específicas usando ferramentas adequadas, dependendo da natureza do problema. Utilize o comando a baixo para manter leituras com qualidade acima de 27 e tamanho mínimo de 100.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">trimmomatic</span> PE <span class="at">-phred33</span> <span class="dt">\</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>WGS_ShortReads/fastq/HG00097_r1.fastq WGS_ShortReads/fastq/HG00097_r2.fastq <span class="dt">\</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>trimmed_r1.fastq trimmed_r1_unpaired.fastq trimmed_r2.fastq trimmed_r2_unpaired.fastq <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ILLUMINACLIP:~/miniconda3/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>LEADING:3 TRAILING:3 SLIDINGWINDOW:4:27 MINLEN:100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
 </ul></li>
 <li><strong>Filtragem de Leituras Curtas ou Longas:</strong>
 <ul>
@@ -308,12 +315,13 @@ Importante
 </section>
 <section id="atividades-da-tarde" class="level2">
 <h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
+<p>De 1 a 3, compare dos dados de cada amostra para WGS e Exoma.</p>
 <ol type="1">
 <li>Qual é a pontuação geral de qualidade em todas as bases de sua amostra?</li>
 <li>Há alguma contaminação de adaptador nas leituras de sequenciamento?</li>
 <li>As sequências têm algum conteúdo incomum de GC?</li>
-<li>Qual é a distribuição de comprimento das leituras de sequenciamento?</li>
-<li>Há alguma sequência super-representada presente nos dados?</li>
+<li>Execute <code>FASTQC</code> para as leituras simuladas (<strong><code>WorkshopBioinfo2024/SimulatedReads</code></strong>). Quais as principais diferenças entre as amostras?</li>
+<li>O que acontece se você realizar a trimagem utilizando <code>trimmomatic</code> com os paramêtros qualidade acima de 30 e tamanho mínimo de 100 com ambas as amostras?</li>
 </ol>
 
 

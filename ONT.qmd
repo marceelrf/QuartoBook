@@ -151,7 +151,7 @@ Este tutorial foi inspirado no tutorial do Tim Kahlke[^ont-1] e em nossas experi
 ## Atividades da tarde
 
 1.  Avalie a qualidade das leituras das amostras com `NanoPlot`. Qual a qualidade média das sequencias?
-2.  s
+2.  Quais o intervaldo de tamanhos das leituras de cada amostra?
 3.  Compare a genotipagem dos genes MC1R e SLC45A2 obtidas com ONT com as obtidas com short reads.
 4.  s
 5.  Avalie as modificações 5mC e 5hmC nos genes MC1R e SLC45A2.
