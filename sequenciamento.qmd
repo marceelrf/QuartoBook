@@ -18,7 +18,7 @@ Serão utilizados os arquivos contidos na pastas:
 
 -   **`WorkshopBioinfo2024/Exome_ShortReads/fastq/`**
 
-Estão dados vieram do projeto [1000 genomas](https://www.internationalgenome.org/home).
+Estes dados vieram do projeto [1000 genomas](https://www.internationalgenome.org/home).
 
 ## Atividades da manhã
 
