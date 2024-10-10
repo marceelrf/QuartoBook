@@ -39,7 +39,7 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
     ::: callout-warning
     ## Indexação do genoma
 
-    O processo para criar o indice do genoma via `bwa index` demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta **`WorkshopDados/genome/`** os arquivo resultantes desta etapa, que são os arquivos com extensão `.amb`, `.ann`, `.bwt`, `.fai`, `.pac` e `.sa`.
+    O processo para criar o indice do genoma via `bwa index` demora bastante tempo para ser realizado. Mesmo em máquimas com grandes capacidades de memória. Devido a isso colocamos na pasta **`Genome/index`** os arquivo resultantes desta etapa, que são os arquivos com extensão `.amb`, `.ann`, `.bwt`, `.fai`, `.pac` e `.sa`.
 
     O genoma de referência humano esta no arquivo `hg38.fa`. Esse é a última versão do genoma de referência e a mais utilizada no mundo.
     :::

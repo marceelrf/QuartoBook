@@ -213,14 +213,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Nesta seção</h2>
    
   <ul>
-  <li><a href="#primer-paso---descargas" id="toc-primer-paso---descargas" class="nav-link active" data-scroll-target="#primer-paso---descargas">PRIMER PASO - DESCARGAS</a></li>
-  <li><a href="#hipstr" id="toc-hipstr" class="nav-link" data-scroll-target="#hipstr">HIPSTR</a>
+  <li><a href="#hipstr" id="toc-hipstr" class="nav-link active" data-scroll-target="#hipstr">HipSTR</a>
   <ul class="collapse">
-  <li><a href="#instalação" id="toc-instalação" class="nav-link" data-scroll-target="#instalação">INSTALAÇÃO</a></li>
-  <li><a href="#cómo-criar-os-índices-das-amostras" id="toc-cómo-criar-os-índices-das-amostras" class="nav-link" data-scroll-target="#cómo-criar-os-índices-das-amostras">CÓMO CRIAR OS ÍNDICES DAS AMOSTRAS?</a></li>
-  <li><a href="#comandos" id="toc-comandos" class="nav-link" data-scroll-target="#comandos">COMANDOS</a></li>
+  <li><a href="#requerimentos" id="toc-requerimentos" class="nav-link" data-scroll-target="#requerimentos">REQUERIMENTOS</a></li>
+  <li><a href="#instalação-do-hipstr" id="toc-instalação-do-hipstr" class="nav-link" data-scroll-target="#instalação-do-hipstr">INSTALAÇÃO DO HIPSTR</a></li>
+  <li><a href="#genotipagem" id="toc-genotipagem" class="nav-link" data-scroll-target="#genotipagem">GENOTIPAGEM</a></li>
+  <li><a href="#como-criar-os-índices-das-amostras" id="toc-como-criar-os-índices-das-amostras" class="nav-link" data-scroll-target="#como-criar-os-índices-das-amostras">COMO CRIAR OS ÍNDICES DAS AMOSTRAS?</a></li>
+  <li><a href="#comando-do-hipstr" id="toc-comando-do-hipstr" class="nav-link" data-scroll-target="#comando-do-hipstr">COMANDO DO HIPSTR</a></li>
   <li><a href="#interpretação-do-arquivo-de-saída" id="toc-interpretação-do-arquivo-de-saída" class="nav-link" data-scroll-target="#interpretação-do-arquivo-de-saída">INTERPRETAÇÃO DO ARQUIVO DE SAÍDA</a></li>
   </ul></li>
+  <li><a href="#atividades-da-manhã" id="toc-atividades-da-manhã" class="nav-link" data-scroll-target="#atividades-da-manhã">Atividades da manhã</a></li>
+  <li><a href="#atividades-da-tarde" id="toc-atividades-da-tarde" class="nav-link" data-scroll-target="#atividades-da-tarde">Atividades da tarde</a></li>
   </ul>
 </nav>
     </div>
@@ -246,63 +249,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Para esse curso, utilizaremos um computador virtual, devido à incompatibilidades com a nova versão do compilador C++. Portanto, teremos que baixar o computador virtual com os arquivos necessários para o curso, e virtual box que permitirá executar o computador virtual.</p>
-<section id="primer-paso---descargas" class="level2">
-<h2 class="anchored" data-anchor-id="primer-paso---descargas">PRIMER PASO - DESCARGAS</h2>
-<p>1. Baixar o computador virtual Ubuntu (baixar e descomprimir o arquivo zip).</p>
-<p>Link para baixar o computador virtual: <a href="https://drive.google.com/file/d/1Pnw3KGixyB6ur2h9zDA3zSAeHj8OzvyX/view?usp=drive_link" class="uri">https://drive.google.com/file/d/1Pnw3KGixyB6ur2h9zDA3zSAeHj8OzvyX/view?usp=drive_link</a></p>
-<p>1. Baixar virtual box e o pacote de instalação.</p>
-<p>Link para baixar virtual box que mostrará o computador virtual Linux: <a href="https://www.virtualbox.org/wiki/Downloads" class="uri">https://www.virtualbox.org/wiki/Downloads</a></p>
-<p>Baixar DUAS coisas deste link virtual box:</p>
-<p>1. <strong>VirtualBox Platform Packages</strong></p>
-<p>2. <strong>VirtualBox Extension Pack</strong></p>
-<p>Escolher o sistema operativo do computador (windows, mac ou linux) e baixar.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Screenshot 2024-10-02 at 11.13.45.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<p>Logo de instalar, escolher o computador virtual Ubuntu que baixamos no primer link.</p>
-<p>Senha do computador virtual instalado: bioinformatica</p>
-<p>Link tutorial de ajuda: <a href="https://drive.google.com/file/d/1bPgrcmzdD3b_ELsGPKUMBllZ7G0SJR18/view?usp=drive_link" class="uri">https://drive.google.com/file/d/1bPgrcmzdD3b_ELsGPKUMBllZ7G0SJR18/view?usp=drive_link</a></p>
-</section>
 <section id="hipstr" class="level2">
-<h2 class="anchored" data-anchor-id="hipstr">HIPSTR</h2>
-<p><strong>H</strong>aplotype&nbsp;<strong>i</strong>nference and&nbsp;<strong>p</strong>hasing for&nbsp;<strong>S</strong>hort&nbsp;<strong>T</strong>andem&nbsp;<strong>R</strong>epeats ou <code>HipSTR</code> é um programa que foi desenvolvido por Thomas Willems para capturar marcadores STRs a partir de dados de sequenciamento de nova geração.</p>
+<h2 class="anchored" data-anchor-id="hipstr">HipSTR</h2>
+<p><strong>H</strong>aplotype<strong>i</strong>nference and<strong>p</strong>hasing for<strong>S</strong>hort<strong>T</strong>andem<strong>R</strong>epeats ou <code>HipSTR</code> é um programa que foi desenvolvido por Thomas Willems para capturar marcadores STRs a partir de dados de sequenciamento de nova geração.</p>
 <p>Link do Github:</p>
 <p><a href="https://github.com/tfwillems/HipSTR" class="uri">https://github.com/tfwillems/HipSTR</a></p>
-<section id="instalação" class="level3">
-<h3 class="anchored" data-anchor-id="instalação">INSTALAÇÃO</h3>
-<p>Infelizmente a última versão do compilador C++ apresenta uma incompatibilidade com <code>HipSTR</code>. Portanto, iremos utilizar um computador virtual que já contem o programa instalado.</p>
-<p>O computador virtual tem uma pasta chamada “curso” no desktop, onde se encontra:</p>
+<p>Atualmente, HipSTR apresenta uma incompatibilidade com a nova versão do compilador do C++. Portanto, iremos utilizar um repositório transitório que já contém uma mudança no código fonte, até o Dr.&nbsp;Thomas Willems modificar diretamente no repositório original.</p>
+<p>Link do Github para o repositório alternativo:</p>
+<p><a href="https://github.com/Tfronta/HipSTR2" class="uri">https://github.com/Tfronta/HipSTR2</a></p>
+<section id="requerimentos" class="level3">
+<h3 class="anchored" data-anchor-id="requerimentos">REQUERIMENTOS</h3>
+<p>Para compilar HipSTR, são necessários os seguintes pacotes:</p>
 <ul>
-<li><p>O genoma de referência <code>(arquivo.fa</code>)</p></li>
-<li><p>O índice do genoma de referência <code>(arquivo.fai</code>)</p></li>
-<li><p>Amostras em formato bam (<code>HG00118.bam</code>, etc)</p></li>
-<li><p>O arquivo bed com as regiões que serão analizadas.</p></li>
+<li><p>make</p></li>
+<li><p>g++</p></li>
+<li><p>zlib</p></li>
+<li><p>libhts</p></li>
+<li><p>libbz2</p></li>
+<li><p>liblzma</p></li>
 </ul>
-<p>Com isso, iremos correr o comando do <code>HipSTR</code> para genotipar essas amostras</p>
-</section>
-<section id="cómo-criar-os-índices-das-amostras" class="level3">
-<h3 class="anchored" data-anchor-id="cómo-criar-os-índices-das-amostras">CÓMO CRIAR OS ÍNDICES DAS AMOSTRAS?</h3>
-<ul>
-<li>Utilizaremos <code>samtools index</code></li>
-</ul>
+<p>Se vocês estiverem executando o Ubuntu 16+, os pacotes podem ser facilmente instalados executando:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">samtools</span> index nome_da_amostra.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install make g++ zlib1g-dev libhts-dev libbz2-dev liblzma-dev git samtools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Fazer esse comando para todas as amostras.</p>
-<p>Link tutorial de ajuda: <a href="https://drive.google.com/file/d/17vv41Hf0ezyEHzAHne1e4iPbzCemDgXN/view?usp=drive_link" class="uri">https://drive.google.com/file/d/17vv41Hf0ezyEHzAHne1e4iPbzCemDgXN/view?usp=drive_link</a></p>
 </section>
-<section id="comandos" class="level3">
-<h3 class="anchored" data-anchor-id="comandos">COMANDOS</h3>
-<p>Arquivos necessários</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image (1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<section id="instalação-do-hipstr" class="level3">
+<h3 class="anchored" data-anchor-id="instalação-do-hipstr">INSTALAÇÃO DO HIPSTR</h3>
+<p>HipSTR requer um compilador c++ padrão. Para obter HipSTR, use:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/Tfronta/HipSTR2 HipSTR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Para construir, usem Make:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> HipSTR</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para que HipSTR esteja disponível no computador, sem necessidade de copiar a rota donde ele está instalado, por exemplo “downloads”, criaremos un symlink. Um **symlink** (ou link simbólico) é um “atalho” que aponta para outro arquivo ou diretório no sistema. Isso permite acessar um arquivo de diferentes locais como se estivesse em várias pastas, mas ele só existe em uma.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> <span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span>/HipSTR /usr/local/bin/HipSTR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para saber se o HipSTR foi instalado corretamente ou solicitar ajuda use:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">HipSTR</span> <span class="at">--help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://drive.google.com/file/d/1H9LA6Yp8Pho_XBQOpNENhL3Egtj1B24R/view?usp=drive_link">Tutorial de ajuda</a></p>
+</section>
+<section id="genotipagem" class="level3">
+<h3 class="anchored" data-anchor-id="genotipagem">GENOTIPAGEM</h3>
+<p>ARQUIVOS NECESSÁRIOS</p>
+<ul>
+<li><p>O genoma de referência HG38 (arquivo.fa)</p></li>
+<li><p>O índice do genoma de referência HG38 (arquivo.fai)</p></li>
+<li><p>Amostras em formato bam (HG00118.bam, etc)</p></li>
+<li><p>O índice das amostras em formato bai (HG00118.bai, etc)</p></li>
+<li><p>O arquivo bed com as regiões que serão analizadas em este curso</p></li>
+</ul>
+<p>Estes arquivos se encontram dentro de uma pasta de google drive. O genoma de referência já possui o índice, por questões de tempo. Entretanto, vamos a criar os índices para as amostras</p>
+<p><a href="https://drive.google.com/drive/folders/14ZXVyXaDAP_QvTrtizeAtrZTL8E_25GP?usp=drive_link">Acesso aos arquivos</a></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -313,27 +316,77 @@ IMPORTANTE
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>- Deverão baixar todos estes arquivos e coloca-los dentro DA MESMA PASTA</p>
+<p>- Se todos estes arquivos não se encontrarem dentro da MESMA pasta, o comando não funcionará.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+RECOMENDAÇÕES
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>- Não usar espaços ou maiúsculas no nome da pasta criada. Exemplos sugeridos: curso, curso_bioinfo, cursobioinfo, etc.</p>
+</div>
+</div>
+</section>
+<section id="como-criar-os-índices-das-amostras" class="level3">
+<h3 class="anchored" data-anchor-id="como-criar-os-índices-das-amostras">COMO CRIAR OS ÍNDICES DAS AMOSTRAS?</h3>
+<p>- Utilizaremos samtools index</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta_criada</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">samtools</span> index nome_da_amostra.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Fazer esse comando para todas as amostras.</p>
+<p><a href="https://drive.google.com/file/d/1_kTWQTcX4k_adN28sEJb47drwAZAzrm0/view?usp=drive_link">Tutorial de ajuda</a></p>
+</section>
+<section id="comando-do-hipstr" class="level3">
+<h3 class="anchored" data-anchor-id="comando-do-hipstr">COMANDO DO HIPSTR</h3>
 <ul>
-<li><p>Antes de correr o comando do <code>HipSTR</code>, verifiquem que todas as amostras que serão incluidas no comando, já tenham o seu índice (Arquivo fai, gerado com samtools index)</p></li>
+<li><p>Antes de correr o comando do HipSTR, verifiquem que todas as amostras que serão incluidas no comando, já tenham o índice (Arquivo fai, gerado com samtools index)</p></li>
 <li><p>Preparar o comando previamente em algum arquivo de texto, substituindo nome_da_amostra1 pelo nome real da amostra.</p></li>
 <li><p>Podem rodar varias amostras no mesmo comando, separando elas por virgulas SEM espaço, como no exemplo embaixo.</p></li>
 </ul>
-</div>
-</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">--bams</span> nome_da_amostra1.bam,nome_da_amostra2.bam <span class="at">--fasta</span> GRCh38_full_analysis_set_plus_decoy_hla.fa <span class="at">--regions</span> regionsx.bed <span class="at">--str-vcf</span> nome_de_saida.vcf.gz <span class="at">--min-reads</span> 8 <span class="at">--def-stutter-model</span> <span class="at">--max-flank-indel</span> 0.50 <span class="at">--max-str-len</span> 127 <span class="at">--viz-out</span> aln.viz.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">HipSTR</span> <span class="at">--bams</span> nome_da_amostra1.bam,nome_da_amostra2.bam <span class="at">--fasta</span> GRCh38_full_analysis_set_plus_decoy_hla.fa <span class="at">--regions</span> regionsx.bed <span class="at">--str-vcf</span> nome_de_saida.vcf.gz <span class="at">--min-reads</span> 8 <span class="at">--def-stutter-model</span> <span class="at">--max-flank-indel</span> 0.50 <span class="at">--max-str-len</span> 127 <span class="at">--viz-out</span> aln.viz.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Link de ajuda: <a href="https://drive.google.com/file/d/1Vzw8K7-Jh-ud7ul_0bNhKpJ4gw0zxqvo/view?usp=drive_link" class="uri">https://drive.google.com/file/d/1Vzw8K7-Jh-ud7ul_0bNhKpJ4gw0zxqvo/view?usp=drive_link</a></p>
+<p><a href="https://drive.google.com/file/d/1jBNQ8lxWDYQ-L4U34WVhbenagOPWRerR/view?usp=drive_link">Tutoria de ajuda</a></p>
 </section>
 <section id="interpretação-do-arquivo-de-saída" class="level3">
 <h3 class="anchored" data-anchor-id="interpretação-do-arquivo-de-saída">INTERPRETAÇÃO DO ARQUIVO DE SAÍDA</h3>
-<p><code>HipSTR</code> gera como arquivo de saída um arquivo vcf.gz. Logo de descomprimir o arquivo teremos um vcf.</p>
-<p>O vcf podemos abrir com Excel e realizar a interpretação dos dados para genotipar as amostras.</p>
-<p>Durante a aula aprenderemos a realizar essa interpretação.</p>
-
-
+<ul>
+<li><p>HipSTR gera como arquivo de saída um arquivo vcf.gz. Logo de descomprimir o arquivo teremos um vcf.</p></li>
+<li><p>Podem abrir com Excel e realizar a interpretação dos dados para genotipar as amostras. Durante a aula aprenderemos a realizar essa interpretação.</p></li>
+</ul>
 </section>
+</section>
+<section id="atividades-da-manhã" class="level2">
+<h2 class="anchored" data-anchor-id="atividades-da-manhã">Atividades da manhã</h2>
+<ul>
+<li><p>Extrair os valores GB e DP de todas as amostras</p></li>
+<li><p>Genotipar todas as amostras, incluir valores de cobertura</p></li>
+</ul>
+</section>
+<section id="atividades-da-tarde" class="level2">
+<h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
+<ol type="1">
+<li><p>Quais são os genótipos do marcador CSF1PO na amostra HG00239?</p></li>
+<li><p>Quais são os genótipos do marcador TPOX na amostra NA18602?</p></li>
+<li><p>Qual é o comando utilizado para criar os índices das amostras?</p></li>
+<li><p>O valor DP indica a diferença de número de bases com o alelo de referênça?</p></li>
+<li><p>Alguma das amostras não foi possível genotipar?</p></li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->

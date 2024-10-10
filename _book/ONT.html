@@ -240,79 +240,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Importante
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>O software <code>guppy</code> só esta disponível para download via comunidade da Oxford Nanopore. Para este tutorial fornecemos um arquivo <code>.tar</code> para instalação em sua máquina. O arquivo esta na pasta <strong>WorkshopDados/guppy_installer/</strong></p>
-<p>Para instalar siga os seguintes passos:</p>
-<p>Acesse a pasta que contem o arquivo <code>.tar</code> e descompacte;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xf</span> ont-guppy-cpu_6.5.7_linux64.tar.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Verifique o caminho completo para a pasta</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Executando <code>guppy</code> via caminho completo (Exemplo pedindo ajuda)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./guppy_basecaller</span> <span class="at">--help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-<p>Este tutorial foi inspirado no tutorial do Tim Kahlke<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> e em nossas experiências durante os trabalhos com ONT.</p>
 <section id="atividades-da-manhã" class="level2">
 <h2 class="anchored" data-anchor-id="atividades-da-manhã">Atividades da manhã</h2>
 <ol type="1">
-<li><p><strong>Realize uma chamada de base utilizando guppy (Opicional):</strong></p>
+<li><p><strong>Chamada de bases via <a href="https://github.com/nanoporetech/dorado">Dorado</a>:</strong></p>
 <ul>
-<li><p>Verifique os workflows disponíveis para esta versão de <code>guppy</code>;</p>
+<li><p>Qual o modelo deve ser usado?</p></li>
+<li><p>Realize a chamada de base para todos os arquivos <code>pod5</code> contidos na pasta <strong>WorkshopDados/pod5/</strong>;</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./Downloads/ont-guppy-cpu/bin/guppy_basecaller</span> <span class="at">--print_workflows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dorado</span> basecaller pod5/dna_r10.4.1_e8.2_260bps_fast@v4.1.0 pod5/ <span class="at">--modified-bases</span> 5mCG_5hmCG <span class="op">&gt;</span> calls.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
-<li><p>Sabendo que este sequenciamento foi realizado utilizando o kit SQK-LSK108 e a flowcell MIN106, qual a configuração a ser utilizada?</p></li>
-<li><p>Realize a chamada de base para todos os arquivos <code>fast5</code> contidos na pasta <strong>WorkshopDados/fast5/</strong>;</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./Downloads/ont-guppy-cpu/bin/guppy_basecaller</span> –i <span class="pp">[</span><span class="ss">PASTAFAST5</span><span class="pp">]</span> –s /</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./guppy_out</span> –c <span class="pp">[</span><span class="ss">CONFIG</span><span class="pp">]</span>.cfg  <span class="at">--num_callers</span> 2 <span class="at">--cpu_threads_per_caller</span> 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Aviso
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>O tempo de execução da chama de base (para este conjunto de dados) é superior a <strong>12 horas</strong> em máquinas de uso pessoal, e pode acabar inutilizando seu uso. Caso deseje praticar, recomendamos que seja feito em um momento onde não precise da máquina para outras atividades. Para este tutorial utilize o resultado da chamada de base contido na pasta <strong>WorkshopDados/LongReadsFastq/</strong></p>
-</div>
-</div></li>
+</ul></li>
 <li><p><strong>Avaliação da qualidade do arquivo resultado <code>.fastq</code>:</strong></p>
 <ul>
 <li><p>Utilize o <code>NanoPlot</code> para gerar gráficos de qualidade da amostra;</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">NanoPlot</span> <span class="at">--fastq</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-o</span> <span class="pp">[</span><span class="ss">OUTDIR</span><span class="pp">]</span> <span class="at">--N50</span> <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">NanoPlot</span> <span class="at">--fastq</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-o</span> <span class="pp">[</span><span class="ss">OUTDIR</span><span class="pp">]</span> <span class="at">--N50</span> <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul></li>
 <li><p><strong>Filtre as leituras baseado no tamanho e qualidade:</strong></p>
 <ul>
 <li><p>Utilize <code>chopper</code> para isso.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chopper</span> <span class="op">&lt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-q</span> <span class="pp">[</span><span class="ss">QUALIDADE</span><span class="pp">]</span> <span class="at">-l</span> <span class="pp">[</span><span class="ss">TAMANHO_MIN</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>_filtrada.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">chopper</span> <span class="op">&lt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq <span class="at">-q</span> <span class="pp">[</span><span class="ss">QUALIDADE</span><span class="pp">]</span> <span class="at">-l</span> <span class="pp">[</span><span class="ss">TAMANHO_MIN</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>_filtrada.fastq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -321,7 +275,7 @@ Por que usar <code>&lt;</code> no comando <code>chopper</code>?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>O comando <code>&lt;</code> garante que o arquivo fastq da amostra seja direcionado para entrada (<strong><code>stdin</code></strong>) do comando no <code>chopper</code>. Em nossas experiências já tivemos a necessidade de utilizar algumas vezes e outras não.</p>
 </div>
@@ -331,9 +285,9 @@ Por que usar <code>&lt;</code> no comando <code>chopper</code>?
 <ul>
 <li><p>Use o <code>minimap2</code> para alinhar suas sequências de DNA ao genoma de referência.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">minimap2</span> <span class="at">-ax</span> map-ont <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">minimap2</span> <span class="at">-ax</span> map-ont <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -366,9 +320,9 @@ Tempo de execução do <code>bwa</code>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bwa</span> mem <span class="at">-x</span> ont2d <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bwa</span> mem <span class="at">-x</span> ont2d <span class="pp">[</span><span class="ss">REFERENCE_GENOME</span><span class="pp">]</span>.fa <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.fastq /</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-R</span> <span class="st">"@RG\tID:{SAMPLE}\tSM:{SAMPLE}"</span> <span class="at">-t</span> <span class="pp">[</span><span class="ss">THREADS</span><span class="pp">]</span> <span class="op">&gt;</span> <span class="pp">[</span><span class="ss">AMOSTRA</span><span class="pp">]</span>.sam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p><strong>Gerar o arquivo BAM indexado:</strong></p>
 <ul>
@@ -394,7 +348,7 @@ Tempo de execução da genotipagem em Long Reads
 </div>
 <div class="callout-body-container callout-body">
 <p>O tempo de execução do <code>freebayes</code> para arquivos de ONT pode ser bem demorado! Você pode optar por modificar o arquivo <code>bed</code> fornecido para trabalhar com menos regiões.</p>
-<p>Para os formulários utilize o <code>vcf</code> resultante em <strong>WorkshopDados/pre_run/Dia4/</strong></p>
+<p>Para os formulários utilize o <code>vcf</code> resultante em <strong>WorkshopDados/R10/vcf/variantes.vcf</strong></p>
 </div>
 </div>
 <ul>
@@ -405,9 +359,9 @@ Tempo de execução da genotipagem em Long Reads
 <ul>
 <li><p>Use modkit para avaliar as modificações de base.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">modkit</span> pileup {sample}.bam {sample}_pileup.bed <span class="at">--log-filepath</span> {sample}.log</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">--ref</span> path/to/reference.fasta</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">--preset</span> traditional</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">modkit</span> pileup {sample}.bam {sample}_pileup.bed <span class="at">--log-filepath</span> {sample}.log</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">--ref</span> path/to/reference.fasta</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">--preset</span> traditional</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p>Avalie as modificações no IGV.</p></li>
 </ul></li>
@@ -420,16 +374,10 @@ Tempo de execução da genotipagem em Long Reads
 <li>Quais o intervaldo de tamanhos das leituras de cada amostra?</li>
 <li>Compare a genotipagem dos genes MC1R e SLC45A2 obtidas com ONT com as obtidas com short reads.</li>
 <li>s</li>
-<li>Avalie as modificações 5mC e 5hmC nos genes MC1R e SLC45A2.</li>
+<li>Avalie as modificações 5mC e 5hmC na região promotora dos genes MC1R e SLC45A2.</li>
 </ol>
 
 
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>&nbsp;https://timkahlke.github.io/LongRead_tutorials/<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
