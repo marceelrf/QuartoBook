@@ -359,9 +359,7 @@ Tempo de execução da genotipagem em Long Reads
 <ul>
 <li><p>Use modkit para avaliar as modificações de base.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">modkit</span> pileup {sample}.bam {sample}_pileup.bed <span class="at">--log-filepath</span> {sample}.log</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">--ref</span> path/to/reference.fasta</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">--preset</span> traditional</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">modkit</span> pileup {sample}.bam {sample}_pileup.bed <span class="at">--log-filepath</span> {sample}.log <span class="at">--ref</span> path/to/reference.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p>Avalie as modificações no IGV.</p></li>
 </ul></li>
@@ -370,10 +368,10 @@ Tempo de execução da genotipagem em Long Reads
 <section id="atividades-da-tarde" class="level2">
 <h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
 <ol type="1">
-<li>Avalie a qualidade das leituras das amostras com <code>NanoPlot</code>. Qual a qualidade média das sequencias?</li>
-<li>Quais o intervaldo de tamanhos das leituras de cada amostra?</li>
+<li>Avalie a qualidade das leituras das amostras com <code>NanoPlot</code>. Qual das 9 amostras apresentou uma qualidade média mais baixa?</li>
+<li>Sobre o intervaldo de tamanhos das leituras de cada amostra, qual apresenta a maior média de tamanho?</li>
+<li>Para a amostra HG00372, corte a amostra para qualidades acima de 15 e tamanho mínimo de 2000 bases. Qual o número de bases original e após corte?</li>
 <li>Compare a genotipagem dos genes MC1R e SLC45A2 obtidas com ONT com as obtidas com short reads.</li>
-<li>s</li>
 <li>Avalie as modificações 5mC e 5hmC na região promotora dos genes MC1R e SLC45A2.</li>
 </ol>
 

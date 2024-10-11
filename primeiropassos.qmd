@@ -93,7 +93,8 @@ conda activate workshopbioinfo
 Ao terminar a instalação do `WSL` e de configurar seu usuário no linux utilize os seguintes comandos:
 
 ```{bash,eval=FALSE}
-sudo apt-get update  sudo apt-get upgrade
+sudo apt-get update 
+sudo apt-get upgrade
 ```
 
 Estes comandos irão garantir que o seu sistema esteja atualizado.
@@ -118,6 +119,12 @@ Baixe os dados que serão utilizados neste workshop via [**OneDrive**](https://1
 Para ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro, entre em contato com a organização.
 
 Os dados totalizam \~20 GB. **Atente-se para isso!!!**
+:::
+
+::: callout-important
+## Confira os arquivos baixados
+
+Ao realizar o download, confira se os arquivos foram baixados corretamente.
 :::
 
 As amostras utilizadas neste curso foram sequenciadas pelo projeto 1000 genomas.

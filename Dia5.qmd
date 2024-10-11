@@ -37,7 +37,7 @@ Para compilar HipSTR, são necessários os seguintes pacotes:
 Se vocês estiverem executando o Ubuntu 16+, os pacotes podem ser facilmente instalados executando:
 
 ```{bash,eval=F}
-sudo apt install make g++ zlib1g-dev libhts-dev libbz2-dev liblzma-dev git samtools
+sudo apt install make g++ zlib1g-dev libhts-dev libbz2-dev liblzma-dev
 ```
 
 ### INSTALAÇÃO DO HIPSTR

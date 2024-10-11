@@ -81,7 +81,9 @@ Serão utilizados os arquivos `BAM` que foram gerados no dia 2.
 
 ## Atividades da tarde
 
-1.  Quantos SNPs e *indels* foram identificados em suas amostras?
-2.  Qual é a qualidade das variantes identificadas?
-3.  As variantes identificadas estão localizadas em regiões codificadoras ou não codificadoras do genomas?
-4.  Há algum gene ou região genômica específica com uma densidade excepcionalmente alta de variantes?
+1.  Olhando no VCF do Exome, no gene "SLC45A2", na posição "33984321" (chr5), qual é a qualidade no IGV?
+2.  Qual o genótipo da amostra HG00463 no SNP localizado na posição "89914679" (chr16) (WGS)? O que se conclui com esse tipo de genótipo em questão de ref. e alt.?
+3.  Qual a qualidade do SNP que está na posição "89914789" (chr16) para Exome e WGS?
+4.  Sobre a qualidade do SNP da questão anterior, qual a sua interpretação do resultado?
+5.  Na posição "89914936" (chr16) (Excel), qual o tipo de polimorfismo observado no IGV? Qual o genótipo das amostras HG00142, HG00145 e HG00263?
+6.  No IGV, na posição "89914473" (chr16), qual a cobertura? (WGS)
