@@ -70,10 +70,9 @@ O controle de qualidade (QC) dos dados é uma etapa crítica na análise de sequ
 
 ## Atividades da tarde
 
-De 1 a 3, compare dos dados de cada amostra para WGS e Exoma.
-
-1.  Qual é a pontuação geral de qualidade em todas as bases de sua amostra?
-2.  Há alguma contaminação de adaptador nas leituras de sequenciamento?
-3.  As sequências têm algum conteúdo incomum de GC?
-4.  Execute `FASTQC` para as leituras simuladas (**`WorkshopBioinfo2024/SimulatedReads`**). Quais as principais diferenças entre as amostras?
-5.  O que acontece se você realizar a trimagem utilizando `trimmomatic` com os paramêtros qualidade acima de 30 e tamanho mínimo de 100 com ambas as amostras?
+1.  No relatório do FASTQC, o que significa uma bandeira vermelha (*Fail*) no gráfico de \'*Per base sequence content*\'?
+2.  Qual métrica do FASTQC pode indicar a presença de contaminantes ou adaptadores remanescentes nas leituras?
+3.  Quando o gráfico de \'*Per base sequence quality*\' mostra uma queda significativa nas últimas bases de uma leitura, o que isso pode indicar?
+4.  O gráfico de '*Per sequence GC content*' avalia a distribuição do conteúdo GC nas leituras. O que um pico inesperado nesse gráfico pode sugerir?
+5.  Execute `FASTQC` para as leituras simuladas (**`WorkshopBioinfo2024/SimulatedReads`**). Quais as principais diferenças entre as amostras?
+6.  O que acontece se você realizar a trimagem utilizando `trimmomatic` com os paramêtros qualidade acima de 30 e tamanho mínimo de 100 com ambas as amostras?

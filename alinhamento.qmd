@@ -106,8 +106,30 @@ Preste atenção para o caminho da pasta aonde estão os `.fastq`. Eles estão n
 
 Para resolver os exercícios, utilizem todas as amostras do conjunto de dados, com exceção da amostra HG00097.
 
-1.  Qual formato de arquivo não é gerado por `bwa index`.
-2.  Qual a cobertura das amostras para os marcadores `PentaE`, `PentaD`, `vWA` **`[PODEM SER OUTROS]`**.
-3.  Qual é a profundidade média de cobertura das leituras alinhadas?
-4.  Há alguma região com uma alta porcentagem de *mismatches* ou *indels* no genes MC1R e SLC45A2?
-5.  Quão uniformemente as leituras estão distribuídas no genoma de referência?
+1.  Qual dos seguintes programas é amplamente utilizado para alinhar sequências curtas de DNA em genomas de referência?
+
+2.  Qual formato de arquivo não é gerado por `bwa index`.
+
+3.  Qual é o principal formato de saída gerado por ferramentas como BWA, Bowtie e STAR após o alinhamento de sequências de DNA?
+
+4.  O que o programa SAMtools realiza no fluxo de análise de dados de alinhamento de DNA?
+
+5.  Qual é a profundidade média de cobertura das leituras alinhadas para o gene MC1R?
+
+    ::: callout-tip
+    ## Dica
+
+    Use o comando a baixo para amostras Exoma e WGS:
+
+    `samtools coverage -b bam_list.txt -r {chr}:{start}-{end} > cov.txt`
+    :::
+
+6.  Qual o número de leituras alinhadas em para os genes MC1R e SLC45A2 de exoma da amostra HG00372?
+
+    ::: callout-tip
+    ## Dica
+
+    Use o comando abaixo e olhe no arquivo resultante na linha 10 "SN sequences: VALOR".
+
+    `samtools stats HG00372.bam {chr}:{start}{end} > {stat}.txt`
+    :::

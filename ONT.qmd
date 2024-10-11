@@ -104,8 +104,9 @@ engine: knitr
 
 ## Atividades da tarde
 
-1.  Avalie a qualidade das leituras das amostras com `NanoPlot`. Qual das 9 amostras apresentou uma qualidade média mais baixa?
-2.  Sobre o intervaldo de tamanhos das leituras de cada amostra, qual apresenta a maior média de tamanho?
-3.  Para a amostra HG00372, corte a amostra para qualidades acima de 15 e tamanho mínimo de 2000 bases. Qual o número de bases original e após corte?
-4.  Compare a genotipagem dos genes MC1R e SLC45A2 obtidas com ONT com as obtidas com short reads.
-5.  Avalie as modificações 5mC e 5hmC na região promotora dos genes MC1R e SLC45A2.
+1.  Qual dos seguintes programas é especializado no alinhamento de leituras longas, como as geradas por sequenciadores Oxford Nanopore e PacBio?
+2.  Avalie a qualidade das leituras das amostras com `NanoPlot`. Qual das 9 amostras apresentou uma qualidade média mais baixa?
+3.  Sobre o intervaldo de tamanhos das leituras de cada amostra, qual apresenta a maior média de tamanho?
+4.  Para a amostra HG00372, corte a amostra para qualidades acima de 15 e tamanho mínimo de 2000 bases. Qual o número de bases original e após corte?
+5.  Compare a genotipagem dos genes MC1R e SLC45A2 obtidas com ONT com as obtidas com short reads.
+6.  Avalie as modificações 5mC e 5hmC na região promotora dos genes MC1R e SLC45A2.

@@ -358,11 +358,40 @@ Regiões com reads
 <h2 class="anchored" data-anchor-id="atividades-da-tarde">Atividades da tarde</h2>
 <p>Para resolver os exercícios, utilizem todas as amostras do conjunto de dados, com exceção da amostra HG00097.</p>
 <ol type="1">
-<li>Qual formato de arquivo não é gerado por <code>bwa index</code>.</li>
-<li>Qual a cobertura das amostras para os marcadores <code>PentaE</code>, <code>PentaD</code>, <code>vWA</code> <strong><code>[PODEM SER OUTROS]</code></strong>.</li>
-<li>Qual é a profundidade média de cobertura das leituras alinhadas?</li>
-<li>Há alguma região com uma alta porcentagem de <em>mismatches</em> ou <em>indels</em> no genes MC1R e SLC45A2?</li>
-<li>Quão uniformemente as leituras estão distribuídas no genoma de referência?</li>
+<li><p>Qual dos seguintes programas é amplamente utilizado para alinhar sequências curtas de DNA em genomas de referência?</p></li>
+<li><p>Qual formato de arquivo não é gerado por <code>bwa index</code>.</p></li>
+<li><p>Qual é o principal formato de saída gerado por ferramentas como BWA, Bowtie e STAR após o alinhamento de sequências de DNA?</p></li>
+<li><p>O que o programa SAMtools realiza no fluxo de análise de dados de alinhamento de DNA?</p></li>
+<li><p>Qual é a profundidade média de cobertura das leituras alinhadas para o gene MC1R?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use o comando a baixo para amostras Exoma e WGS:</p>
+<p><code>samtools coverage -b bam_list.txt -r {chr}:{start}-{end} &gt; cov.txt</code></p>
+</div>
+</div></li>
+<li><p>Qual o número de leituras alinhadas em para os genes MC1R e SLC45A2 de exoma da amostra HG00372?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use o comando abaixo e olhe no arquivo resultante na linha 10 “SN sequences: VALOR”.</p>
+<p><code>samtools stats HG00372.bam {chr}:{start}{end} &gt; {stat}.txt</code></p>
+</div>
+</div></li>
 </ol>
 
 

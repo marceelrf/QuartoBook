@@ -106,9 +106,7 @@ Estes arquivos se encontram dentro de uma pasta de google drive. O genoma de ref
 \- Utilizaremos samtools index
 
 ```{bash,eval=F}
-
 cd rota_da_pasta_criada
-
 samtools index nome_da_amostra.bam
 ```
 
@@ -125,9 +123,7 @@ Fazer esse comando para todas as amostras.
 -   Podem rodar varias amostras no mesmo comando, separando elas por virgulas SEM espaço, como no exemplo embaixo.
 
 ```{bash,eval=F}
-
 cd rota_da_pasta
-
 HipSTR --bams nome_da_amostra1.bam,nome_da_amostra2.bam --fasta GRCh38_full_analysis_set_plus_decoy_hla.fa --regions regionsx.bed --str-vcf nome_de_saida.vcf.gz --min-reads 8 --def-stutter-model --max-flank-indel 0.50 --max-str-len 127 --viz-out aln.viz.gz
 ```
 

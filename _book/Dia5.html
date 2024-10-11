@@ -338,10 +338,8 @@ RECOMENDAÇÕES
 <h3 class="anchored" data-anchor-id="como-criar-os-índices-das-amostras">COMO CRIAR OS ÍNDICES DAS AMOSTRAS?</h3>
 <p>- Utilizaremos samtools index</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta_criada</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">samtools</span> index nome_da_amostra.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta_criada</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">samtools</span> index nome_da_amostra.bam</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Fazer esse comando para todas as amostras.</p>
 <p><a href="https://drive.google.com/file/d/1_kTWQTcX4k_adN28sEJb47drwAZAzrm0/view?usp=drive_link">Tutorial de ajuda</a></p>
@@ -354,10 +352,8 @@ RECOMENDAÇÕES
 <li><p>Podem rodar varias amostras no mesmo comando, separando elas por virgulas SEM espaço, como no exemplo embaixo.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">HipSTR</span> <span class="at">--bams</span> nome_da_amostra1.bam,nome_da_amostra2.bam <span class="at">--fasta</span> GRCh38_full_analysis_set_plus_decoy_hla.fa <span class="at">--regions</span> regionsx.bed <span class="at">--str-vcf</span> nome_de_saida.vcf.gz <span class="at">--min-reads</span> 8 <span class="at">--def-stutter-model</span> <span class="at">--max-flank-indel</span> 0.50 <span class="at">--max-str-len</span> 127 <span class="at">--viz-out</span> aln.viz.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> rota_da_pasta</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">HipSTR</span> <span class="at">--bams</span> nome_da_amostra1.bam,nome_da_amostra2.bam <span class="at">--fasta</span> GRCh38_full_analysis_set_plus_decoy_hla.fa <span class="at">--regions</span> regionsx.bed <span class="at">--str-vcf</span> nome_de_saida.vcf.gz <span class="at">--min-reads</span> 8 <span class="at">--def-stutter-model</span> <span class="at">--max-flank-indel</span> 0.50 <span class="at">--max-str-len</span> 127 <span class="at">--viz-out</span> aln.viz.gz</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><a href="https://drive.google.com/file/d/1jBNQ8lxWDYQ-L4U34WVhbenagOPWRerR/view?usp=drive_link">Tutoria de ajuda</a></p>
 </section>
