@@ -76,7 +76,7 @@ rm -rf ~/miniconda3/miniconda.sh
 
 Reinicie o sistema. No **WSL** é só fechar a abrir novamente.
 
-Baixe o arquivo de configuração do CONDA para o Workshop clicando [aqui](https://1drv.ms/u/s!Aug0fBvVf82yj5dTJujT9quiT53bfA?e=sYzYD0).
+Baixe o arquivo de configuração do CONDA para o Workshop clicando [aqui](https://drive.google.com/file/d/16BxolwKXhV-bSmFqlKx6i8ZULEbF4MvL/view?usp=drive_link).
 
 ### Crie e ative o ambiente
 
@@ -113,7 +113,7 @@ sudo apt install [SOFTWARE]
 
 ## Dados utilizados {#sec-dados-utilizados}
 
-Baixe os dados que serão utilizados neste workshop via [**OneDrive**](https://1drv.ms/f/s!Aug0fBvVf82yjvkrB5R-N_v3rFDHzg?e=FtqWjx);
+Baixe os dados que serão utilizados neste workshop via [Drive](https://drive.google.com/drive/u/1/folders/151BpwOd5jFKaB43bM5dgdKcL8skHBLK9);
 
 ::: {.callout-important title="Utilize o email correto"}
 Para ter acesso aos dados utilize o email que foi fornecido durante a inscrição no evento. Em caso de erro, entre em contato com a organização.
